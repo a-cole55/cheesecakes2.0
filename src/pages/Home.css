@@ -1,0 +1,24 @@
+#homeLogo{
+    width:40%;
+}
+#landing{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    /* border-bottom:2px solid #F9EFED; */
+    /* background-color: #D8806B; */
+    margin-bottom: 0;
+}
+#landing p{
+    width:80%;
+    height:7em;
+    background-color: #D8806B;
+    color:white;
+    text-align: center;
+    font:1.3rem 'Arial';
+    padding: 3.5% 5% 0 5%;
+    position:relative;
+    bottom:50px;
+}

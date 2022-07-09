@@ -1,0 +1,68 @@
+h1{
+    text-transform: uppercase;
+    font:4rem 'Rancho', cursive;
+    color:#391117;
+}
+.menu{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin:0 10%;
+}
+
+.cheesecake{
+    width:280px;
+    height:370px;
+    background-color: rgba(224, 159, 146, 0.3);
+    margin: 15px 5px;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.cheesecake img{
+    height:230px;
+    width:280px;
+    border-radius: 25px 25px 0 0;
+}
+h3{
+    text-transform: uppercase;
+    letter-spacing: -0.1rem;
+    margin-bottom: 0;
+    font-size: 1.2rem;
+    color:#391117;
+}
+#price{
+    display: block;
+    margin-bottom: 10px;
+    font-size:1.2rem;
+}
+#order{
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+}
+button{
+    background-color: rgba(224, 159, 146, 0.7);
+    border-color: rgba(224, 159, 146, 0.3);
+    height:2em;
+    cursor: pointer;
+}
+#add, #remove{
+    width:2em;
+    font-weight: bold;
+}
+#quantity{
+    width:80%;
+
+}
+#qtyCount{
+    width:2em;
+    height:2em;
+    font-weight: bold;
+    color:#391117;
+    text-align: center;
+}

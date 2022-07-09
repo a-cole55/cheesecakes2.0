@@ -1,7 +1,8 @@
 import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
 import LocalOfferIcon from '@mui/icons-material/LocalOffer';
 import logo from "../assets/default-monochrome.svg";
-import "./Header.css"
+import "./Header.css";
+import {Link} from "react-router-dom"
 
 export default function Header() {
     return(
@@ -16,11 +17,12 @@ export default function Header() {
                 </div>
             </button>
             <div class="dropdown-content">
-              <a id="aboutMe" href='#about'>About</a>
-              <a id="menuSelection" href='#menu'>Menu</a>
-              <a id="Placeorder" href='#order'>Order</a>
-              <a href="#specials">Specials <LocalOfferIcon className="shop discount" fontSize="small"/></a>
-              <a id="contactUs" href='#contact'>Contact</a>
+              <Link to="/">Home</Link>
+              <Link to="/menu">Menu</Link>
+              {/* <Link to="/order">Order</Link> */}
+              <Link to="/specials">Specials <LocalOfferIcon className="shop discount" fontSize="small"/></Link>
+              <Link to="/about">About</Link>
+              <Link to="/contact">Contact</Link>
             </div>
           </div>
       <img src={logo} alt="logo" />
