@@ -22,7 +22,7 @@ export default function Header() {
               {/* <Link to="/order">Order</Link> */}
               <Link to="/specials">Specials <LocalOfferIcon className="shop discount" fontSize="small"/></Link>
               <Link to="/about">About</Link>
-              <Link to="/contact">Contact</Link>
+
             </div>
           </div>
       <img src={logo} alt="logo" />

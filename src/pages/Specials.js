@@ -1,5 +1,5 @@
 export default function Specials(){
     return(
-        <h1>Chelsea's Cheesecakes</h1>
+        <h1>Specials Coming Soon</h1>
     )
 }

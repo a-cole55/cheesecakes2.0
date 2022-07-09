@@ -1,5 +1,6 @@
 #homeLogo{
     width:40%;
+    border-radius: 25em;
 }
 #landing{
     display:flex;
@@ -20,5 +21,5 @@
     font:1.3rem 'Arial';
     padding: 3.5% 5% 0 5%;
     position:relative;
-    bottom:50px;
+    bottom:150px;
 }
