@@ -7,7 +7,6 @@ import Menu from "./pages/Menu.js";
 import About from "./pages/About.js";
 import Order from "./pages/Order.js";
 import Specials from "./pages/Specials.js";
-import Contact from "./pages/Contact.js";
 import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 
 
@@ -23,12 +22,15 @@ function App() {
             <Route path="/menu" element={<Menu/>} />
             <Route path="/order" element={<Order/>} />
             <Route path="/specials" element={<Specials/>} />
-            <Route path="/contact" element={<Contact/>} />
           </Routes>
       </div>
     <footer>
-      <FacebookIcon className="shop" fontSize="large"/>
-      <InstagramIcon className="shop" fontSize="large"/>
+        <span id="email">email@cheesecakes.com</span>
+        <div id="socials">
+          <FacebookIcon className="shop" fontSize="large"/>
+          <InstagramIcon className="shop" fontSize="large"/>
+        </div>
+        <span>555-555-5555</span>
     </footer>
   </div>
   </Router>

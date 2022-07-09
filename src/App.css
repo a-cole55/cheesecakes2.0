@@ -6,4 +6,18 @@
   color: #BB4C50;
   cursor: pointer;
 }
+footer{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+}
+span{
+  font:1.25rem 'Rancho', cursive;
+  color:#391117;
+}
+#email{
+  font-size: 1.7rem;
+}
 
