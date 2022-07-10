@@ -3,6 +3,7 @@ h1{
     text-transform: uppercase;
     font:4rem 'Rancho', cursive;
     color:#391117;
+    /* margin-top: 3%; */
 }
 .menu{
     display:flex;
@@ -10,7 +11,7 @@ h1{
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    margin:0 10% 7% 10%;
+    margin: 0 10% 7% 10%;
 }
 
 .cheesecake{

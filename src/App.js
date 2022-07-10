@@ -14,15 +14,10 @@ import { useState } from "react"
 function App() {
   const [totalQty, setTotal] = useState(0);
 
-  // const location = {
-  //   pathname: '/menu',
-  //   state: { setQuantity }
-  // }
-
   return (
     <Router>
     <div className="App">
-      <Header totalQty = {[totalQty, setTotal]}/>
+      <Header className="header" totalQty = {[totalQty, setTotal]}/>
       <div className="content">
           <Routes>
             <Route path="/" element={<Home/>} />

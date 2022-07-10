@@ -15,8 +15,7 @@ import { useState } from "react";
 export default function Menu(props){
     let totalQty = props.totalQty[0];
     let setTotal = props.totalQty[1];
-    console.log(totalQty, setTotal)
-    // console.log(props.totalQty)
+ 
     function Cheesecake(props){
         const [quantity, setQuantity] = useState(0);
         console.log(props.totalQty)
