@@ -24,6 +24,7 @@ h1{
     justify-content: flex-start;
     align-items: center;
     box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+    transition: all 0.5s ease;
 }
 
 .cheesecake img{

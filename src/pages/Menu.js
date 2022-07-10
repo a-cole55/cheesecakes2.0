@@ -1,5 +1,5 @@
 import "./Menu.css";
-import Cheesecake from "../components/Cheesecake"
+// import Cheesecake from "../components/Cheesecake"
 import BananaPudding from "../assets/banana.jpg";
 import BourbonPecan from "../assets/pecan (2).jpg";
 import CaramelApple from "../assets/caramelapple.jpg";
@@ -8,18 +8,53 @@ import Cinnamon from "../assets/cinnamon.jpg";
 import Cookies from "../assets/cookies.jpg";
 import SweetPotatoe from "../assets/sweetpotatoe (2).jpg";
 import Neo from "../assets/neopolitan.jpg";
-import Minis from "../assets/minis.jpg"
+import Minis from "../assets/minis.jpg";
+import { useState } from "react";
 
 
+export default function Menu(props){
+    let totalQty = props.totalQty[0];
+    let setTotal = props.totalQty[1];
+    console.log(totalQty, setTotal)
+    // console.log(props.totalQty)
+    function Cheesecake(props){
+        const [quantity, setQuantity] = useState(0);
+        console.log(props.totalQty)
+    
+        function addItem(){
+            setQuantity(quantity < 10 ? quantity + 1 : quantity);
+        }
+    
+        function removeItem(){
+            setQuantity(quantity > 0 ? quantity - 1 : 0);
+        }
 
-export default function Menu(cartQuantity){
-    // alert(cartQuantity[0], cartQuantity[1])
+        const handleCart = () => {
+            return setTotal(totalQty = totalQty + quantity)
+        }
+    return(
+        <div className="cheesecake">
+                <img src={props.img} alt=""></img>
+                <h3>{props.title}</h3>
+                <span id="price">{props.price}</span>
+                <div id="quantity">
+                        <button id="remove" onClick={removeItem}>-</button>
+                        <input disabled id="qtyCount" value={quantity}></input>
+                        <button id="add" onClick={addItem}>+</button>
+                    </div>
+                {quantity > 0 && 
+                <button id="order" onClick={handleCart}>Add to Order</button>
+                    }
+        </div>
+        )};
+
+
     return(
         <div>
         <h1>Menu</h1>
         <div className="menu">
             <Cheesecake img={BananaPudding} alt="bourbon banana pudding cheesecake" title="Bourbon Banana Pudding" price="$55" />
-            <Cheesecake img={BourbonPecan} alt= "bourbon pecan pie cheesecake" title="Bourbon Pecan" price="$50"/>
+            <Cheesecake img={BourbonPecan} alt= "bourbon pecan pie cheesecake" title="Bourbon Pecan" price="$50" />
             <Cheesecake img={Chocolate} alt="chocolate cheesecake" title="Chocolate" price="$35" />
             <Cheesecake img={Cinnamon} alt="cinnamon roll cheesecake" title="Cinnamon Roll" price="$50" />
             <Cheesecake img={Cookies} alt="cookies and cream cheesecake" title="Cookies N' Creme" price="$45" />

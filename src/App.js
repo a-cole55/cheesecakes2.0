@@ -12,17 +12,22 @@ import { useState } from "react"
 
 
 function App() {
-  const [quantity, setQuantity] = useState(0);
+  const [totalQty, setTotal] = useState(0);
+
+  // const location = {
+  //   pathname: '/menu',
+  //   state: { setQuantity }
+  // }
 
   return (
     <Router>
     <div className="App">
-      <Header cartQuantity = {[quantity, setQuantity]}/>
+      <Header totalQty = {[totalQty, setTotal]}/>
       <div className="content">
           <Routes>
             <Route path="/" element={<Home/>} />
             <Route path="/about" element={<About/>} />
-            <Route path="/menu" element={<Menu cartQuantity = {[quantity, setQuantity]}/>} />
+            <Route path="/menu" element={<Menu totalQty = {[totalQty, setTotal]}/>} />
             {/* <Route path="/order" element={<Order/>} /> */}
             <Route path="/specials" element={<Specials/>} />
           </Routes>

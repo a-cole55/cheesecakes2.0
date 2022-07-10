@@ -5,11 +5,12 @@ import "./Header.css";
 import {Link} from "react-router-dom";
 
 export default function Header(props) {
-    let quantity = props.cartQuantity[0];
-    // let quantity = 9
+    let quantity = props.totalQty[0];
+    // let setQuantity = props.total[1];
+
 
     return(
-        <header className="App-header">
+      <header className="App-header">
       <nav>
         <div class="dropdown">
             <button class="dropbtn">
