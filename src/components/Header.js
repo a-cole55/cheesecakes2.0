@@ -1,10 +1,11 @@
-import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
+// import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
 import LocalOfferIcon from '@mui/icons-material/LocalOffer';
-import logo from "../assets/default-monochrome.svg";
+import ShoppingBagOutlinedIcon from '@mui/icons-material/ShoppingBagOutlined';
+// import logo from "../assets/default-monochrome.svg";
 import "./Header.css";
 import {Link} from "react-router-dom"
 
-export default function Header() {
+export default function Header(props) {
     return(
         <header className="App-header">
       <nav>
@@ -25,9 +26,12 @@ export default function Header() {
 
             </div>
           </div>
-      <img src={logo} alt="logo" />
+      {/* <img src={logo} alt="logo" /> */}
       <div className="actions">
-        <ShoppingBagIcon className="shop" fontSize="large"/>
+        {/* <ShoppingBagIcon className="shop" fontSize="large"/> */}
+        <ShoppingBagOutlinedIcon className='shop' fontSize='large'/>
+        {/* conditioal statement if over 9 make 9+ & if equal to 0 don't display*/}
+        <span id="cartQty">0</span>
       </div>
     </nav>
       </header>

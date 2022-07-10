@@ -1,5 +1,13 @@
+import Owner from "../assets/owner.jpg"
 export default function About(){
     return(
-        <h1>Chelsea's Cheesecakes</h1>
+        <div>
+            <h1>Meet the Baker💫</h1>
+            <h2>Chelsea Jones</h2>
+            <img src={Owner} alt="image of owner"></img>
+            <p><strong>Welcome to Cheesecakes by Chelsea!</strong><br></br>My name is Chelsea Jones. Originally from Kansas and now an Austin resident. I love being creative in the kitchen and experimenting with new cheesecake flavors. 
+            I am so happy that you have chosen to place an order with me! I look forward to providing you with the best quality cheesecake you have ever experienced!</p>
+
+        </div>
     )
 }

@@ -57,4 +57,16 @@ nav{
   .discount{
     display: inline;
   }
+
+  #cartQty{
+    position:relative;
+    text-align: center;
+    top:-7.5px;
+    right:1.3em;
+    color:#391117;;
+    font-size:1rem;
+    font-weight: bold;
+    /* background-color: rgba(249,241,241, 0.9); */
+    border-radius: 5em;
+  }
   
