@@ -7,13 +7,13 @@ export default function Order(props){
     let setCart = props.cartTotal[1]
 
 
-    const emptyCart = () => {
+    function emptyCart(){
         return (
             <h2><Link to="/menu">Visit Here</Link> To Add Items to Your Shopping Bag</h2>
         )
     }
 
-    const fullCart = () => {
+    function fullCart(){
         return (
             <div className="cartContent">
                 <div className="cart">
@@ -46,14 +46,13 @@ export default function Order(props){
                         <button>Submit</button>
                     </form>
                 </div>
-
             </div>
         )
     }
     return(
         <div>
             <h1>Chelsea's Cheesecakes</h1>
-            {cart > 0 ? fullCart() : emptyCart()}
+            {totalQty > 0 ? fullCart() : emptyCart()}
 
         </div>
 

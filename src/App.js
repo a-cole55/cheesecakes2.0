@@ -24,7 +24,7 @@ function App() {
             <Route path="/" element={<Home/>} />
             <Route path="/about" element={<About/>} />
             <Route path="/menu" element={<Menu totalQty= {[totalQty, setTotal]} cartTotal={[cart, setCart]} />} />
-            <Route path="/order" element={<Order/>} />
+            <Route path="/order" element={<Order totalQty= {[totalQty, setTotal]} cartTotal={[cart, setCart]} />} />
             <Route path="/specials" element={<Specials/>} />
           </Routes>
       </div>
