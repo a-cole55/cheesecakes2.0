@@ -12,18 +12,18 @@ export default function Header(props) {
     return(
       <header className="App-header">
       <nav>
-        <div class="dropdown">
-            <button class="dropbtn">
-                <div class="container">
-                    <div class="bar1"></div>
-                    <div class="bar2"></div>
-                    <div class="bar3"></div>
+        <div className="dropdown">
+            <button className="dropbtn">
+                <div className="container">
+                    <div className="bar1"></div>
+                    <div className="bar2"></div>
+                    <div className="bar3"></div>
                 </div>
             </button>
-            <div class="dropdown-content">
+            <div className="dropdown-content">
               <Link to="/">Home</Link>
               <Link to="/menu">Menu</Link>
-              {/* <Link to="/order">Order</Link> */}
+              <Link to="/order">Order</Link>
               <Link to="/specials">Specials <LocalOfferIcon className="shop discount" fontSize="small"/></Link>
               <Link to="/about">About</Link>
 
@@ -31,7 +31,7 @@ export default function Header(props) {
           </div>
       {/* <img src={logo} alt="logo" /> */}
       <div className="actions">
-        <ShoppingBagOutlinedIcon className='shop' fontSize='large'/>
+        <Link to="/order"><ShoppingBagOutlinedIcon className='shop' fontSize='large'/></Link>
         {/* conditional statement if over 9 make 9+ & if equal to 0 don't display*/}
         {quantity > 0 && 
         <span id="cartQty">{quantity > 9 ? "9+" : quantity}</span>}
