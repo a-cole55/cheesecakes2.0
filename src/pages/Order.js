@@ -9,11 +9,13 @@ export default function Order(props){
     let cart = props.cartTotal[0];
     // let setCart = props.cartTotal[1];
     const [checked, setChecked] = useState(false);
-    const [itemTotals, setItemTotals] = useState(0)
+    const [total, setTotal] = useState(0);
+    // let total = 0;
     
-    function itemTotal(props){
-        setItemTotals(props.quantity * Number(props.price))
+    function calcTotal(item){
+        setTotal(total = total + item.itemTotal)
     }
+
     function emptyCart(){
         return (
             <h2><Link to="/menu">Visit Here</Link> To Add Items to Your Shopping Bag</h2>
@@ -33,14 +35,18 @@ export default function Order(props){
                                 <div className="viewItemDetails">
                                     <h3>{item.name}</h3>
                                     <h4>QTY: {item.quantity}</h4>
-                                    <span>{item.price}</span>
+                                    <span>${item.price}</span>
                                 </div>
-                                <div className="total">
-                                    <h3>Total:</h3>
-                                    <span onHandle={itemTotal}>{itemTotals}</span>
+                                <div className="subtotal">
+                                    {/* <h3>Subtotal:</h3> */}
+                                    <span>${item.itemTotal}</span>
                                 </div>
                             </div>
                             )})}
+                            <div className="total">
+                                <h3>Total:</h3>
+                                <span>${total}</span>
+                            </div>
                     </div>
                 </div>
                 <div className="billing">
@@ -112,7 +118,7 @@ export default function Order(props){
     }
     return(
         <div>
-            <h1>Chelsea's Cheesecakes</h1>
+            <h1>Cheesecakes by Chelsea</h1>
             {totalQty > 0 ? fullCart(cart) : emptyCart()}
 
         </div>

@@ -43,7 +43,7 @@ input{
     padding:20px 150px 0 50px;
 }
 .viewItems{
-    border: 1px solid black;
+    border: 2px solid black;
     display: flex;
     flex-direction: row;
 
@@ -58,4 +58,16 @@ input{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+.subtotal{
+    padding: 0 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.subtotal span{
+    color: #BB4C50;
+    font-weight: bold;
+    font-size: 1.5rem;
 }

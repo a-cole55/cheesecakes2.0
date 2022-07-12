@@ -13,7 +13,8 @@ import { useState } from "react"
 
 function App() {
   const [totalQty, setTotal] = useState(0);
-  const [cart, setCart] = useState([])
+  const [cart, setCart] = useState([]);
+  const [itemTotals, setItemTotals] = useState(0)
 
   return (
     <Router>
@@ -23,8 +24,8 @@ function App() {
           <Routes>
             <Route path="/" element={<Home/>} />
             <Route path="/about" element={<About/>} />
-            <Route path="/menu" element={<Menu totalQty= {[totalQty, setTotal]} cartTotal={[cart, setCart]} />} />
-            <Route path="/order" element={<Order totalQty= {[totalQty, setTotal]} cartTotal={[cart, setCart]} />} />
+            <Route path="/menu" element={<Menu totalQty= {[totalQty, setTotal]} cartTotal={[cart, setCart]} itemTotals={[itemTotals, setItemTotals]} />} />
+            <Route path="/order" element={<Order totalQty= {[totalQty, setTotal]} cartTotal={[cart, setCart]} itemTotals={[itemTotals, setItemTotals]} />} />
             <Route path="/specials" element={<Specials/>} />
           </Routes>
       </div>
