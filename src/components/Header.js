@@ -34,7 +34,7 @@ export default function Header(props) {
         <Link to="/order"><ShoppingBagOutlinedIcon className='shop' fontSize='large'/></Link>
         {/* conditional statement if over 9 make 9+ & if equal to 0 don't display*/}
         {quantity > 0 && 
-        <span id="cartQty">{quantity > 9 ? "9+" : quantity}</span>}
+        <Link to="/order"><span id="cartQty">{quantity > 9 ? "9+" : quantity}</span></Link>}
       </div>
     </nav>
       </header>

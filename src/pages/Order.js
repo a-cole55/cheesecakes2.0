@@ -1,10 +1,15 @@
+import { Checkbox } from "@mui/material";
 import {Link} from "react-router-dom";
+import { useState } from "react";
+import "./Order.css"
 
 export default function Order(props){
     let totalQty = props.totalQty[0];
     let setTotal = props.totalQty[1];
     let cart = props.cartTotal[0];
-    let setCart = props.cartTotal[1]
+    let setCart = props.cartTotal[1];
+    const [checked, setChecked] = useState(false)
+
 
 
     function emptyCart(){
@@ -24,26 +29,66 @@ export default function Order(props){
                 </div>
                 <div className="billing">
                     <form>
-                        <label>First Name:</label>
-                        <input type="text"></input>
-                        <label>Last Name:</label>
-                        <input type="text"></input>
-                        <label>Email:</label>
-                        <input type="email"></input>
-                        <label>Phone Number:</label>
-                        <input type="tel"></input>
-                        <label>Mailing Address:</label>
-                        <input type="text"></input>
-                        <label>City:</label>
-                        <input type="text"></input>
-                        <label>State:</label>
-                        <input type="text"></input>
-                        <label>Zipcode:</label>
-                        <input type="number"></input>
-                        {/* <label>Email:</label>
-                        <input type="email"></input> */}
+                        <div className="formInput">
+                            <label>First Name:</label>
+                            <input type="text"></input>
+                        </div>
+                        <div className="formInput">
+                            <label>Last Name:</label>
+                            <input type="text"></input>
+                        </div>
+                        <div className="formInput">
+                            <label>Email:</label>
+                            <input type="email"></input>
+                        </div>
+                        <div className="formInput">
+                            <label>Phone Number:</label>
+                            <input type="tel"></input>
+                        </div>
+                        <div className="formInput">
+                            <label>Mailing Address:</label>
+                            <input type="text"></input>
+                        </div>
+                        <div className="formInput">
+                            <label>City:</label>
+                            <input type="text"></input>
+                        </div>
+                        <div className="formInput">
+                            <label>State:</label>
+                            <input type="text"></input>
+                        </div>
+                        <div className="formInput">
+                            <label>Zipcode:</label>
+                            <input type="number"></input>
+                        </div>
+                        <div className="billingInfo">
+                            <h3>Billing Info</h3>
+                            <div className="billingBorder">
+                                <Checkbox onClick={()=> setChecked(checked => !checked)}></Checkbox><label>Billing Address Different from Shipping</label>
+                                {checked && 
+                                <div className="billingAddress">
+                                    <div className="formInput">
+                                        <label>Mailing Address:</label>
+                                        <input type="text"></input>
+                                    </div>
+                                    <div className="formInput">
+                                        <label>City:</label>
+                                        <input type="text"></input>
+                                    </div>
+                                    <div className="formInput">
+                                        <label>State:</label>
+                                        <input type="text"></input>
+                                    </div>
+                                    <div className="formInput">
+                                        <label>Zipcode:</label>
+                                        <input type="number"></input>
+                                    </div>
+                                </div>
+                                }
+                        </div>
+                        </div>
 
-                        <button>Submit</button>
+                        <button className="formSubmit">Place Order</button>
                     </form>
                 </div>
             </div>

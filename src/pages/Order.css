@@ -1,0 +1,41 @@
+.cartContent{
+    display:flex;
+    flex-direction: row-reverse;
+}
+
+.cart{
+    width:50%;
+}
+.billing{
+    width: 50%;
+    padding:40px 40px 40px 150px;
+}
+form{
+    width:100%;
+}
+label{
+    margin-right:10px;
+    color:#391117;
+    font:2rem 'Rancho', cursive;
+}
+input{
+    width: 350px;
+    margin-top:10px;
+    height:45px;
+    border-color: rgba(224, 159, 146, 0.3);
+    border-radius: 5px;
+}
+.formInput{
+    width:100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.formSubmit{
+    margin: 20px 0 0 180px;
+    width:8em;
+    height:2em;
+    color:#391117;
+    font:2rem 'Rancho', cursive;
+
+}
