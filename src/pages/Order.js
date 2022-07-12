@@ -9,12 +9,10 @@ export default function Order(props){
     let cart = props.cartTotal[0];
     // let setCart = props.cartTotal[1];
     const [checked, setChecked] = useState(false);
-    const [total, setTotal] = useState(0);
-    // let total = 0;
-    
-    function calcTotal(item){
-        setTotal(total = total + item.itemTotal)
-    }
+    let total = 0;
+    let salesT = 0;
+    let salesTax = 0;
+    let subtotal = 0;
 
     function emptyCart(){
         return (
@@ -29,6 +27,10 @@ export default function Order(props){
                     <h3>View Cart</h3>
                     <div className="cartItems">
                         {cart.map((item) => {
+                            subtotal = subtotal + item.itemTotal
+                            salesT = subtotal * .0825
+                            salesTax = +(salesT.toFixed(2))
+                            total = (subtotal + salesTax)
                             return (
                             <div key={item.name} className="viewItems">
                                 <img src={item.img} alt={item.img}></img>
@@ -44,6 +46,14 @@ export default function Order(props){
                             </div>
                             )})}
                             <div className="total">
+                                <div>
+                                    <span><strong>Subtotal: </strong></span>
+                                    <span>${subtotal}</span>
+                                </div>
+                                <div>
+                                    <span><strong>Sales Tax (8.25%): </strong></span>
+                                    <span>${salesTax}</span>
+                                </div>
                                 <h3>Total:</h3>
                                 <span>${total}</span>
                             </div>

@@ -71,3 +71,9 @@ input{
     font-weight: bold;
     font-size: 1.5rem;
 }
+.total div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding:5px 180px;
+}
