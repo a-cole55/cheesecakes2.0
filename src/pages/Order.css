@@ -39,3 +39,23 @@ input{
     font:2rem 'Rancho', cursive;
 
 }
+.cartItems{
+    padding:20px 150px 0 50px;
+}
+.viewItems{
+    border: 1px solid black;
+    display: flex;
+    flex-direction: row;
+
+}
+.viewItems img{
+    width:150px;
+    height: 80px;
+}
+.viewItemDetails{
+    width:100%;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

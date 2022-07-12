@@ -5,11 +5,15 @@ import "./Order.css";
 
 export default function Order(props){
     let totalQty = props.totalQty[0];
-    let setTotal = props.totalQty[1];
+    // let setTotal = props.totalQty[1];
     let cart = props.cartTotal[0];
-    let setCart = props.cartTotal[1];
-    const [checked, setChecked] = useState(false)
-
+    // let setCart = props.cartTotal[1];
+    const [checked, setChecked] = useState(false);
+    const [itemTotals, setItemTotals] = useState(0)
+    
+    function itemTotal(props){
+        setItemTotals(props.quantity * Number(props.price))
+    }
     function emptyCart(){
         return (
             <h2><Link to="/menu">Visit Here</Link> To Add Items to Your Shopping Bag</h2>
@@ -24,11 +28,17 @@ export default function Order(props){
                     <div className="cartItems">
                         {cart.map((item) => {
                             return (
-                            <div key={item.name}>
+                            <div key={item.name} className="viewItems">
                                 <img src={item.img} alt={item.img}></img>
-                                <h3>{item.name}</h3>
-                                <h4>QTY: {item.quantity}</h4>
-                                <span>{item.price}</span>
+                                <div className="viewItemDetails">
+                                    <h3>{item.name}</h3>
+                                    <h4>QTY: {item.quantity}</h4>
+                                    <span>{item.price}</span>
+                                </div>
+                                <div className="total">
+                                    <h3>Total:</h3>
+                                    <span onHandle={itemTotal}>{itemTotals}</span>
+                                </div>
                             </div>
                             )})}
                     </div>
