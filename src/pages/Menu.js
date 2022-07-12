@@ -1,5 +1,5 @@
 import "./Menu.css";
-import DATA from "../Data";
+// import DATA from "../Data";
 import BananaPudding from "../assets/banana.jpg";
 import BourbonPecan from "../assets/pecan (2).jpg";
 import CaramelApple from "../assets/caramelapple.jpg";
@@ -46,7 +46,7 @@ export default function Menu(props){
                         <button id="add" onClick={addItem}>+</button>
                     </div>
                 {quantity > 0 && 
-                <button value = {props.tag} id="order" onClick={() => handleCart(props.tag)}>Add to Order</button>
+                <button id="order" onClick={() => handleCart(props.tag)}>{cart === 0? "Add to Order" : "Added"}</button>
                     }
         </div>
         )};

@@ -80,7 +80,7 @@ export default function Order(props){
                                         <input type="text"></input>
                                     </div>
                                     <div className="formInput">
-                                        <label>Zipcode:</label>
+                                        <label>Zip code:</label>
                                         <input type="number"></input>
                                     </div>
                                 </div>
