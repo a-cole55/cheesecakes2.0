@@ -54,6 +54,11 @@ export default function Order(props){
                                     <span><strong>Sales Tax (8.25%): </strong></span>
                                     <span>${salesTax}</span>
                                 </div>
+                                <div className="promoCode">
+                                    <span><strong>PROMOCODE: </strong></span>
+                                    <input></input>
+                                    <button>Redeem</button>
+                                </div>
                                 <h3>Total:</h3>
                                 <span>${total}</span>
                             </div>
