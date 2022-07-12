@@ -1,7 +1,7 @@
 import { Checkbox } from "@mui/material";
 import {Link} from "react-router-dom";
 import { useState } from "react";
-import "./Order.css"
+import "./Order.css";
 
 export default function Order(props){
     let totalQty = props.totalQty[0];
@@ -10,21 +10,27 @@ export default function Order(props){
     let setCart = props.cartTotal[1];
     const [checked, setChecked] = useState(false)
 
-
-
     function emptyCart(){
         return (
             <h2><Link to="/menu">Visit Here</Link> To Add Items to Your Shopping Bag</h2>
         )
     }
 
-    function fullCart(){
+    function fullCart(cart){
         return (
             <div className="cartContent">
                 <div className="cart">
                     <h3>View Cart</h3>
                     <div className="cartItems">
-
+                        {cart.map((item) => {
+                            return (
+                            <div key={item.name}>
+                                <img src={item.img} alt={item.img}></img>
+                                <h3>{item.name}</h3>
+                                <h4>QTY: {item.quantity}</h4>
+                                <span>{item.price}</span>
+                            </div>
+                            )})}
                     </div>
                 </div>
                 <div className="billing">
@@ -97,7 +103,7 @@ export default function Order(props){
     return(
         <div>
             <h1>Chelsea's Cheesecakes</h1>
-            {totalQty > 0 ? fullCart() : emptyCart()}
+            {totalQty > 0 ? fullCart(cart) : emptyCart()}
 
         </div>
 

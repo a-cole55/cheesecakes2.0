@@ -29,10 +29,10 @@ export default function Menu(props){
             setQuantity(quantity > 0 ? quantity - 1 : 0);
         }
 
-        const handleCart = (tag) => {
+        const handleCart = (props) => {
             return (
             setTotal(totalQty = totalQty + quantity),
-            setCart(cart = [...cart, {"quantity": quantity, "key": tag}]),
+            setCart(cart = [...cart, {"quantity": quantity, "key": props.tag, "name":props.title, "price":props.price, "img":props.img}]),
             console.log(cart)
         )}
     return(
@@ -46,7 +46,7 @@ export default function Menu(props){
                         <button id="add" onClick={addItem}>+</button>
                     </div>
                 {quantity > 0 && 
-                <button id="order" onClick={() => handleCart(props.tag)}>{cart === 0? "Add to Order" : "Added"}</button>
+                <button id="order" onClick={() => handleCart(props)}>{cart === 0? "Add to Order" : "Added"}</button>
                     }
         </div>
         )};
