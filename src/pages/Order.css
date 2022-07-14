@@ -31,12 +31,15 @@ input{
     flex-direction: row;
     justify-content: space-between;
 }
+.billingInfo{
+    margin-top: 10px;
+}
 .formSubmit{
     margin: 20px 0 0 180px;
-    width:8em;
-    height:2em;
+    width:5.5em;
+    height:1.6em;
     color:#391117;
-    font:2rem 'Rancho', cursive;
+    font:1.5rem 'Rancho', cursive;
 
 }
 .cartItems{
