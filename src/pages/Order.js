@@ -5,14 +5,17 @@ import "./Order.css";
 
 export default function Order(props){
     let totalQty = props.totalQty[0];
-    // let setTotal = props.totalQty[1];
     let cart = props.cartTotal[0];
-    // let setCart = props.cartTotal[1];
     const [checked, setChecked] = useState(false);
+    const [promo, setPromo] = useState("");
+    const [getPromo, setGetPromo] = useState("");
+    const [discount, setDiscount] = useState(0)
     let total = 0;
     let salesT = 0;
     let salesTax = 0;
     let subtotal = 0;
+    // let discount = 0;
+
 
     function emptyCart(){
         return (
@@ -20,7 +23,27 @@ export default function Order(props){
         )
     }
 
-    function fullCart(cart){
+    function fullCart(cart, promo, discount, setDiscount, getPromo, setGetPromo){
+        const elgDiscountCode = "CHEESECAKE2022"
+
+        function handleChange(event){
+            setPromo(event.target.value)
+        }
+        
+        // function calcDiscount(total){
+        //     setDiscount(discount => discount + (total * 0.10));
+        // }
+
+        const checkPromo = (promo) => {
+            if(promo === elgDiscountCode){
+                setGetPromo(true)
+                // calcDiscount()
+            }else{
+                getPromo = false;
+                setGetPromo(false)
+            }
+        }
+
         return (
             <div className="cartContent">
                 <div className="cart">
@@ -40,28 +63,36 @@ export default function Order(props){
                                     <span>${item.price}</span>
                                 </div>
                                 <div className="subtotal">
-                                    {/* <h3>Subtotal:</h3> */}
                                     <span>${item.itemTotal}</span>
                                 </div>
                             </div>
                             )})}
                             <div className="total">
-                                <div>
+                                <div className="totalDetails">
                                     <span><strong>Subtotal: </strong></span>
                                     <span>${subtotal}</span>
                                 </div>
-                                <div>
+                                <div className="totalDetails">
                                     <span><strong>Sales Tax (8.25%): </strong></span>
                                     <span>${salesTax}</span>
                                 </div>
                                 <div className="promoCode">
                                     <span><strong>PROMOCODE: </strong></span>
-                                    <input></input>
-                                    <button>Redeem</button>
+                                    <input type="text" value={promo} onChange={handleChange} />
+                                    <button onClick={()=>checkPromo(promo, elgDiscountCode)}>Redeem</button>
                                 </div>
-                                <h3>Total:</h3>
-                                <span>${total}</span>
-                            </div>
+                                <div>
+                                    {getPromo === false &&
+                                        <h5>This is an invalid code</h5>}
+                                        </div>
+                                    {getPromo === true &&
+                                    <><div className="totalDetails"><span><strong>Discount: </strong></span>
+                                    <span>-${discount = subtotal * 0.10}</span></div></>}
+                                </div>
+                                <div className="finalTotal">
+                                    <h3>Total:</h3>
+                                    <span>${getPromo === false ? total : total-discount}</span>
+                                </div>
                     </div>
                 </div>
                 <div className="billing">
@@ -134,7 +165,7 @@ export default function Order(props){
     return(
         <div>
             <h1>Cheesecakes by Chelsea</h1>
-            {totalQty > 0 ? fullCart(cart) : emptyCart()}
+            {totalQty > 0 ? fullCart(cart, promo, discount, setDiscount, getPromo, setGetPromo) : emptyCart()}
 
         </div>
 
