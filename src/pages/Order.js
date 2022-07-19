@@ -2,11 +2,12 @@ import { Checkbox } from "@mui/material";
 import {Link} from "react-router-dom";
 import { useState } from "react";
 import "./Order.css";
-import React from "react";
-import ReactDOM from "react-dom";
+import Paypal from "../components/Paypal"
+// import React from "react";
+// import ReactDOM from "react-dom";
 
 
-const PayPalButton = window.paypal.Buttons.driver("react", { React, ReactDOM });
+// const PayPalButton = window.paypal.Buttons.driver("react", { React, ReactDOM });
 
 export default function Order(props){
     let totalQty = props.totalQty[0];
@@ -78,9 +79,9 @@ export default function Order(props){
                                     <h4>QTY: {item.quantity}</h4>
                                     <span>${item.price}</span>
                                 </div>
-                                <div className="subtotal">
+                                {/* <div className="subtotal">
                                     <span>${item.itemTotal}</span>
-                                </div>
+                                </div> */}
                             </div>
                             )})}
                             <div className="total">
@@ -89,7 +90,7 @@ export default function Order(props){
                                     <span>${subtotal}</span>
                                 </div>
                                 <div className="totalDetails">
-                                    <span><strong>Sales Tax (8.25%): </strong></span>
+                                    <span><strong>Sales Tax </strong>(8.25%):</span>
                                     <span>${salesTax}</span>
                                 </div>
                                 <div className="promoCode">
@@ -103,7 +104,7 @@ export default function Order(props){
                                         </div>
                                     {getPromo === true &&
                                     <><div className="totalDetails"><span><strong>Discount: </strong></span>
-                                    <span>-${discount = +((subtotal * 0.10).toFixed(2))}</span></div></>}
+                                    <span>-${discount = +(subtotal * 0.10).toFixed(2)}</span></div></>}
                                 </div>
                                 <div className="finalTotal">
                                     <h3>Total:</h3>
@@ -112,8 +113,9 @@ export default function Order(props){
                     </div>
                 </div>
                 <div className="billing">
-                    <PayPalButton createOrder={(data, actions) => this.createOrder(data, actions)}
-                        onApprove={(data, actions) => this.onApprove(data, actions)}/>
+                    <Paypal />
+                    {/* <PayPalButton className="paypalBtn" createOrder={(data, actions) => this.createOrder(data, actions)}
+                        onApprove={(data, actions) => this.onApprove(data, actions)}/> */}
                     {/* <form>
                         <div className="formInput">
                             <label>First Name:</label>

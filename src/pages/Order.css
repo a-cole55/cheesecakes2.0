@@ -55,7 +55,7 @@ input{
 
 }
 .viewItems img{
-    width:150px;
+    width:140px;
     height: 80px;
 }
 .viewItemDetails{
@@ -81,14 +81,20 @@ input{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding:5px 100px 5px 90px;
+    padding:5px 140px;
 }
+.totalDetails span, .finalTotal h3, .finalTotal span{
+    font-size: 1.5rem;
+}
+/* .promoCode span{
+    font-size: ;
+} */
 .total input{
     height:28px;
     width:200px;
     margin:0 0 0 10px;
     border-radius: 0;
 }
-.finalTotal h3{
-    /* letter-spacing: 0.01em; */
+.billing{
+    padding: 5% 10%
 }
