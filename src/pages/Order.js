@@ -1,21 +1,17 @@
-import { Checkbox } from "@mui/material";
+// import { Checkbox } from "@mui/material";
 import {Link} from "react-router-dom";
 import { useState } from "react";
 import "./Order.css";
 import Paypal from "../components/Paypal"
-// import React from "react";
-// import ReactDOM from "react-dom";
-
-
-// const PayPalButton = window.paypal.Buttons.driver("react", { React, ReactDOM });
 
 export default function Order(props){
     let totalQty = props.totalQty[0];
     let cart = props.cartTotal[0];
-    const [checked, setChecked] = useState(false);
+    // const [checked, setChecked] = useState(false);
     const [promo, setPromo] = useState("");
     const [getPromo, setGetPromo] = useState("");
-    const [discount, setDiscount] = useState(0)
+    const [discount, setDiscount] = useState(0);
+    // const [total, setTotal] = useState(0)
     let total = 0;
     let salesT = 0;
     let salesTax = 0;
@@ -45,21 +41,6 @@ export default function Order(props){
                 setGetPromo(false)
             }
         }
-
-        const createOrder = (data, actions, total) => {
-            return actions.order.create({
-              purchase_units: [
-                {
-                  amount: {
-                    value: `${total}`,
-                  },
-                },
-              ],
-            });
-          }
-        const onApprove = (data, actions) => {
-            return actions.order.capture();
-          }
 
         return (
             <div className="cartContent">
@@ -113,7 +94,7 @@ export default function Order(props){
                     </div>
                 </div>
                 <div className="billing">
-                    <Paypal />
+                    <Paypal cart={cart} total={total}/>
                     {/* <PayPalButton className="paypalBtn" createOrder={(data, actions) => this.createOrder(data, actions)}
                         onApprove={(data, actions) => this.onApprove(data, actions)}/> */}
                     {/* <form>

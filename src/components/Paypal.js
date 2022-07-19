@@ -1,23 +1,20 @@
 import React, {useRef, useEffect} from "react";
-import ReactDOM from "react-dom";
 
 
-// const PayPalButton = window.paypal.Buttons.driver("react", { React, ReactDOM });
-
-export default function Paypal(){
+export default function Paypal(cart,total){
     const paypal = useRef();
 
     useEffect(() => {
         window.paypal.Buttons({
-            createOrder: (data, actions, err) => {
+            createOrder: (data, actions, err, cart, total) => {
                 return actions.order.create({
                     intent: "CAPTURE",
                     purchase_units: [
                         {
-                            description: "Cheesecake",
+                            description: `Cheesecake Order: ${cart}`,
                             amount: {
                                 currency_code: "USD",
-                                value: 50.0,
+                                value: cart.price,
                             },
                         }
                     ]

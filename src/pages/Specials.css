@@ -22,3 +22,9 @@
     align-items: center;
 
 }
+@media screen and (max-width:448px){
+    .coupon{
+        width:90%;
+        margin-top: 10%;
+    }
+  }

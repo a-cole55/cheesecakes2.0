@@ -20,3 +20,15 @@
     position:relative;
     bottom:75px;
 }
+@media screen and (max-width:448px){
+    #homeLogo{
+        width:90%;
+    }
+    #landing{
+        width:100%;
+    }
+    #landing p{
+        width:90%;
+        font-size: 1rem;
+    }
+  }

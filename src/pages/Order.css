@@ -1,7 +1,6 @@
 .cartContent{
     display:flex;
     flex-direction: row;
-    /* margin-top: 2%; */
     padding: 1% 5% 5% 5%;
     min-height:80vh;
 }
@@ -86,9 +85,6 @@ input{
 .totalDetails span, .finalTotal h3, .finalTotal span{
     font-size: 1.5rem;
 }
-/* .promoCode span{
-    font-size: ;
-} */
 .total input{
     height:28px;
     width:200px;
@@ -97,4 +93,27 @@ input{
 }
 .billing{
     padding: 5% 10%
+}
+
+@media screen and (max-width:448px){
+    h1{
+        font-size: 2rem;
+        padding-top: 9%;
+    }
+    .cartContent{
+        display:flex;
+        flex-direction: column;
+        padding: 1% 5% 5% 5%;
+        /* min-height:80vh; */
+    }
+    .cart{
+        width:100%;
+    }
+    .billing{
+        width: 100%;
+        /* padding:40px 40px 40px 40px; */
+    }
+    .totalDetails{
+        padding:5px 40px;
+    }
 }
