@@ -25,7 +25,7 @@ export default function Header(props) {
               <Link to="/menu">Menu</Link>
               <Link to="/order">Order</Link>
               <Link to="/specials">Specials <LocalOfferIcon className="shop discount" fontSize="small"/></Link>
-              <Link to="/about">About</Link>
+              {/* <Link to="/about">About</Link> */}
 
             </div>
           </div>
