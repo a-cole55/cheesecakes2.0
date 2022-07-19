@@ -12,6 +12,7 @@ import Minis from "../assets/minis.jpg";
 import { useState } from "react";
 
 
+
 export default function Menu(props){
     let totalQty = props.totalQty[0];
     let setTotal = props.totalQty[1];

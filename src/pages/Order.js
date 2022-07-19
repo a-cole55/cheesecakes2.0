@@ -2,6 +2,11 @@ import { Checkbox } from "@mui/material";
 import {Link} from "react-router-dom";
 import { useState } from "react";
 import "./Order.css";
+import React from "react";
+import ReactDOM from "react-dom";
+
+
+const PayPalButton = window.paypal.Buttons.driver("react", { React, ReactDOM });
 
 export default function Order(props){
     let totalQty = props.totalQty[0];
@@ -29,10 +34,6 @@ export default function Order(props){
         function handleChange(event){
             setPromo(event.target.value)
         }
-        
-        // function calcDiscount(total){
-        //     setDiscount(discount => discount + (total * 0.10));
-        // }
 
         const checkPromo = (promo) => {
             if(promo === elgDiscountCode){
@@ -43,6 +44,21 @@ export default function Order(props){
                 setGetPromo(false)
             }
         }
+
+        const createOrder = (data, actions, total) => {
+            return actions.order.create({
+              purchase_units: [
+                {
+                  amount: {
+                    value: `${total}`,
+                  },
+                },
+              ],
+            });
+          }
+        const onApprove = (data, actions) => {
+            return actions.order.capture();
+          }
 
         return (
             <div className="cartContent">
@@ -87,16 +103,18 @@ export default function Order(props){
                                         </div>
                                     {getPromo === true &&
                                     <><div className="totalDetails"><span><strong>Discount: </strong></span>
-                                    <span>-${discount = subtotal * 0.10}</span></div></>}
+                                    <span>-${discount = +((subtotal * 0.10).toFixed(2))}</span></div></>}
                                 </div>
                                 <div className="finalTotal">
                                     <h3>Total:</h3>
-                                    <span>${getPromo === false ? total : total-discount}</span>
+                                    <span>${getPromo === false ? total : total = total-discount}</span>
                                 </div>
                     </div>
                 </div>
                 <div className="billing">
-                    <form>
+                    <PayPalButton createOrder={(data, actions) => this.createOrder(data, actions)}
+                        onApprove={(data, actions) => this.onApprove(data, actions)}/>
+                    {/* <form>
                         <div className="formInput">
                             <label>First Name:</label>
                             <input type="text"></input>
@@ -157,7 +175,7 @@ export default function Order(props){
                         </div>
 
                         <button className="formSubmit">Place Order</button>
-                    </form>
+                    </form> */}
                 </div>
             </div>
         )

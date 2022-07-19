@@ -1,14 +1,17 @@
 .cartContent{
     display:flex;
-    flex-direction: row-reverse;
+    flex-direction: row;
+    /* margin-top: 2%; */
+    padding: 2.5% 5% 5% 5%;
+    min-height:80vh;
 }
 
 .cart{
-    width:50%;
+    width:60%;
 }
 .billing{
     width: 50%;
-    padding:40px 40px 40px 150px;
+    padding:40px 40px 40px 40px;
 }
 form{
     width:100%;
@@ -43,7 +46,7 @@ input{
 
 }
 .cartItems{
-    padding:20px 150px 0 50px;
+    padding:20px 40px 0 50px;
 }
 .viewItems{
     border: 2px solid black;
