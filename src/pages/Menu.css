@@ -58,6 +58,7 @@ button{
 #add, #remove{
     width:2em;
     font-weight: bold;
+    color:#391117
 }
 #quantity{
     width:80%;
