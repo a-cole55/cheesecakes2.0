@@ -7,8 +7,10 @@ import Menu from "./pages/Menu.js";
 import About from "./pages/About.js";
 import Order from "./pages/Order.js";
 import Specials from "./pages/Specials.js";
+import HomeImg from "./assets/bourbonpecan.jpg";
+import Home2 from "./assets/strawberrys.jpg"
 import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
-import { useState } from "react"
+import { useState } from "react";
 
 
 function App() {
@@ -28,6 +30,8 @@ function App() {
             <Route path="/order" element={<Order totalQty= {[totalQty, setTotal]} cartTotal={[cart, setCart]} itemTotals={[itemTotals, setItemTotals]} />} />
             <Route path="/specials" element={<Specials/>} />
           </Routes>
+          <img id="smallImg" src={Home2} alt="cheesecake img"></img>
+          <img id="bgImg" src={HomeImg} alt="cheesecake img"></img>
       </div>
     <footer>
         <span id="email">email@cheesecakes.com</span>

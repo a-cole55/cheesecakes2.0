@@ -4,6 +4,22 @@
 .content{
   margin-top: 1%;
 }
+#bgImg{
+  width:25%;
+  opacity:0.3;
+  border-radius: 25em;
+  position:fixed;
+  bottom:195px;
+  right:0px
+}
+#smallImg{
+  width:15%;
+  opacity:0.3;
+  border-radius: 25em;
+  position:fixed;
+  top:300px;
+  left:10px
+}
 
 .shop{
   color: #BB4C50;

@@ -9,8 +9,6 @@ import Cookies from "../assets/cookies.jpg";
 import SweetPotatoe from "../assets/sweetpotatoe (2).jpg";
 import Neo from "../assets/neopolitan.jpg";
 import Minis from "../assets/minis.jpg";
-import HomeImg from "../assets/bourbonpecan.jpg";
-import Home2 from "../assets/strawberrys.jpg";
 import { useState } from "react";
 
 
@@ -76,8 +74,6 @@ export default function Menu(props){
                 <Cheesecake tag="08" img={CaramelApple} alt="caramel apple cheesecake" title="Caramel Apple" price={35} />
                 <Cheesecake tag="09" img={Minis} alt="3 mini cheesecakes of assorted flavors" title="3x Assorted Minis" price={35} />
             </div>
-            <img id="smallImg" src={Home2} alt="cheesecake img"></img>
-            <img id="bgImg" src={HomeImg} alt="cheesecake img"></img>
         </div>
 
     )
