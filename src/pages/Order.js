@@ -7,7 +7,6 @@ import Paypal from "../components/Paypal"
 export default function Order(props){
     let totalQty = props.totalQty[0];
     let cart = props.cartTotal[0];
-    // const [checked, setChecked] = useState(false);
     const [promo, setPromo] = useState("");
     const [getPromo, setGetPromo] = useState("");
     const [discount, setDiscount] = useState(0);
@@ -21,7 +20,9 @@ export default function Order(props){
 
     function emptyCart(){
         return (
-            <h2><Link to="/menu">Visit Here</Link> To Add Items to Your Shopping Bag</h2>
+            <div className="cartContent2">
+                <h2><Link to="/menu">Visit Here</Link> To Add Items to Your Shopping Bag</h2>
+            </div>
         )
     }
 
@@ -95,70 +96,6 @@ export default function Order(props){
                 </div>
                 <div className="billing">
                     <Paypal cart={cart} total={total}/>
-                    {/* <PayPalButton className="paypalBtn" createOrder={(data, actions) => this.createOrder(data, actions)}
-                        onApprove={(data, actions) => this.onApprove(data, actions)}/> */}
-                    {/* <form>
-                        <div className="formInput">
-                            <label>First Name:</label>
-                            <input type="text"></input>
-                        </div>
-                        <div className="formInput">
-                            <label>Last Name:</label>
-                            <input type="text"></input>
-                        </div>
-                        <div className="formInput">
-                            <label>Email:</label>
-                            <input type="email"></input>
-                        </div>
-                        <div className="formInput">
-                            <label>Phone Number:</label>
-                            <input type="tel"></input>
-                        </div>
-                        <div className="formInput">
-                            <label>Mailing Address:</label>
-                            <input type="text"></input>
-                        </div>
-                        <div className="formInput">
-                            <label>City:</label>
-                            <input type="text"></input>
-                        </div>
-                        <div className="formInput">
-                            <label>State:</label>
-                            <input type="text"></input>
-                        </div>
-                        <div className="formInput">
-                            <label>Zipcode:</label>
-                            <input type="number"></input>
-                        </div>
-                        <div className="billingInfo">
-                            <h3>Billing Info</h3>
-                            <div className="billingBorder">
-                                <Checkbox onClick={()=> setChecked(checked => !checked)}></Checkbox><label>Billing Address Different from Shipping</label>
-                                {checked && 
-                                <div className="billingAddress">
-                                    <div className="formInput">
-                                        <label>Mailing Address:</label>
-                                        <input type="text"></input>
-                                    </div>
-                                    <div className="formInput">
-                                        <label>City:</label>
-                                        <input type="text"></input>
-                                    </div>
-                                    <div className="formInput">
-                                        <label>State:</label>
-                                        <input type="text"></input>
-                                    </div>
-                                    <div className="formInput">
-                                        <label>Zip code:</label>
-                                        <input type="number"></input>
-                                    </div>
-                                </div>
-                                }
-                        </div>
-                        </div>
-
-                        <button className="formSubmit">Place Order</button>
-                    </form> */}
                 </div>
             </div>
         )
