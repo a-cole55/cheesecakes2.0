@@ -1,6 +1,8 @@
 .cartContent{
     display:flex;
-    flex-direction: row;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     padding: 1% 5% 5% 5%;
     min-height:80vh;
 }
@@ -12,9 +14,12 @@
 .cart{
     width:60%;
 }
+.cartItems h3{
+    margin-bottom: 3%;
+}
 .billing{
     width: 50%;
-    padding:40px 40px 40px 40px;
+    padding:0px 40px;
 }
 form{
     width:100%;
@@ -55,7 +60,7 @@ input{
 }
 .viewItems{
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: row;
 
 }
 .viewItems img{
@@ -65,9 +70,10 @@ input{
 .viewItemDetails{
     width:100%;
     display:flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    flex-direction: row;
+}
+.viewItemDetails div{
+    width:33%;
 }
 .subtotal{
     padding: 0 10px;
@@ -145,4 +151,19 @@ input{
     .totalDetails{
         padding:5px 40px;
     }
+}
+    @media screen and (max-width:448px){
+        .viewItemDetails{
+            width:100%;
+            display:flex;
+            flex-direction: column;
+            padding-left:5%;
+        }
+        .viewItemDetails div{
+            width: 100%;
+            text-align: left;
+        }
+        .viewItemDetails h3{
+            font-size: 1rem;
+        }
 }

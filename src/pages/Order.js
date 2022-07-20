@@ -49,8 +49,8 @@ export default function Order(props){
         return (
             <div className="cartContent">
                 <div className="cart">
-                    <h3>View Cart</h3>
                     <div className="cartItems">
+                    <h3>View Cart</h3>
                         {cart.map((item) => {
                             subtotal = subtotal + item.itemTotal
                             salesT = subtotal * .0825
@@ -60,9 +60,15 @@ export default function Order(props){
                             <div key={item.name} className="viewItems">
                                 <img src={item.img} alt={item.img}></img>
                                 <div className="viewItemDetails">
+                                    <div>
                                     <h3>{item.name}</h3>
+                                    </div>
+                                    <div>
                                     <h4>QTY: {item.quantity}</h4>
+                                    </div>
+                                    <div>
                                     <span>${item.price}</span>
+                                    </div>
                                 </div>
                                 {/* <div className="subtotal">
                                     <span>${item.itemTotal}</span>
