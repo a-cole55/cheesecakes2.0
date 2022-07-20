@@ -2,7 +2,9 @@
 import {Link} from "react-router-dom";
 import { useState } from "react";
 import "./Order.css";
-import Paypal from "../components/Paypal"
+import Paypal from "../components/Paypal";
+import HomeImg from "../assets/bourbonpecan.jpg";
+import Home2 from "../assets/strawberrys.jpg";
 
 export default function Order(props){
     let totalQty = props.totalQty[0];
@@ -104,7 +106,8 @@ export default function Order(props){
         <div>
             <h1>Cheesecakes by Chelsea</h1>
             {totalQty > 0 ? fullCart(cart, promo, discount, setDiscount, getPromo, setGetPromo) : emptyCart()}
-
+            <img id="smallImg" src={Home2} alt="cheesecake img"></img>
+            <img id="bgImgMenu" src={HomeImg} alt="cheesecake img"></img>
         </div>
 
     )

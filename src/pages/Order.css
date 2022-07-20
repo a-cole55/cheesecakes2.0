@@ -8,6 +8,22 @@
     padding: 1% 5% 5% 5%;
     min-height:80vh;
 }
+#bgImgMenu{
+    width:25%;
+    opacity:0.3;
+    border-radius: 25em;
+    position:fixed;
+    bottom:195px;
+    right:-50px
+}
+#smallImg{
+    width:15%;
+    opacity:0.3;
+    border-radius: 25em;
+    position:fixed;
+    top:300px;
+    left:10px
+}
 
 .cart{
     width:60%;

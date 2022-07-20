@@ -1,5 +1,7 @@
 import LocalOfferIcon from '@mui/icons-material/LocalOffer';
-import "../pages/Specials.css"
+import "../pages/Specials.css";
+import HomeImg from "../assets/bourbonpecan.jpg";
+import Home2 from "../assets/strawberrys.jpg";
 
 export default function Specials(){
     return(
@@ -14,6 +16,8 @@ export default function Specials(){
                 <h3>PROMOCODE: </h3>
                 <h4>CHEESECAKE2022</h4>
             </div>
+            <img id="smallImg" src={Home2} alt="cheesecake img"></img>
+            <img id="bgImg" src={HomeImg} alt="cheesecake img"></img>
 
         </div>
 
