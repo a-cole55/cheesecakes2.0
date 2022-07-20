@@ -36,8 +36,8 @@ function App() {
     <footer>
         <span id="email">email@cheesecakes.com</span>
         <div id="socials">
-          <FacebookIcon className="shop" fontSize="large"/>
-          <InstagramIcon className="shop" fontSize="large"/>
+          <a href="https://acolee.netlify.app/" target="_blank" rel="noreferrer"><FacebookIcon className="shop" fontSize="large"/></a>
+          <a href="https://github.com/a-cole55" target="_blank" rel="noreferrer"><InstagramIcon className="shop" fontSize="large"/></a>
         </div>
         <span>555-555-5555</span>
     </footer>
