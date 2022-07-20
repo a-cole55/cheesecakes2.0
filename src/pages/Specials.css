@@ -23,6 +23,13 @@
 
 }
 
+@media screen and (max-width:950px){
+    .coupon{
+        width:60%;
+        margin-top: 10%;
+    }
+  }
+
 @media screen and (max-width:448px){
     .coupon{
         width:90%;

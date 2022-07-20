@@ -28,6 +28,31 @@ body{
     bottom:75px;
 }
 
+@media screen and (max-width:1100px){
+    #homeLogo{
+        width:60%;
+    }
+  }
+
+  @media screen and (max-width:740px){
+    #homeLogo{
+        width:70%;
+    }
+    #landing p{
+        font-size: 1.1rem;
+        width:90%;
+    }
+  }
+  @media screen and (max-width:550px){
+    #homeLogo{
+        width:80%;
+    }
+    #landing p{
+        font-size: 1.1rem;
+        width:90%;
+    }
+  }
+
 
 @media screen and (max-width:448px){
     #homeLogo{
