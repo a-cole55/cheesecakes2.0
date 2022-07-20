@@ -10,6 +10,9 @@ import SweetPotatoe from "../assets/sweetpotatoe (2)-min.jpg";
 import Neo from "../assets/neopolitan-min.jpg";
 import Minis from "../assets/minis-min.jpg";
 import { useState } from "react";
+import { motion } from "framer-motion";
+
+const transition = {duration: 0.6, ease: [0.43, 0.13, 0.23, 0.96]};
 
 
 
@@ -61,7 +64,11 @@ export default function Menu(props){
 
 
     return(
-        <div>
+        <motion.div
+        initial={{ opacity: 0}}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0}}
+        transition={transition}>
             <h1>Menu</h1>
             <div className="menu">
                 <Cheesecake tag="01" img={BananaPudding} alt="bourbon banana pudding cheesecake" title="Bourbon Banana Pudding" price={55} />
@@ -74,7 +81,7 @@ export default function Menu(props){
                 <Cheesecake tag="08" img={CaramelApple} alt="caramel apple cheesecake" title="Caramel Apple" price={35} />
                 <Cheesecake tag="09" img={Minis} alt="3 mini cheesecakes of assorted flavors" title="3x Assorted Minis" price={35} />
             </div>
-        </div>
+        </motion.div>
 
     )
 }

@@ -1,9 +1,17 @@
 import LocalOfferIcon from '@mui/icons-material/LocalOffer';
 import "../pages/Specials.css";
+import { motion } from "framer-motion";
+
+const transition = {duration: 0.6, ease: [0.43, 0.13, 0.23, 0.96]};
 
 export default function Specials(){
     return(
-        <div className="specials">
+        <motion.div 
+        className="specials"
+        initial={{ opacity: 0}}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0}}
+        transition={transition}>
             <div className="specialsHeading">
                 <h1>Specials</h1>
                 <LocalOfferIcon className="shop discount" fontSize="large"/>
@@ -15,7 +23,7 @@ export default function Specials(){
                 <h4>CHEESECAKE2022</h4>
             </div>
 
-        </div>
+        </motion.div>
 
         
     )
