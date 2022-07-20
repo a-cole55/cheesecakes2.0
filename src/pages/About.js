@@ -1,4 +1,4 @@
-import Owner from "../assets/owner.jpg"
+import Owner from "../assets/owner-min.jpg"
 export default function About(){
     return(
         <div>
