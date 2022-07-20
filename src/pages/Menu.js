@@ -1,14 +1,14 @@
 import "./Menu.css";
 // import DATA from "../Data";
-import BananaPudding from "../assets/banana.jpg";
-import BourbonPecan from "../assets/pecan (2).jpg";
-import CaramelApple from "../assets/caramelapple.jpg";
-import Chocolate from "../assets/choc.jpg";
-import Cinnamon from "../assets/cinnamon.jpg";
-import Cookies from "../assets/cookies.jpg";
-import SweetPotatoe from "../assets/sweetpotatoe (2).jpg";
-import Neo from "../assets/neopolitan.jpg";
-import Minis from "../assets/minis.jpg";
+import BananaPudding from "../assets/banana-min.jpg";
+import BourbonPecan from "../assets/pecan (2)-min.jpg";
+import CaramelApple from "../assets/caramelapple-min.jpg";
+import Chocolate from "../assets/choc-min.jpg";
+import Cinnamon from "../assets/cinnamon-min.jpg";
+import Cookies from "../assets/cookies-min.jpg";
+import SweetPotatoe from "../assets/sweetpotatoe (2)-min.jpg";
+import Neo from "../assets/neopolitan-min.jpg";
+import Minis from "../assets/minis-min.jpg";
 import { useState } from "react";
 
 

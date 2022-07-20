@@ -7,8 +7,8 @@ import Menu from "./pages/Menu.js";
 import About from "./pages/About.js";
 import Order from "./pages/Order.js";
 import Specials from "./pages/Specials.js";
-import HomeImg from "./assets/bourbonpecan.jpg";
-import Home2 from "./assets/strawberrys.jpg"
+import HomeImg from "./assets/bourbonpecan-min.jpg";
+import Home2 from "./assets/strawberrys-min.jpg"
 import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import { useState } from "react";
 

@@ -1,4 +1,4 @@
-import HomeLogo from "../assets/default.png";
+import HomeLogo from "../assets/default-min.png";
 import "./Home.css";
 
 export default function Home(){
