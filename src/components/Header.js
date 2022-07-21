@@ -1,5 +1,5 @@
 import LocalOfferIcon from '@mui/icons-material/LocalOffer';
-import ShoppingBagOutlinedIcon from '@mui/icons-material/ShoppingBagOutlined';
+// import ShoppingBagOutlinedIcon from '@mui/icons-material/ShoppingBagOutlined';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 // import logo from "../assets/default-monochrome.svg";
 import "./Header.css";
