@@ -17,7 +17,7 @@ export default function Home(){
             initial={{ y: "-50%"}}
             animate={{ y: 0, transition: {delay: 0.2, ...transition}}}
             exit={{ opacity: 0}}
-            transition={transition}>Welcome Cheesecake Lover! I'm so glad you're here. I look forward to providing you with the best quality cheesecakes you have ever experienced.</motion.p>
+            transition={transition}>Welcome Cheesecake Lover! I look forward to providing you with the best quality cheesecakes you have ever experienced.</motion.p>
         </motion.div>
     )
 }

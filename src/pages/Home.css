@@ -18,7 +18,7 @@ body{
     margin-bottom: 5%;;
 }
 #landing p{
-    width:80%;
+    max-width:900px;
     height:7em;
     background-color: #D8806B;
     color:white;
