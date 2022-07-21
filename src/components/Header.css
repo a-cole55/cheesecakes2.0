@@ -5,6 +5,7 @@ nav{
     display:flex;
     flex-direction:row;
     justify-content: space-between;
+    padding:1%;
   }
   nav > img{
     width:10%;
@@ -60,14 +61,13 @@ nav{
   }
 
   #cartQty{
-    position:relative;
+    position:absolute;
     text-align: center;
-    top:-7.5px;
-    right:1.3em;
+    top:-1.2px;
+    right:1.8rem;
     color:#391117;;
     font-size:1rem;
-    font-weight: bold;
-    /* background-color: rgba(249,241,241, 0.9); */
+    font-weight: bolder;
     border-radius: 5em;
   }
   

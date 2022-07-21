@@ -1,5 +1,6 @@
 import LocalOfferIcon from '@mui/icons-material/LocalOffer';
 import ShoppingBagOutlinedIcon from '@mui/icons-material/ShoppingBagOutlined';
+import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 // import logo from "../assets/default-monochrome.svg";
 import "./Header.css";
 import {Link} from "react-router-dom";
@@ -31,7 +32,7 @@ export default function Header(props) {
           </div>
       {/* <img src={logo} alt="logo" /> */}
       <div className="actions">
-        <Link to="/order"><ShoppingBagOutlinedIcon className='shop' fontSize='large'/></Link>
+        <Link to="/order"><ShoppingCartOutlinedIcon className='shop' fontSize='large'/></Link>
         {/* conditional statement if over 9 make 9+ & if equal to 0 don't display*/}
         {quantity > 0 && 
         <Link to="/order"><span id="cartQty">{quantity > 9 ? "9+" : quantity}</span></Link>}
