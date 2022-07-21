@@ -11,6 +11,7 @@ import Neo from "../assets/neopolitan-min.jpg";
 import Minis from "../assets/minis-min.jpg";
 import { useState } from "react";
 import { motion } from "framer-motion";
+// import e from "cors";
 
 const transition = {duration: 0.6, ease: [0.43, 0.13, 0.23, 0.96]};
 

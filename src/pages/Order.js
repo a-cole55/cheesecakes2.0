@@ -5,16 +5,18 @@ import "./Order.css";
 import Paypal from "../components/Paypal";
 import { motion } from "framer-motion";
 
+
 const transition = {duration: 0.6, ease: [0.43, 0.13, 0.23, 0.96]};
 
 export default function Order(props){
     let totalQty = props.totalQty[0];
     let cart = props.cartTotal[0];
+    let total = props.total[0];
+    let setTotal = props.total[1];
     const [promo, setPromo] = useState("");
     const [getPromo, setGetPromo] = useState("");
     const [discount, setDiscount] = useState(0);
-    // const [total, setTotal] = useState(0)
-    let total = 0;
+    // let total = 0;
     let salesT = 0;
     let salesTax = 0;
     let subtotal = 0;
@@ -29,7 +31,7 @@ export default function Order(props){
         )
     }
 
-    function fullCart(cart, promo, discount, setDiscount, getPromo, setGetPromo){
+    function fullCart(cart, promo, discount, setDiscount, getPromo, setGetPromo, total, setTotal){
         const elgDiscountCode = "CHEESECAKE2022"
 
         function handleChange(event){
@@ -95,7 +97,7 @@ export default function Order(props){
                                         </div>
                                     {getPromo === true &&
                                     <><div className="totalDetails"><span><strong>Discount: </strong></span>
-                                    <span>-${discount = +(subtotal * 0.10).toFixed(2)}</span></div></>}
+                                    <span>-${discount = Math.round((subtotal * 0.10)*100)/100}</span></div></>}
                                 </div>
                                 <div className="finalTotal">
                                     <h3>Total:</h3>
@@ -116,7 +118,7 @@ export default function Order(props){
         exit={{ opacity: 0}}
         transition={transition}>
             <h1>Cheesecakes by Chelsea</h1>
-            {totalQty > 0 ? fullCart(cart, promo, discount, setDiscount, getPromo, setGetPromo) : emptyCart()}
+            {totalQty > 0 ? fullCart(cart, promo, discount, setDiscount, getPromo, setGetPromo, total, setTotal) : emptyCart()}
         </motion.div>
 
     )
