@@ -89,7 +89,13 @@ export default function Order(props){
                                 <div className="promoCode">
                                     <span><strong>PROMOCODE: </strong></span>
                                     <input type="text" value={promo} onChange={handleChange} />
-                                    <button onClick={()=>checkPromo(promo, elgDiscountCode)}>Redeem</button>
+                                    <motion.button 
+                                        // onMouseOver={}
+                                          initial={{ scale:1}}
+                                          animate={{ scale: 1.1 }}
+                                          exit={{ scale:1}}
+                                          transition={transition}
+                                          onClick={()=>checkPromo(promo, elgDiscountCode)}>Redeem</motion.button>
                                 </div>
                                 <div>
                                     {getPromo === false &&
