@@ -19,7 +19,7 @@ export default function Specials(){
             <motion.div 
             className="coupon"
             initial={{ y: "-50%"}}
-            animate={{ y: 20, transition: {delay: 0.4, duration: 1, ease: [0.43, 0.13, 0.23, 0.96]}}}
+            animate={{ y: 5, transition: {delay: 0.4, duration: 1, ease: [0.43, 0.13, 0.23, 0.96]}}}
             exit={{ opacity: 0}}
             transition={transition}>
                 <h2>Cheesecake Lovers Special</h2>

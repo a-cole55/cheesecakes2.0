@@ -57,23 +57,43 @@ input{
     padding:20px 40px 0 50px;
     padding-bottom:5%;
 }
+
+.cartHeader{
+    background-color:rgba(224, 159, 146, 0.7);
+    height:3em;
+    border-radius: 5px 5px 0 0;
+}
+
+.cartHeader h3{
+    color:white;
+    letter-spacing: 0.1em;
+}
+#cart{
+    box-shadow: 1px 1px 7px rgba(33,33,33,.7);
+    margin-bottom: 3%;
+    border-radius: 5px 5px 0 0;
+}
 .viewItems{
     display: flex;
     flex-direction: row;
     align-items: center;
-    box-shadow: 5px 5px 7px rgba(33,33,33,.7);
-    margin-bottom: 15px;
-
+    border-bottom:2px dashed rgba(224, 159, 146, 0.3);
+    margin-bottom: 5px;
+}
+.viewItems:last-child{
+    border:none;
 }
 .viewItems img{
     width:140px;
-    height: 80px;
+    height: 85px;
+    border:none;
 }
 .viewItemDetails{
     width:100%;
     display:flex;
     flex-direction: row;
 }
+
 .viewItemDetails div{
     width:33%;
 }
@@ -98,16 +118,45 @@ input{
 .totalDetails span, .finalTotal h3, .finalTotal span{
     font-size: 1.5rem;
 }
-.total input{
-    height:30px;
-    width:240px;
+.promoCode input{
+    height:40px;
+    max-width:280px;
     margin:0 0 0 10px;
     border-radius: 0;
+    text-align: center;
+    border-color: rgba(57,17,23,0.8);
+    opacity: 0.85;
+    font:1rem 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
 }
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: rgba(33,33,33,.75);
+    opacity: 0.9; /* Firefox */
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #391117
+  }
+  
+  ::-ms-input-placeholder {
+    color: #391117
+  }
 .promoCode button{
     width:7em;
-    height:2.5em;
-    font-size:0.7rem;
+    height:2.9em;
+    font-size:0.9rem;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+    letter-spacing: 0.07em;
     font-weight: bold;
     text-transform: uppercase;
 }
