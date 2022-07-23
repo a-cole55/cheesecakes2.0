@@ -97,7 +97,7 @@ export default function Order(props){
                                         </div>
                                     {getPromo === true &&
                                     <><div className="totalDetails"><span><strong>Discount: </strong></span>
-                                    <span>-${discount = Math.round((subtotal * 0.10)*100)/100}</span></div></>}
+                                    <span>-${discount = (subtotal * 0.10).toFixed(2)}</span></div></>}
                                 </div>
                                 <div className="promoCode">
                                     {/* <span><strong>PROMOCODE: </strong></span> */}
@@ -115,7 +115,7 @@ export default function Order(props){
                                 </div>
                                 <div className="finalTotal">
                                     <h3>Total:</h3>
-                                    <span>${getPromo === false ? total : total = total-discount}</span>
+                                    <span>${getPromo === false ? total : total = total-(+discount)}</span>
                                 </div>
                     </div>
                 </div>
