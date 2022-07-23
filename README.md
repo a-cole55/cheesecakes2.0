@@ -1,22 +1,23 @@
 Cheesecake Webpage
-This is a demo cheesecake bakery site for a friend. This is a revamp of the original site that was created with HTML, CSS, and vanilla JavaScript. Now to continue to enhance my skills in React, I've decided to build Cheesecakes 2.0. As my skills continue to progress the site will be updated.
+This is a demo cheesecake bakery site for a friend. This is a revamp of the original site that was created with HTML, CSS, and vanilla JavaScript. Now to continue to enhance my skills in React, I've decided to build Cheesecakes 2.0. Users can place their orders directly from the site and pay with PayPal, debit or Credit Card.
 
 Link to project: 
 
 alt tag
 
 How It's Made:
-Tech used: React, NodeJs, Express
+Tech used: React, PayPal REST API
 
-Here's where you can go to town on how you actually built this thing. Write as much as you can here, it's totally fine if it's not too much just make sure you write something. If you don't have too much experience on your resume working on the front end that's totally fine. This is where you can really show off your passion and make up for that ten fold.
+<!-- Description
+How did you build this project. Add all details -->
 
 Optimizations
-(optional)
+I plan to integrate a backend component using NodeJs and Express. I would like for the owner of the business to be able to have access to each cheesecake order (outside of PayPal). Eventually I would like to add an email component as well, which will email the user once the order has been placed and also email the business owner and order summary.
 
-You don't have to include this section but interviewers love that you can not only deliver a final product that looks great but also functions efficiently. Did you write something then refactor it later and the result was 5x faster than the original implementation? Did you cache your assets? Things that you write in this section are GREAT to bring up in interviews and you can use this section as reference when studying for technical interviews!
+<!-- You don't have to include this section but interviewers love that you can not only deliver a final product that looks great but also functions efficiently. Did you write something then refactor it later and the result was 5x faster than the original implementation? Did you cache your assets? Things that you write in this section are GREAT to bring up in interviews and you can use this section as reference when studying for technical interviews! -->
 
 Lessons Learned:
-No matter what your experience level, being an engineer means continuously learning. Every time you build something you always have those whoa this is awesome or fuck yeah I did it! moments. This is where you should share those moments! Recruiters and interviewers love to see that you're self-aware and passionate about growing.
+No matter what your experience level, being an engineer means continuously learning. Also, as an engineer you never feel as if a project is finished. I'm continuing to research ways to optimize this site and also consulting the Cheesecake business owner for feedback. I definitely plan to continue adding to this site.
 
 
 
