@@ -14,6 +14,8 @@ How did you build this project. Add all details -->
 Optimizations
 I plan to integrate a backend component using NodeJs and Express. I would like for the owner of the business to be able to have access to each cheesecake order (outside of PayPal). Eventually I would like to add an email component as well, which will email the user once the order has been placed and also email the business owner and order summary.
 
+Also, I plan to add Redux to site for state management.
+
 <!-- You don't have to include this section but interviewers love that you can not only deliver a final product that looks great but also functions efficiently. Did you write something then refactor it later and the result was 5x faster than the original implementation? Did you cache your assets? Things that you write in this section are GREAT to bring up in interviews and you can use this section as reference when studying for technical interviews! -->
 
 Lessons Learned:
