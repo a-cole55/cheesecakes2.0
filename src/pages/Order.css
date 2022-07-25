@@ -15,6 +15,8 @@
     justify-content: flex-start;
     width:100%;
     position:fixed;
+    top:120px;
+    left:70px;
 }
 #returnButton{
     color:#391117;
@@ -25,7 +27,12 @@
 a{
     color:#391117
 }
-
+a:hover{
+    text-decoration: underline;
+}
+#visitHereLink{
+    color:purple
+}
 .cart{
     width:60%;
 }

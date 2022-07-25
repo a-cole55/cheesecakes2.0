@@ -25,7 +25,7 @@ export default function Order(props){
     function emptyCart(){
         return (
             <div className="cartContent2">
-                <h2><Link to="/menu">Visit Here</Link> To Add Items to Your Shopping Bag</h2>
+                <h2><Link to="/menu"><strong id="visitHereLink">Visit Here</strong></Link> To Add Items to Your Shopping Bag</h2>
             </div>
         )
     }
