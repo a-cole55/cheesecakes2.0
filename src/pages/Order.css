@@ -10,6 +10,21 @@
     padding: 1% 5% 5% 5%;
     min-height:100vh;
 }
+#returnBTNContainer{
+    display:flex;
+    justify-content: flex-start;
+    width:100%;
+    position:fixed;
+}
+#returnButton{
+    color:#391117;
+    font-size: 1.5rem;
+    margin-left: 3em;
+    /* text-transform: uppercase; */
+}
+a{
+    color:#391117
+}
 
 .cart{
     width:60%;

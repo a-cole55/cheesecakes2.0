@@ -32,7 +32,8 @@ export default function Header(props) {
           </div>
       {/* <img src={logo} alt="logo" /> */}
       <div className="actions">
-        <Link to="/order"><ShoppingCartOutlinedIcon className='shop' fontSize='large'/></Link>
+        <Link to="/order"><ShoppingCartOutlinedIcon className='shop' fontSize='large'/>
+        <span id="cartHeading">Cart</span></Link>
         {/* conditional statement if over 9 make 9+ & if equal to 0 don't display*/}
         {quantity > 0 && 
         <Link to="/order"><span id="cartQty">{quantity > 9 ? "9+" : quantity}</span></Link>}

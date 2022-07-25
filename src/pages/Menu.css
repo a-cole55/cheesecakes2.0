@@ -55,15 +55,26 @@ button{
     border-color: rgba(224, 159, 146, 0.3);
     height:2em;
     cursor: pointer;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+    font-weight: bold;
 }
 #add, #remove{
     width:2em;
+    height:2em;
     font-weight: bold;
-    color:#391117
+    color:#391117;
+
 }
 #quantity{
-    width:80%;
-
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    margin-bottom: 1.5px;
 }
 #qtyCount{
     width:2em;
@@ -71,4 +82,6 @@ button{
     font-weight: bold;
     color:#391117;
     text-align: center;
+    margin:0;
+    border-radius:0
 }

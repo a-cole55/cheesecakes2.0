@@ -53,6 +53,9 @@ export default function Order(props){
 
         return (
             <div className="cartContent">
+                <div id="returnBTNContainer">
+                        <span id="returnButton">&lt;&lt; <Link to="/menu">Return to Menu</Link></span>
+                    </div>
                 <div className="cart">
                     <div className="cartItems">
                         <div id="cart">
