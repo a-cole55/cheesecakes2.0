@@ -1,9 +1,10 @@
 Cheesecake Webpage
+
 This is a demo cheesecake bakery site for a friend. This is a revamp of the original site that was created with HTML, CSS, and vanilla JavaScript. Now to continue to enhance my skills in React, I've decided to build Cheesecakes 2.0. Users can place their orders directly from the site and pay with PayPal, debit or Credit Card.
 
-Link to project: 
+Link to project: https://cheesecakes.netlify.app/
 
-alt tag
+![Cheesecakes](https://user-images.githubusercontent.com/94746691/180818004-bfb7db78-b518-49e7-a338-97aa3292f410.png)
 
 How It's Made:
 Tech used: React, PayPal REST API
