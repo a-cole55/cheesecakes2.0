@@ -16,7 +16,6 @@ export default function Order(props){
     const [promo, setPromo] = useState("");
     const [getPromo, setGetPromo] = useState("");
     const [discount, setDiscount] = useState(0);
-    // let total = 0;
     let salesT = 0;
     let salesTax = 0;
     let subtotal = 0;
@@ -47,6 +46,10 @@ export default function Order(props){
                 setGetPromo(false)
             }
         }
+
+        // const calcTotal = (total){
+        //     setTotal(total => total)
+        // }
 
         return (
             <div className="cartContent">
@@ -100,7 +103,6 @@ export default function Order(props){
                                     <span>-${discount = (subtotal * 0.10).toFixed(2)}</span></div></>}
                                 </div>
                                 <div className="promoCode">
-                                    {/* <span><strong>PROMOCODE: </strong></span> */}
                                     <input type="text" 
                                     placeholder="PROMO CODE"
                                     value={promo} 
