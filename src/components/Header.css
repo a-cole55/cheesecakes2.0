@@ -61,10 +61,10 @@ nav{
   }
 
   #cartQty{
-    position:absolute;
+    position:relative;
     text-align: center;
-    top:-11px;
-    right:115px;
+    top:-35px;
+    left:-45px;
     color:#391117;
     font-size:1rem;
     font-weight: bolder;
@@ -79,8 +79,6 @@ nav{
       position: absolute;
     }
     #cartQty{
-      top:-8px;
-      right:63px;
       font-size:0.8rem;
 
     }
