@@ -191,14 +191,24 @@ input{
 .finalTotal span{
     margin-top: 0rem;
 }
-/* .promoCode button:hover{
-    transition: all 0.3s ease;
-    /* background-color:#391117;
-    color:white;
- } */
 
 .billing{
     padding:0 10%;
+}
+
+#placeOrder{
+    width:10em;
+    height:2.9em;
+    font-size:0.9rem;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+    letter-spacing: 0.07em;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom:3em;
 }
 
 @media screen and (max-width:950px){

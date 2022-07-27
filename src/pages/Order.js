@@ -16,6 +16,7 @@ export default function Order(props){
     const [promo, setPromo] = useState("");
     const [getPromo, setGetPromo] = useState("");
     const [discount, setDiscount] = useState(0);
+    const [placeOrder, setPlaceOrder] = useState(false)
     let salesT = 0;
     let salesTax = 0;
     let subtotal = 0;
@@ -30,7 +31,7 @@ export default function Order(props){
         )
     }
 
-    function fullCart(cart, promo, discount, setDiscount, getPromo, setGetPromo, total, setTotal){
+    function fullCart(cart, promo, discount, setDiscount, getPromo, setGetPromo, total, setTotal, placeOrder, setPlaceOrder){
         const elgDiscountCode = "CHEESECAKE2022"
 
         function handleChange(event){
@@ -42,9 +43,13 @@ export default function Order(props){
                 setGetPromo(true)
                 // calcDiscount()
             }else{
-                getPromo = false;
+                // getPromo = false;
                 setGetPromo(false)
             }
+        }
+
+        const displayPayment = (placeOrder) =>{
+            setPlaceOrder(true)
         }
 
         // const calcTotal = (total){
@@ -125,7 +130,9 @@ export default function Order(props){
                     </div>
                 </div>
                 <div className="billing">
-                    <Paypal cart={cart} total={total}/>
+                    <button id="placeOrder" onClick={()=>displayPayment(placeOrder)}>PLACE ORDER</button>
+                    {placeOrder === true && <Paypal cart={cart} total={total}/>}
+                    {/* <Paypal cart={cart} total={total}/> */}
                 </div>
             </div>
         )
@@ -137,7 +144,7 @@ export default function Order(props){
         exit={{ opacity: 0}}
         transition={transition}>
             <h1>Cheesecakes by Chelsea</h1>
-            {totalQty > 0 ? fullCart(cart, promo, discount, setDiscount, getPromo, setGetPromo, total, setTotal) : emptyCart()}
+            {totalQty > 0 ? fullCart(cart, promo, discount, setDiscount, getPromo, setGetPromo, total, setTotal, placeOrder, setPlaceOrder) : emptyCart()}
         </motion.div>
 
     )
