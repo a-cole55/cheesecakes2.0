@@ -13,10 +13,9 @@
 #returnBTNContainer{
     display:flex;
     justify-content: flex-start;
+    align-items: center;
     width:100%;
-    position:fixed;
-    top:120px;
-    left:180px;
+    position:static;
 }
 #returnButton{
     color:#391117;
@@ -213,8 +212,8 @@ input{
 
 @media screen and (max-width:950px){
     h1{
-        font-size: 4rem;
-        padding-top: 9%;
+        font-size: 3rem;
+        padding-top: 5%;
     }
     .cartContent{
         display:flex;
@@ -260,9 +259,6 @@ input{
 
     @media screen and (max-width:480px){
         #returnBTNContainer{
-            display:flex;
-            justify-content: flex-start;
-            width:100%;
             position:static;
             top:110px;
             left:0;
