@@ -257,7 +257,21 @@ input{
         padding:5px 40px;
     }
 }
-    @media screen and (max-width:448px){
+
+    @media screen and (max-width:480px){
+        #returnBTNContainer{
+            display:flex;
+            justify-content: flex-start;
+            width:100%;
+            position:static;
+            top:110px;
+            left:0;
+        }
+        #returnButton{
+            color:#391117;
+            font-size: 1rem;
+            margin-left: 3em;
+        }
         .viewItemDetails{
             width:100%;
             display:flex;

@@ -40,10 +40,19 @@ span{
 #email{
   font-size: 1.7rem;
 }
-@media screen and (max-width:448px){
+@media screen and (max-width:480px){
+  .content{
+    margin-top: 5%;
+  }
   footer{
-    font-size:1.2rem;
+    font-size:1.25rem;
     padding: 0;
     justify-content: space-evenly;
   }
+  #email{
+    font-size: 1.25rem;
+  }
+  #phoneNumber{
+    font-size: 1rem;
+}
 }

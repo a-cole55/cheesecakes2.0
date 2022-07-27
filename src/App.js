@@ -40,7 +40,7 @@ function App() {
           <a href="https://acolee.netlify.app/" target="_blank" rel="noreferrer"><FacebookIcon className="shop" fontSize="large"/></a>
           <a href="https://github.com/a-cole55" target="_blank" rel="noreferrer"><InstagramIcon className="shop" fontSize="large"/></a>
         </div>
-        <span>555-555-5555</span>
+        <span id="phoneNumber">555-555-5555</span>
     </footer>
   </div>
   </Router>

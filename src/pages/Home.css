@@ -68,5 +68,9 @@ body{
     #landing p{
         width:90%;
         font-size: 1rem;
+        height:7em;
+        position:relative;
+        bottom:0;
+        padding: 2.5% 19%;
     }
   }
