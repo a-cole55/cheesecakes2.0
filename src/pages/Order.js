@@ -23,7 +23,7 @@ export default function Order(props){
     // let discount = 0;
 
 
-    function emptyCart(){
+    function EmptyCart(){
         return (
             <div className="cartContent2">
                 <h2><Link to="/menu"><strong id="visitHereLink">Visit Here</strong></Link> To Add Items to Your Shopping Bag</h2>
@@ -31,8 +31,9 @@ export default function Order(props){
         )
     }
 
-    function fullCart(cart, promo, discount, setDiscount, getPromo, setGetPromo, total, setTotal, placeOrder, setPlaceOrder){
-        const elgDiscountCode = "CHEESECAKE2022"
+    function FullCart(cart, promo, discount, setDiscount, getPromo, setGetPromo, total, setTotal, placeOrder, setPlaceOrder){
+        const elgDiscountCode = "CHEESECAKE2022";
+        const [disabled, setDisabled] = useState(false);
 
         function handleChange(event){
             setPromo(event.target.value)
@@ -49,7 +50,7 @@ export default function Order(props){
         }
 
         const displayPayment = (placeOrder) =>{
-            setPlaceOrder(true)
+            setPlaceOrder(placeOrder => !placeOrder)
         }
 
         // const calcTotal = (total){
@@ -114,6 +115,7 @@ export default function Order(props){
                                     <input type="text" 
                                     placeholder="PROMO CODE"
                                     value={promo} 
+                                    disabled = {disabled}
                                     onChange={handleChange} />
                                     <motion.button 
                                         // onMouseOver={}
@@ -130,7 +132,11 @@ export default function Order(props){
                     </div>
                 </div>
                 <div className="billing">
-                    <button id="placeOrder" onClick={()=>displayPayment(placeOrder)}>PLACE ORDER</button>
+                    <button id="placeOrder" 
+                    onClick={()=> {
+                        displayPayment(placeOrder);
+                        setDisabled(disabled => !disabled)
+                    }}>PLACE ORDER</button>
                     {placeOrder === true && <Paypal cart={cart} total={total}/>}
                     {/* <Paypal cart={cart} total={total}/> */}
                 </div>
@@ -144,7 +150,7 @@ export default function Order(props){
         exit={{ opacity: 0}}
         transition={transition}>
             <h1>Cheesecakes by Chelsea</h1>
-            {totalQty > 0 ? fullCart(cart, promo, discount, setDiscount, getPromo, setGetPromo, total, setTotal, placeOrder, setPlaceOrder) : emptyCart()}
+            {totalQty > 0 ? FullCart(cart, promo, discount, setDiscount, getPromo, setGetPromo, total, setTotal, placeOrder, setPlaceOrder) : EmptyCart()}
         </motion.div>
 
     )
