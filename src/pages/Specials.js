@@ -1,6 +1,8 @@
 import LocalOfferIcon from '@mui/icons-material/LocalOffer';
 import "../pages/Specials.css";
 import { motion } from "framer-motion";
+import HomeImg from "../assets/bourbonpecan-min.jpg";
+import Home2 from "../assets/strawberrys-min.jpg"
 
 const transition = {duration: 0.6, ease: [0.43, 0.13, 0.23, 0.96]};
 
@@ -27,6 +29,8 @@ export default function Specials(){
                 <h3>PROMOCODE: </h3>
                 <h4>CHEESECAKE2022</h4>
             </motion.div>
+            <img id="smallImg" className="hide" src={Home2} alt="cheesecake img"></img>
+        <img id="bgImg" className="hide" src={HomeImg} alt="cheesecake img"></img>
 
         </motion.div>
 

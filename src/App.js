@@ -7,8 +7,6 @@ import Menu from "./pages/Menu.js";
 import About from "./pages/About.js";
 import Order from "./pages/Order.js";
 import Specials from "./pages/Specials.js";
-import HomeImg from "./assets/bourbonpecan-min.jpg";
-import Home2 from "./assets/strawberrys-min.jpg"
 import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import { useState } from "react";
 
@@ -31,8 +29,6 @@ function App() {
             <Route path="/order" element={<Order totalQty= {[totalQty, setTotal]} cartTotal={[cart, setCart]} itemTotals={[itemTotals, setItemTotals]} total={[total, setCartTotal]}/>} />
             <Route path="/specials" element={<Specials/>} />
           </Routes>
-          <img id="smallImg" className="hide" src={Home2} alt="cheesecake img"></img>
-          <img id="bgImg" className="hide" src={HomeImg} alt="cheesecake img"></img>
       </div>
     <footer>
         <span id="email">email@cheesecakes.com</span>

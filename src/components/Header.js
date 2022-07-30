@@ -11,26 +11,26 @@ export default function Header(props) {
     return(
       <header className="App-header">
 
-        <nav class="navbar navbar-expand-lg">
-          <div class="container-fluid">
-            <Link to="/"><img src={NavLogo} alt="cheesecake logo" class="navbar-brand"></img></Link>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
+        <nav className="navbar navbar-expand-lg">
+          <div className="container-fluid">
+            <Link to="/"><img src={NavLogo} alt="cheesecake logo" className="navbar-brand"></img></Link>
+            <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+              <span className="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarText">
-              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                  {/* <a class="nav-link active" aria-current="page" href="#">Home</a> */}
+            <div className="collapse navbar-collapse" id="navbarText">
+              <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+                <li className="nav-item">
+                  {/* <a className="nav-link active" aria-current="page" href="#">Home</a> */}
                   <Link to="/menu" className='nav-link menuNav' aria-current="page">Menu</Link>
                 </li>
-                <li class="nav-item">
+                <li className="nav-item">
                   <Link to="/order" className='nav-link'>Order</Link>
                 </li>
-                <li class="nav-item">
+                <li className="nav-item">
                 <Link to="/specials" className='nav-link'>Specials <LocalOfferIcon className="shop discount" fontSize="small"/></Link>
                 </li>
               </ul>
-              {/* <span class="navbar-text">
+              {/* <span className="navbar-text">
                 Navbar text with an inline element
               </span> */}
               <div className="actions">

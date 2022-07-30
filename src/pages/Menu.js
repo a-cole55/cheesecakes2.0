@@ -10,7 +10,10 @@ import SweetPotatoe from "../assets/sweetpotatoe (2)-min.jpg";
 import Neo from "../assets/neopolitan-min.jpg";
 import Minis from "../assets/minis-min.jpg";
 import { useState } from "react";
+import {Link} from "react-router-dom"
 import { motion } from "framer-motion";
+import Button from 'react-bootstrap/Button';
+import Modal from 'react-bootstrap/Modal';
 // import e from "cors";
 
 const transition = {duration: 0.6, ease: [0.43, 0.13, 0.23, 0.96]};
@@ -24,9 +27,15 @@ export default function Menu(props){
     let setCart = props.cartTotal[1];
     let itemTotals = props.itemTotals[0];
     let setItemTotals = props.itemTotals[1];
+    const [show, setShow] = useState(false);
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
+
  
-    function Cheesecake(props){
+    function Cheesecake(props, setShow){
         const [quantity, setQuantity] = useState(0);
+        // const [show, setShow] = useState(false);
+        // const handleShow = () => setShow(true);
     
         function addItem(){
             setQuantity(quantity < 10 ? quantity + 1 : quantity);
@@ -45,32 +54,53 @@ export default function Menu(props){
             setTotal(totalQty = totalQty + quantity),
             itemTotal(props),
             setCart(cart = [...cart, {"quantity": quantity, "key": props.tag, "name":props.title, "price":props.price, "img":props.img, "itemTotal": itemTotals}]),
-            console.log(cart)
+            console.log(cart),
+            handleShow()
         )}
     return(
         <div className="cheesecake">
                 <img src={props.img} alt=""></img>
                 <h3>{props.title}</h3>
                 <span id="price">${props.price}</span>
-                <div id="quantity">
-                        <button id="remove" onClick={removeItem}>-</button>
-                        <input disabled id="qtyCount" value={quantity}></input>
-                        <button id="add" onClick={addItem}>+</button>
+                <div id="menuBTNS">
+                  <div id="quantity">
+                          <button id="remove" onClick={removeItem}>-</button>
+                          <input disabled id="qtyCount" value={quantity}></input>
+                          <button id="add" onClick={addItem}>+</button>
+                      </div>
+                    <div id="addToCartBTN">
+                    {quantity > 0 && 
+                  <button id="order" type="button" onClick={() => handleCart(props)}>Add to Cart</button>
+                      }
                     </div>
-                {quantity > 0 && 
-                <button id="order" type="button" onClick={() => handleCart(props)}>Add to Cart</button>
-                    }
+                </div>
         </div>
         )};
 
 
     return(
         <motion.div
+        className="menuBG"
         initial={{ opacity: 0}}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0}}
         transition={transition}>
             <h1>Menu</h1>
+            <Modal show={show} onHide={handleClose}>
+            <Modal.Header closeButton className="modalTitle">
+              <Modal.Title className="modalHeading">Item Added To Cart</Modal.Title>
+            </Modal.Header>
+            <Modal.Footer className="modalFooter">
+              <Button variant="secondary" onClick={handleClose} className="modalBTN">
+                Continue Shopping
+              </Button>
+              <Link to="/order">
+                <Button variant="primary" onClick={handleClose} className="modalBTNCart">
+                  View Cart
+                </Button>
+              </Link>
+            </Modal.Footer>
+          </Modal>
             <div className="menu">
                 <Cheesecake tag="01" img={BananaPudding} alt="bourbon banana pudding cheesecake" title="Bourbon Banana Pudding" price={55} />
                 <Cheesecake tag="02" img={BourbonPecan} alt="bourbon pecan pie cheesecake" title="Bourbon Pecan" price={50} />

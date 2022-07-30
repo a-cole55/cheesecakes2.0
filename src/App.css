@@ -10,7 +10,8 @@
   border-radius: 25em;
   position:fixed;
   bottom:195px;
-  right:0px
+  right:0px;
+  z-index: 0.5;
 }
 #smallImg{
   width:20%;
@@ -18,7 +19,8 @@
   border-radius: 25em;
   position:fixed;
   top:300px;
-  left:10px
+  left:10px;
+  z-index: 0.5;
 }
 
 .shop{
