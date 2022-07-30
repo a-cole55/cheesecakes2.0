@@ -14,7 +14,7 @@ export default function Specials(){
         transition={transition}>
             <div className="specialsHeading">
                 <h1>Specials</h1>
-                <LocalOfferIcon className="shop discount" fontSize="large"/>
+                <LocalOfferIcon className="shop discount hide" fontSize="large"/>
             </div>
             <motion.div 
             className="coupon"

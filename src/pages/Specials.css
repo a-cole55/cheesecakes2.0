@@ -12,9 +12,9 @@
 }
 .coupon{
     height:30vh;
-    width:40%;
+    width:600px;
     border-radius: 2em;
-    margin-top: 3%;
+    margin-top: 1%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -31,16 +31,21 @@
     text-shadow: black 1px 2px;
 }
 
-@media screen and (max-width:950px){
+@media screen and (max-width:690px){
     .coupon{
-        width:60%;
-        margin-top: 10%;
+        width:500px;
+    }
+    .hide{
+        display: none;
     }
   }
-
-@media screen and (max-width:448px){
+  @media screen and (max-width:550px){
     .coupon{
-        width:90%;
-        margin-top: 10%;
+        width:450px;
+    }
+  }
+@media screen and (max-width:500px){
+    .coupon{
+        max-width:400px;
     }
   }
