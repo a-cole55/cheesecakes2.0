@@ -1,16 +1,17 @@
-nav{
-    position: fixed;
-    width: 100%;
-    text-align: center;
-    display:flex;
-    flex-direction:row;
-    justify-content: space-between;
-    padding: 0 5%;
+  nav{
+    background-color: #F9EFED;
   }
-  nav > img{
-    width:10%;
+  nav img{
+    width:60px;
+    border-radius:10em;
     margin-left:1%;
   }
+  .nav-link, .menuNav{
+    font-size: 1.2rem;
+    color:#391117;
+    font-family: "Source Sans Pro", sans-serif;
+  }
+
   /* Menu Bar */
   .bar1, .bar2, .bar3 {
     width: 35px;
@@ -63,7 +64,7 @@ nav{
   #cartQty{
     position:relative;
     text-align: center;
-    top:-35px;
+    top:-20px;
     left:-45px;
     color:#391117;
     font-size:1rem;
@@ -80,7 +81,6 @@ nav{
     }
     #cartQty{
       font-size:0.8rem;
-
     }
   }
   

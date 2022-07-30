@@ -1,6 +1,5 @@
 .App {
   text-align: center;
-  margin-top:2%;
 }
 .content{
   margin-top: 1%;
@@ -14,7 +13,7 @@
   right:0px
 }
 #smallImg{
-  width:15%;
+  width:20%;
   opacity:0.3;
   border-radius: 25em;
   position:fixed;
@@ -40,9 +39,19 @@ span{
 #email{
   font-size: 1.7rem;
 }
-@media screen and (max-width:480px){
+@media screen and (max-width:1000px){
+  .hide{
+    display: none;
+  }
+}
+@media screen and (max-width:900px){
   .content{
-    margin-top: 5%;
+    margin-top:2%;
+  } 
+}
+@media screen and (max-width:600px){
+  .content{
+    margin-top:5%;
   }
   footer{
     font-size:1.25rem;

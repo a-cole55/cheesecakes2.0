@@ -31,8 +31,8 @@ function App() {
             <Route path="/order" element={<Order totalQty= {[totalQty, setTotal]} cartTotal={[cart, setCart]} itemTotals={[itemTotals, setItemTotals]} total={[total, setCartTotal]}/>} />
             <Route path="/specials" element={<Specials/>} />
           </Routes>
-          <img id="smallImg" src={Home2} alt="cheesecake img"></img>
-          <img id="bgImg" src={HomeImg} alt="cheesecake img"></img>
+          <img id="smallImg" className="hide" src={Home2} alt="cheesecake img"></img>
+          <img id="bgImg" className="hide" src={HomeImg} alt="cheesecake img"></img>
       </div>
     <footer>
         <span id="email">email@cheesecakes.com</span>
