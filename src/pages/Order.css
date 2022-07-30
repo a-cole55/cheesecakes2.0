@@ -1,14 +1,31 @@
 .cartContent{
     display:flex;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row;
+    align-items: flex-start;
     justify-content: center;
     padding: 1% 5% 5% 5%;
     min-height:100vh;
+    margin-top: 3%;
 }
 .cartContent2{
     padding: 1% 5% 5% 5%;
     min-height:100vh;
+}
+.cartHeader{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.shoppingHeader{
+    display: inline;
+    margin:0;
+    font-size: 1.5rem;
+}
+#totalQtyHeader{
+    color:white;
+    font: 1.15rem "Source Sans Pro", sans-serif;
+    text-transform: uppercase;
 }
 a{
     color:#391117
@@ -20,10 +37,17 @@ a:hover{
     color:purple
 }
 .cart{
-    width:60%;
+    width:55%;
+    margin-right: 100px;
 }
-.cartItems h3{
+h4{
+    font-size:1rem;
+}
+#cartTotal{
+    width:30%;
+    box-shadow: 1px 1px 7px rgba(33,33,33,.7);
     margin-bottom: 3%;
+    border-radius: 5px 5px 0 0;
 }
 .billing{
     width: 50%;
@@ -61,15 +85,20 @@ input{
     font:1.5rem 'Rancho', cursive;
 
 }
-.cartItems{
+/* .cartItems{
     padding:20px 40px 0 50px;
     padding-bottom:5%;
-}
+} */
 
 .cartHeader{
     background-color:rgba(224, 159, 146, 0.7);
-    height:3em;
+    height:5em;
     border-radius: 5px 5px 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
 }
 
 .cartHeader h3{
@@ -78,7 +107,6 @@ input{
 }
 #cart{
     box-shadow: 1px 1px 7px rgba(33,33,33,.7);
-    margin-bottom: 3%;
     border-radius: 5px 5px 0 0;
 }
 .viewItems{
@@ -121,22 +149,31 @@ input{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding:5px 140px;
+    padding:10px 35px 5px 35px;
 }
 .totalDetails span, .finalTotal h3, .finalTotal span{
     font-size: 1.5rem;
 }
+.promoCode{
+    display:flex;
+    align-items: flex-start;
+    justify-content: center;
+}
 .promoCode input{
     height:40px;
-    max-width:280px;
+    width:68%;
     margin:0 0 0 10px;
     border-radius: 0;
     text-align: center;
     border-color: rgba(57,17,23,0.8);
+    border-right: none;
     opacity: 0.85;
     font:1rem 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
+}
+input::selection{
+    border:none;
 }
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
     color: rgba(33,33,33,.75);
@@ -156,30 +193,35 @@ input{
     color: #391117
   }
 .promoCode button{
-    width:7em;
-    height:2.9em;
+    height:2.5em;
     font-size:0.9rem;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    background-color: transparent;
+    text-decoration: underline;
+    border:#391117 2px solid;
+    border-left:none;
+    opacity: 0.85;
+    font:1rem "Source Sans Pro", sans-serif;
     letter-spacing: 0.07em;
     font-weight: bold;
     text-transform: uppercase;
+    color:#391117
 }
 .finalTotal{
-    margin-top:2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding:10px 35px 5px 35px;
 }
 .finalTotal h3{
-    margin-bottom:0;
+    margin:0;
 }
 .finalTotal span{
     margin-top: 0rem;
 }
 
 .billing{
-    padding:0 10%;
+    width:100%;
+    padding:0 10px;
 }
 
 #placeOrder{
@@ -194,14 +236,26 @@ input{
     letter-spacing: 0.07em;
     font-weight: bold;
     text-transform: uppercase;
-    margin-bottom:3em;
+    margin:1em 0 2em 0;
+    border-radius: 2em;
+}
+#placeOrder:hover{
+    background-color:rgba(224, 159, 146, 1);
+    color:white
+}
+
+@media screen and (max-width:1200px){
+    .cart{
+        width:55%;
+        margin-right: 50px;
+    }
+    #cartTotal{
+        width:40%;
+    }
+
 }
 
 @media screen and (max-width:950px){
-    h1{
-        font-size: 3rem;
-        padding-top: 5%;
-    }
     .cartContent{
         display:flex;
         flex-direction: column;
@@ -211,13 +265,24 @@ input{
     }
     .cart{
         width:80%;
+        margin-bottom: 50px;
+        margin-right: 0;
     }
+    #cartTotal{
+        width:80%;
+    }
+    .totalDetails{
+        padding:100px 400px;
+    }
+
     .billing{
-        width: 80%;
-        /* padding:40px 40px 40px 40px; */
+        padding:0 40px;
     }
     .totalDetails{
         padding:5px 40px;
+    }
+    .promoCode input{
+        width:78%;
     }
 }
 
@@ -235,6 +300,9 @@ input{
     .cart{
         width:100%;
     }
+    #cartTotal{
+        width:100%;
+    }
     .billing{
         width: 100%;
         /* padding:40px 40px 40px 40px; */
@@ -242,19 +310,12 @@ input{
     .totalDetails{
         padding:5px 40px;
     }
+    .promoCode input{
+        width:75%;
+    }
 }
 
     @media screen and (max-width:480px){
-        #returnBTNContainer{
-            position:static;
-            top:110px;
-            left:0;
-        }
-        #returnButton{
-            color:#391117;
-            font-size: 1rem;
-            margin-left: 3em;
-        }
         .viewItemDetails{
             width:100%;
             display:flex;
@@ -267,5 +328,8 @@ input{
         }
         .viewItemDetails h3{
             font-size: 1rem;
+        }
+        .promoCode input{
+            width:67%;
         }
 }

@@ -27,14 +27,14 @@ export default function Header(props) {
                   <Link to="/order" className='nav-link'>Order</Link>
                 </li>
                 <li className="nav-item">
-                <Link to="/specials" className='nav-link'>Specials <LocalOfferIcon className="shop discount" fontSize="small"/></Link>
+                <Link to="/specials" className='nav-link'>Specials <LocalOfferIcon className="shop discount hideMenuItems" fontSize="small"/></Link>
                 </li>
               </ul>
               {/* <span className="navbar-text">
                 Navbar text with an inline element
               </span> */}
               <div className="actions">
-                <Link to="/order"><ShoppingCartOutlinedIcon className='shop' fontSize='large'/>
+                <Link to="/order"><ShoppingCartOutlinedIcon className='shop hideMenuItems' fontSize='large'/>
                 <span id="cartHeading">Cart</span></Link>
                 {/* conditional statement if over 9 make 9+ & if equal to 0 don't display*/}
                 {quantity > 0 && 

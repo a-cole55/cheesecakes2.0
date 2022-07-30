@@ -79,6 +79,11 @@
     text-decoration: none;
   }
 
+  @media screen and (max-width:992px){
+    .hideMenuItems{
+      display:none;
+    }
+  }
   @media screen and (max-width:480px){
     nav{
       position: absolute;
