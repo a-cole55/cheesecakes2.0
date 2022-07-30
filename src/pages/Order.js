@@ -59,9 +59,6 @@ export default function Order(props){
 
         return (
             <div className="cartContent">
-                <div id="returnBTNContainer">
-                        <span id="returnButton">&lt;&lt; <Link to="/menu">Return to Menu</Link></span>
-                    </div>
                 <div className="cart">
                     <div className="cartItems">
                         <div id="cart">
@@ -150,7 +147,6 @@ export default function Order(props){
         animate={{ opacity: 1 }}
         exit={{ opacity: 0}}
         transition={transition}>
-            <h1>Cheesecakes by Chelsea</h1>
             {totalQty > 0 ? FullCart(cart, promo, discount, setDiscount, getPromo, setGetPromo, total, setTotal, placeOrder, setPlaceOrder) : EmptyCart()}
         </motion.div>
 

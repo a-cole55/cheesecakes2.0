@@ -15,9 +15,9 @@ export default function Home(){
             <img id="homeLogo" src={HomeLogo} alt="logo"></img>
             <motion.p
             initial={{ y: "-70%"}}
-            animate={{ y: "-25%", transition: {delay: 0.4, duration: 1, ease: [0.43, 0.13, 0.23, 0.96]}}}
+            animate={{ y: "-45%", transition: {delay: 0.4, duration: 1, ease: [0.43, 0.13, 0.23, 0.96]}}}
             exit={{ opacity: 0}}
-            transition={transition}>Welcome Cheesecake Lover! I look forward to providing you with the best quality cheesecakes you have ever experienced.</motion.p>
+            transition={transition}>Welcome Cheesecake Lover! I look forward to providing you with the best quality cheesecakes you've ever experienced.</motion.p>
         </motion.div>
     )
 }

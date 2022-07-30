@@ -58,7 +58,7 @@ export default function Menu(props){
                         <button id="add" onClick={addItem}>+</button>
                     </div>
                 {quantity > 0 && 
-                <button id="order" type="button" onClick={() => handleCart(props)}>ADD</button>
+                <button id="order" type="button" onClick={() => handleCart(props)}>Add to Cart</button>
                     }
         </div>
         )};

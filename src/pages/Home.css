@@ -1,12 +1,8 @@
-/* #home{
-    display: flex;
-    flex-direction: row;
-} */
 body{
     overflow-x:hidden;
 }
 #homeLogo{
-    width:40%;
+    max-width:600px;
     border-radius: 25em;
     box-shadow: 3px 3px 7px rgba(224, 159, 146, 0.5);
 }
@@ -19,58 +15,48 @@ body{
     margin-bottom: 5%;
 }
 #landing p{
-    max-width:900px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    max-width:740px;
     height:7em;
     background-color: #D8806B;
     color:white;
     text-align: center;
-    font:1.3rem 'Arial';
-    padding: 3.5% 5% 0 5%;
+    font:1.3rem "Source Sans Pro", sans-serif;
+    padding:0 5%;
     position:relative;
     bottom:75px;
     box-shadow: 1px 1px 7px rgba(224, 159, 146, 0.7);
-    /* margin-bottom: 6%; */
 }
-
-@media screen and (max-width:1100px){
+  @media screen and (max-width:700px){
     #homeLogo{
-        width:60%;
-    }
-  }
-
-  @media screen and (max-width:740px){
-    #homeLogo{
-        width:70%;
+        max-width:500px;
     }
     #landing p{
-        font-size: 1.1rem;
-        width:90%;
+        font-size: 1.2rem;
+        width:95%;
+        height: 7em;
+        bottom:40px;
     }
   }
   @media screen and (max-width:550px){
     #homeLogo{
-        width:80%;
+        max-width:480px;
     }
     #landing p{
         font-size: 1.1rem;
-        width:90%;
+        bottom:40px;
     }
   }
-
-
-@media screen and (max-width:448px){
+  @media screen and (max-width:500px){
     #homeLogo{
-        width:90%;
-    }
-    #landing{
-        width:100%;
+        max-width:440px;
     }
     #landing p{
-        width:90%;
-        font-size: 1rem;
-        height:7em;
-        position:relative;
-        bottom:0;
-        padding: 2.5% 19%;
+        font-size: 1.1rem;
+        bottom:20px;
+
     }
+
   }
