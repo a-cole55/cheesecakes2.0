@@ -196,6 +196,7 @@ input{
     flex-direction: row;
     align-items: flex-end;
     justify-content: center;
+    color:#391117
 }
 #itemTotalDiv{
     width:22%;
@@ -407,6 +408,11 @@ h5{
         }
         #itemTotalDiv{
             width:100%;
+        }
+        .viewItems img{
+            width:200px;
+            height: 120px;
+            border:none;
         }
         .viewItemDetails{
             width:100%;

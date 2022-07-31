@@ -12,6 +12,7 @@ body {
 }
 button{
   transition: all 0.15s ease-in; 
+  color:#391117
 }
 button:hover{
   transition: all 0.2s ease-in;
