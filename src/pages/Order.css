@@ -128,6 +128,9 @@ input{
 .cartItemDetails span:last-child, #remove{
     cursor: pointer;
 }
+/* .cartItemDetails:last-child{
+    width:25%;
+} */
 
 .cartHeader{
     background-color:rgba(224, 159, 146, 0.7);
@@ -171,6 +174,31 @@ input{
 
 .viewItemDetails div{
     width:33%;
+}
+.changeQtyBTN{
+    width:1.25em;
+    display: inline;
+    background-color: transparent;
+    border:none;
+    font-size: 1rem;
+    color:#391117;
+    font-weight: bold;
+}
+.changeQtyBTN:first-child, .changeQtyBTN:last-child{
+    font-size: 1.25rem;
+}
+#quantityBTNContainer{
+    font-size:1.5rem;
+    width:60%;
+}
+.quantityBTN{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: center;
+}
+#itemTotalDiv{
+    width:22%;
 }
 .subtotal{
     padding: 0 10px;
@@ -367,11 +395,23 @@ h5{
         .cartActions{
             padding:5px 20px;
         }
+        #quantityBTNContainer{
+            font-size:1.5rem;
+            width:100%;
+        }
+        .quantityBTN{
+            display: flex;
+            flex-direction: row;
+            align-items: flex-end;
+            justify-content: center;
+        }
+        #itemTotalDiv{
+            width:100%;
+        }
         .viewItemDetails{
             width:100%;
             display:flex;
             flex-direction: column;
-            padding-left:15%;
         }
         .viewItemDetails div{
             width: 100%;

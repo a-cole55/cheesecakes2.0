@@ -90,10 +90,15 @@ export default function Order(props){
                                     <div className="cartItemDetails">
                                     <h3>{item.name}</h3>
                                     </div>
-                                    <div className="cartItemDetails">
-                                    <h4>QTY: {item.quantity}</h4>
+                                    <div className="cartItemDetails" id="quantityBTNContainer">
+                                        <div className="quantityBTN">
+                                        <h4>QTY: </h4>
+                                        <input className="changeQtyBTN" value="-" type="button" />
+                                        <input className="changeQtyBTN" disabled value={item.quantity} />
+                                        <input className="changeQtyBTN" value="+" type="button" />
+                                        </div>
                                     </div>
-                                    <div className="cartItemDetails">
+                                    <div className="cartItemDetails" id="itemTotalDiv">
                                     <span>${item.itemTotal}</span>
                                     </div>
                                     <div className="cartItemDetails">
