@@ -2,7 +2,11 @@ import React, {useRef, useEffect} from "react";
 
 
 export default function Paypal(props){
-
+    console.log(props.cart);
+    let orderArr = props.cart.map((cartItem) => {
+        return ` ${cartItem.name}: ${cartItem.quantity}`
+    });
+    // console.log(orderArr);                                          )
     const paypal = useRef();
 
 
@@ -13,7 +17,7 @@ export default function Paypal(props){
                 return actions.order.create({
                     intent: "CAPTURE",
                     purchase_units: [{
-                            description: `Cheesecake Order: ${props.cart}`,
+                            description: `${orderArr}`,
                             amount: {
                                 value: props.total
                             },
@@ -30,7 +34,7 @@ export default function Paypal(props){
             }
         })
         .render(paypal.current);
-    }, [props]);
+    }, [props, orderArr]);
     return (
         <div ref={paypal}></div>
     )
