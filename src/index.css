@@ -10,4 +10,10 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+button{
+  transition: all 0.15s ease-in; 
+}
+button:hover{
+  transition: all 0.2s ease-in;
+}
 

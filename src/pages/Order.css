@@ -116,10 +116,12 @@ input{
     font:1.5rem 'Rancho', cursive;
 
 }
-/* .cartItems{
-    padding:20px 40px 0 50px;
-    padding-bottom:5%;
-} */
+.cartItemDetails{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
 .cartHeader{
     background-color:rgba(224, 159, 146, 0.7);
