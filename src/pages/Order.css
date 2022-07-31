@@ -190,10 +190,7 @@ input{
 .changeQtyBTN input::placeholder{
     color:#391117;
 }
-.changeQtyBTN input::-moz-placeholder{
-    color:#391117;
-}
-.changeQtyBTN input::-webkit-input-placeholder{
+#adjustQTY{
     color:#391117;
 }
 .changeQtyBTN:first-child, .changeQtyBTN:last-child{
