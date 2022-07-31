@@ -49,7 +49,6 @@ export default function Order(props){
                 setGetPromo(true)
                 // calcDiscount()
             }else{
-                // getPromo = false;
                 setGetPromo(false)
             }
         }
@@ -69,7 +68,11 @@ export default function Order(props){
                         <div id="cart">
                             <div className="cartHeader">
                                 <h3 className="shoppingHeader">Shopping Cart</h3>
-                                <span id="totalQtyHeader">({props.totalQty} Items)</span>
+                                <span id="totalQtyHeader">({props.totalQty} {props.totalQty > 1 ? "Items" : "Item"})</span>
+                            </div>
+                            <div className="cartActions">
+                                <Link to="/menu"><h4 id="continueShopping">Continue Shopping</h4></Link>
+                                <button id="updateCartBTN">Update Cart</button>
                             </div>
                             {cart.map((item) => {
                             subtotal = subtotal + item.itemTotal
@@ -103,41 +106,44 @@ export default function Order(props){
                     <div className="cartHeader">
                         <h3 className="shoppingHeader">Checkout</h3>
                     </div>
-                        <div className="total">
-                            <div className="totalDetails">
+                  
+                    <div className="promoCode">
+                        <input type="text" 
+                            placeholder="PROMO CODE"
+                            value={promo} 
+                            disabled = {disabled}
+                            onChange={handleChange} />
+                        <button 
+                            onClick={()=>checkPromo(promo, elgDiscountCode)}>Apply</button>
+                    </div>
+
+                    <div>
+                        {getPromo === false &&
+                            <h5>This is an invalid code</h5>}
+                    </div>
+                    <div className="totalDetails">
                                 <span><strong>Subtotal: </strong></span>
                                 <span>${subtotal}</span>
                             </div>
+                    {getPromo === true &&
+                        <><div className="totalDetails"><span><strong>Discount: </strong></span>
+                        <span>-${discount = (subtotal * 0.10).toFixed(2)}</span></div></>}
+
+
+                        <div className="total">
+                            {/* <div className="totalDetails">
+                                <span><strong>Subtotal: </strong></span>
+                                <span>${subtotal}</span>
+                            </div> */}
                             <div className="totalDetails">
                                 <span><strong>Sales Tax </strong>(8.25%):</span>
                                 <span>${salesTax}</span>
-                            </div>
-                            <div>
-                                {getPromo === false &&
-                                    <h5>This is an invalid code</h5>}
-                                    </div>
-                                {getPromo === true &&
-                                <><div className="totalDetails"><span><strong>Discount: </strong></span>
-                                <span>-${discount = (subtotal * 0.10).toFixed(2)}</span></div></>}
-                            </div>
-                            <div className="promoCode">
-                                <input type="text" 
-                                placeholder="PROMO CODE"
-                                value={promo} 
-                                disabled = {disabled}
-                                onChange={handleChange} />
-                                <motion.button 
-                                    // onMouseOver={}
-                                    //   initial={{ scale:1}}
-                                    //   animate={{ scale: 1.1 }}
-                                    //   exit={{ scale:1}}
-                                    //   transition={transition}
-                                      onClick={()=>checkPromo(promo, elgDiscountCode)}>Apply</motion.button>
                             </div>
                             <div className="finalTotal">
                                 <h3>Total:</h3>
                                 <span>${getPromo === false ? total : total = total-(+discount)}</span>
                             </div>
+                    </div>
                 <div className="billing">
                     <button id="placeOrder" 
                     onClick={()=> {

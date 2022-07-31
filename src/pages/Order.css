@@ -22,6 +22,37 @@
     margin:0;
     font-size: 1.5rem;
 }
+.cartActions{
+    padding:5px 60px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom:1px solid rgba(224, 159, 146, 0.1);
+}
+#continueShopping{
+    text-decoration: underline;
+}
+#continueShopping:hover{
+    color:purple
+}
+#updateCartBTN{
+    width:10em;
+    height:2.9em;
+    font-size:0.9rem;
+    font-family: "Source Sans Pro", sans-serif;
+    letter-spacing: 0.07em;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin:1em 0 2em 0;
+    border-radius: 2em;
+}
+#updateCartBTN:hover{
+    background-color:#391117;
+    opacity: 0.75;
+    border-color:#391117;
+    color:white
+}
 #totalQtyHeader{
     color:white;
     font: 1.15rem "Source Sans Pro", sans-serif;
@@ -152,12 +183,14 @@ input{
     padding:10px 35px 5px 35px;
 }
 .totalDetails span, .finalTotal h3, .finalTotal span{
-    font-size: 1.5rem;
+    font-size: 1.25rem;
+    font-family:"Source Sans Pro", sans-serif;
 }
 .promoCode{
     display:flex;
     align-items: flex-start;
     justify-content: center;
+    margin-top:20px;
 }
 .promoCode input{
     height:40px;
@@ -206,6 +239,11 @@ input::selection{
     text-transform: uppercase;
     color:#391117
 }
+h5{
+    margin-top:10px;
+    color:red;
+    font-size:1rem
+}
 .finalTotal{
     display: flex;
     flex-direction: row;
@@ -214,9 +252,13 @@ input::selection{
 }
 .finalTotal h3{
     margin:0;
+    font-weight: 600;
+    text-transform: capitalize;
+    letter-spacing: 0.01em;
 }
 .finalTotal span{
     margin-top: 0rem;
+    font-weight: 600;
 }
 
 .billing{
@@ -228,11 +270,7 @@ input::selection{
     width:10em;
     height:2.9em;
     font-size:0.9rem;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    font-family: "Source Sans Pro", sans-serif;
     letter-spacing: 0.07em;
     font-weight: bold;
     text-transform: uppercase;
@@ -240,7 +278,9 @@ input::selection{
     border-radius: 2em;
 }
 #placeOrder:hover{
-    background-color:rgba(224, 159, 146, 1);
+    background-color:#391117;
+    opacity: 0.75;
+    border-color:#391117;
     color:white
 }
 
@@ -316,11 +356,14 @@ input::selection{
 }
 
     @media screen and (max-width:480px){
+        .cartActions{
+            padding:5px 20px;
+        }
         .viewItemDetails{
             width:100%;
             display:flex;
             flex-direction: column;
-            padding-left:5%;
+            padding-left:15%;
         }
         .viewItemDetails div{
             width: 100%;
