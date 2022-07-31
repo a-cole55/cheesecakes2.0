@@ -22,13 +22,14 @@ h1{
     opacity: 0.9;
 }
 .modalBTNCart{
-    background-color: #BB4C50;
-    opacity:0.8;
+    background-color:rgba(224, 159, 146, 0.7);
+    color:#391117;
+    font-weight: bold;
     border: #391117;
 }
 .modalBTNCart:hover{
-    background-color: #BB4C50;
-    opacity:1;
+    background-color:rgba(224, 159, 146, 0.9);
+    color:#391117
 }
 .menu{
     display:flex;
