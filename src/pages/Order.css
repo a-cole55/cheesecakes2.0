@@ -187,6 +187,9 @@ input{
 .changeQtyBTN input{
     color:#391117;
 }
+.changeQtyBTN input:placeholder-shown{
+    color:#391117;
+}
 .changeQtyBTN:first-child, .changeQtyBTN:last-child{
     font-size: 1.25rem;
 }
