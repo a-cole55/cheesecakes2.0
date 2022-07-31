@@ -187,7 +187,13 @@ input{
 .changeQtyBTN input{
     color:#391117;
 }
-.changeQtyBTN input:placeholder-shown{
+.changeQtyBTN input::placeholder{
+    color:#391117;
+}
+.changeQtyBTN input::-moz-placeholder{
+    color:#391117;
+}
+.changeQtyBTN input::-webkit-input-placeholder{
     color:#391117;
 }
 .changeQtyBTN:first-child, .changeQtyBTN:last-child{
