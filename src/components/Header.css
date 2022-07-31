@@ -6,7 +6,7 @@
     border-radius:10em;
     margin-left:1%;
   }
-  .nav-link, .menuNav{
+  .nav-link, #menuNav{
     font-size: 1.2rem;
     color:#391117;
     font-family: "Source Sans Pro", sans-serif;
@@ -24,7 +24,7 @@
     position:relative;
     text-align: center;
     top:-20px;
-    left:-50px;
+    left:-57px;
     color:#391117;
     font-size:1rem;
     font-weight:600;
@@ -39,9 +39,18 @@
   }
 
   @media screen and (max-width:992px){
-    .hideMenuItems{
+    #hideNavLogo{
       display:none;
     }
+    #cartHeading{
+      font-size:1.2rem;
+    }
+     #cartQty{
+    position:static;
+    font-weight: 100;
+    font-size:1.2rem;
+    font-family:"Source Sans Pro", sans-serif;
+  }
   }
   @media screen and (max-width:480px){
     nav{

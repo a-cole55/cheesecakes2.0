@@ -19,7 +19,7 @@ export default function Header(props) {
             <div className="collapse navbar-collapse" id="navbarText">
               <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                 <li className="nav-item">
-                  <Link to="/menu" className='nav-link menuNav' aria-current="page">Menu</Link>
+                  <Link to="/menu" className='nav-link' id="menuNav" aria-current="page">Menu</Link>
                 </li>
                 <li className="nav-item">
                   <Link to="/order" className='nav-link'>Order</Link>
@@ -29,11 +29,11 @@ export default function Header(props) {
                 </li>
               </ul>
               <div className="actions">
-                <Link to="/order"><ShoppingCartOutlinedIcon className='shop hideMenuItems' fontSize='large'/>
-                <span id="cartHeading">Cart</span></Link>
+                <Link to="/order"><ShoppingCartOutlinedIcon className='shop' id="hideNavLogo" fontSize='large'/>
+                <span id="cartHeading">Cart </span></Link>
                 {/* conditional statement if over 9 make 9+ & if equal to 0 don't display*/}
                 {quantity > 0 && 
-                <Link to="/order"><span id="cartQty">{quantity > 9 ? "9+" : quantity}</span></Link>}
+                <span id="cartQty">{quantity > 9 ? "(9+)" : `(${quantity})`}</span>}
               </div>
             </div>
           </div>
