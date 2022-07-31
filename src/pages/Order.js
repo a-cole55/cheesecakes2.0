@@ -1,4 +1,5 @@
 // import { Checkbox } from "@mui/material";
+import DeleteOutlineOutlinedIcon from '@mui/icons-material/DeleteOutlineOutlined';
 import {Link} from "react-router-dom";
 import { useState } from "react";
 import "./Order.css";
@@ -13,6 +14,7 @@ const transition = {duration: 0.6, ease: [0.43, 0.13, 0.23, 0.96]};
 export default function Order(props){
     let totalQty = props.totalQty[0];
     let cart = props.cartTotal[0];
+    let setCart = props.cartTotal[1]
     let total = props.total[0];
     let setTotal = props.total[1];
     const [promo, setPromo] = useState("");
@@ -36,7 +38,7 @@ export default function Order(props){
         )
     }
 
-    function FullCart(cart, promo, discount, setDiscount, getPromo, setGetPromo, total, setTotal, placeOrder, setPlaceOrder){
+    function FullCart(cart, promo, discount, setDiscount, getPromo, setGetPromo, total, setTotal, placeOrder, setPlaceOrder, setCart){
         const elgDiscountCode = "CHEESECAKE2022";
         const [disabled, setDisabled] = useState(false);
 
@@ -57,9 +59,11 @@ export default function Order(props){
             setPlaceOrder(placeOrder => !placeOrder)
         }
 
-        // const calcTotal = (total){
-        //     setTotal(total => total)
-        // }
+        function removeItem(cart,itemToRemove){
+            console.log(itemToRemove)
+            setCart(cart.filter((item) => item !== itemToRemove));
+
+        }
 
         return (
             <div className="cartContent">
@@ -80,7 +84,7 @@ export default function Order(props){
                             salesTax = +(salesT.toFixed(2))
                             total = (subtotal + salesTax)
                             return (
-                            <div key={item.name} className="viewItems">
+                            <div key={item.key} className="viewItems">
                                 <img src={item.img} alt={item.img}></img>
                                 <div className="viewItemDetails">
                                     <div className="cartItemDetails">
@@ -91,6 +95,9 @@ export default function Order(props){
                                     </div>
                                     <div className="cartItemDetails">
                                     <span>${item.itemTotal}</span>
+                                    </div>
+                                    <div className="cartItemDetails">
+                                    <DeleteOutlineOutlinedIcon id="remove" /><span onClick={()=>removeItem(cart, item)}>Remove</span>
                                     </div>
                                 </div>
                             </div>
@@ -161,7 +168,7 @@ export default function Order(props){
         animate={{ opacity: 1 }}
         exit={{ opacity: 0}}
         transition={transition}>
-            {totalQty > 0 ? FullCart(cart, promo, discount, setDiscount, getPromo, setGetPromo, total, setTotal, placeOrder, setPlaceOrder) : EmptyCart()}
+            {totalQty > 0 ? FullCart(cart, promo, discount, setDiscount, getPromo, setGetPromo, total, setTotal, placeOrder, setPlaceOrder, setCart) : EmptyCart()}
         </motion.div>
 
     )
