@@ -68,7 +68,7 @@ export default function Order(props){
                         <div id="cart">
                             <div className="cartHeader">
                                 <h3 className="shoppingHeader">Shopping Cart</h3>
-                                <span id="totalQtyHeader">({props.totalQty} {props.totalQty > 1 ? "Items" : "Item"})</span>
+                                <span id="totalQtyHeader">({totalQty} {totalQty > 1 ? "Items" : "Item"})</span>
                             </div>
                             <div className="cartActions">
                                 <Link to="/menu"><h4 id="continueShopping">Continue Shopping</h4></Link>
@@ -90,12 +90,9 @@ export default function Order(props){
                                     <h4>QTY: {item.quantity}</h4>
                                     </div>
                                     <div className="cartItemDetails">
-                                    <span>${item.price}</span>
+                                    <span>${item.itemTotal}</span>
                                     </div>
                                 </div>
-                                {/* <div className="subtotal">
-                                    <span>${item.itemTotal}</span>
-                                </div> */}
                             </div>
                             )})}
                         </div>

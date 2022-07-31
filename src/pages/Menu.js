@@ -46,13 +46,42 @@ export default function Menu(props){
         function itemTotal(props){
             setItemTotals(itemTotals = (quantity * props.price))
         }
+        function checkForDuplicates(props){
+          if(cart.length === 0){
+            setCart(
+              cart = [...cart, {"quantity": quantity, "key": props.tag, "name":props.title, "price":props.price, "img":props.img, "itemTotal": itemTotals}])
+          }else{
+            const duplicate = cart.some(cartItem => cartItem.key === props.tag)
+            if(duplicate === false){
+              setCart(
+                cart = [...cart, {"quantity": quantity, "key": props.tag, "name":props.title, "price":props.price, "img":props.img, "itemTotal": itemTotals}])
+            } else{
+                for(let i = 0; i < cart.length; i++) {
+                  if(cart[i].key === props.tag){
+                    cart[i].price += props.price;
+                    cart[i].quantity += quantity;
+                    cart[i].itemTotal += (props.price * quantity);
+                  }
+                }
+                cart = [...cart];
+              }
+          }
+          }
+          function totalCartQuantity(props){
+            let totalCart = 0
+            for(let i = 0; i < cart.length; i++) {
+              totalCart += cart[i].quantity
+          }
+          setTotal(totalQty = totalCart)
+        }
 
         const handleCart = (props) => {
             return (
-            setTotal(totalQty => totalQty + quantity),
             itemTotal(props),
-            setCart(cart = [...cart, {"quantity": quantity, "key": props.tag, "name":props.title, "price":props.price, "img":props.img, "itemTotal": itemTotals}]),
+            checkForDuplicates(props),
             console.log(cart),
+            totalCartQuantity(props),
+            console.log(totalQty),
             handleShow()
         )}
     return(
