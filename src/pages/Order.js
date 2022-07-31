@@ -94,7 +94,7 @@ export default function Order(props){
                                         <div className="quantityBTN">
                                         <h4>QTY: </h4>
                                         <input className="changeQtyBTN" value="-" type="button" />
-                                        <input className="changeQtyBTN" disabled value={item.quantity} />
+                                        <input className="changeQtyBTN" disabled value={item.quantity}></input>
                                         <input className="changeQtyBTN" value="+" type="button" />
                                         </div>
                                     </div>
