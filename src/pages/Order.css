@@ -184,6 +184,9 @@ input{
     color:#391117;
     font-weight: bold;
 }
+.changeQtyBTN input{
+    color:#391117;
+}
 .changeQtyBTN:first-child, .changeQtyBTN:last-child{
     font-size: 1.25rem;
 }
