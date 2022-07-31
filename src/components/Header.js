@@ -1,4 +1,3 @@
-import LocalOfferIcon from '@mui/icons-material/LocalOffer';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import "./Header.css";
 import {Link} from "react-router-dom";
