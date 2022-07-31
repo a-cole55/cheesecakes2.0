@@ -34,8 +34,6 @@ export default function Menu(props){
  
     function Cheesecake(props, setShow){
         const [quantity, setQuantity] = useState(0);
-        // const [show, setShow] = useState(false);
-        // const handleShow = () => setShow(true);
     
         function addItem(){
             setQuantity(quantity < 10 ? quantity + 1 : quantity);
@@ -51,7 +49,7 @@ export default function Menu(props){
 
         const handleCart = (props) => {
             return (
-            setTotal(totalQty = totalQty + quantity),
+            setTotal(totalQty => totalQty + quantity),
             itemTotal(props),
             setCart(cart = [...cart, {"quantity": quantity, "key": props.tag, "name":props.title, "price":props.price, "img":props.img, "itemTotal": itemTotals}]),
             console.log(cart),

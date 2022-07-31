@@ -7,7 +7,7 @@ export default function Paypal(props){
 
 
 
-    useEffect((total) => {
+    useEffect(() => {
         window.paypal.Buttons({
             createOrder: (data, actions, err) => {
                 return actions.order.create({
@@ -30,7 +30,7 @@ export default function Paypal(props){
             }
         })
         .render(paypal.current);
-    });
+    }, [props]);
     return (
         <div ref={paypal}></div>
     )
