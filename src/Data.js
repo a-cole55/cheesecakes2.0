@@ -63,3 +63,4 @@ const DATA = [
         price: 35
     }
 ]
+export default DATA

@@ -20,19 +20,15 @@ export default function Header(props) {
             <div className="collapse navbar-collapse" id="navbarText">
               <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                 <li className="nav-item">
-                  {/* <a className="nav-link active" aria-current="page" href="#">Home</a> */}
                   <Link to="/menu" className='nav-link menuNav' aria-current="page">Menu</Link>
                 </li>
                 <li className="nav-item">
                   <Link to="/order" className='nav-link'>Order</Link>
                 </li>
                 <li className="nav-item">
-                <Link to="/specials" className='nav-link'>Specials <LocalOfferIcon className="shop discount hideMenuItems" fontSize="small"/></Link>
+                <Link to="/specials" className='nav-link'>Specials</Link>
                 </li>
               </ul>
-              {/* <span className="navbar-text">
-                Navbar text with an inline element
-              </span> */}
               <div className="actions">
                 <Link to="/order"><ShoppingCartOutlinedIcon className='shop hideMenuItems' fontSize='large'/>
                 <span id="cartHeading">Cart</span></Link>
