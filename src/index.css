@@ -17,4 +17,35 @@ button{
 button:hover{
   transition: all 0.2s ease-in;
 }
-
+#success{
+  width:60px;
+  height: 60px;
+  border-radius: 10em;
+  margin-bottom: 50px;
+}
+#error{
+  width:100px;
+  height: 100px;
+  border-radius: 10em;
+  margin-bottom: 30px;
+}
+.paymentTitle{
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-left: 43%;
+}
+#errorTitle{
+  margin-left: 35%;
+}
+.paymentSuccessfulInfo{
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center;  */
+  align-items: center;
+}
+.paymentSuccessfulInfo > p{
+  font-size: 1.5rem;
+}

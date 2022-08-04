@@ -2,45 +2,28 @@
 import DeleteOutlineOutlinedIcon from '@mui/icons-material/DeleteOutlineOutlined';
 import {Link} from "react-router-dom";
 import { useState } from "react";
+import EmptyCart from '../components/EmptyCart';
 import "./Order.css";
-import Paypal from "../components/Paypal";
 import { motion } from "framer-motion";
-import HomeImg from "../assets/bourbonpecan-min.jpg";
-import Home2 from "../assets/strawberrys-min.jpg"
+import { useContext } from "react";
+import CartContext from "../components/CartContext";
 
 
 const transition = {duration: 0.6, ease: [0.43, 0.13, 0.23, 0.96]};
 
 export default function Order(props){
-    let totalQty = props.totalQty[0];
-    let cart = props.cartTotal[0];
-    let setCart = props.cartTotal[1]
-    let total = props.total[0];
-    let setTotal = props.total[1];
     const [promo, setPromo] = useState("");
     const [getPromo, setGetPromo] = useState("");
     const [discount, setDiscount] = useState(0);
-    const [placeOrder, setPlaceOrder] = useState(false)
     let salesT = 0;
     let salesTax = 0;
     let subtotal = 0;
-    // let discount = 0;
+    
+    const {cart} = useContext(CartContext);
 
 
-    function EmptyCart(){
-        return (
-            <div className="cartContent2">
-                <h2><Link to="/menu"><strong id="visitHereLink">Visit Here</strong></Link> To Add Items to Your Shopping Bag</h2>
-                <img id="smallImg" className="hide" src={Home2} alt="cheesecake img"></img>
-                <img id="bgImg" className="hide" src={HomeImg} alt="cheesecake img"></img>
-                
-            </div>
-        )
-    }
-
-    function FullCart(cart, promo, discount, setDiscount, getPromo, setGetPromo, total, setTotal, placeOrder, setPlaceOrder, setCart){
+    function FullCart(cart, promo, discount, setDiscount, getPromo, setGetPromo, total,setCart){
         const elgDiscountCode = "CHEESECAKE2022";
-        const [disabled, setDisabled] = useState(false);
 
         function handleChange(event){
             setPromo(event.target.value)
@@ -49,14 +32,13 @@ export default function Order(props){
         const checkPromo = (promo) => {
             if(promo === elgDiscountCode){
                 setGetPromo(true)
-                // calcDiscount()
+                calcDiscount(discount, total, subtotal)
             }else{
                 setGetPromo(false)
             }
         }
-
-        const displayPayment = (placeOrder) =>{
-            setPlaceOrder(placeOrder => !placeOrder)
+        const calcDiscount = (discount,total,subtotal) => {
+            setDiscount((subtotal * 0.10).toFixed(2))
         }
 
         function removeItem(cart,itemToRemove){
@@ -72,16 +54,20 @@ export default function Order(props){
                         <div id="cart">
                             <div className="cartHeader">
                                 <h3 className="shoppingHeader">Shopping Cart</h3>
-                                <span id="totalQtyHeader">({totalQty} {totalQty > 1 ? "Items" : "Item"})</span>
+                                <span id="totalQtyHeader">({props.totalQty} {props.totalQty > 1 ? "Items" : "Item"})</span>
                             </div>
                             <div className="cartActions">
                                 <Link to="/menu"><h4 id="continueShopping">Continue Shopping</h4></Link>
                                 <button id="updateCartBTN">Update Cart</button>
                             </div>
                             {cart.map((item) => {
+                                //CALCULATE SUBTOTAL
                             subtotal = subtotal + item.itemTotal
+                            //CALCULATE SALESTAX
                             salesT = subtotal * .0825
+                            //CONVERT TO NUMBER
                             salesTax = +(salesT.toFixed(2))
+                            //CALCULATE TOTAL
                             total = (subtotal + salesTax)
                             return (
                             <div key={item.key} className="viewItems">
@@ -94,7 +80,7 @@ export default function Order(props){
                                         <div className="quantityBTN">
                                         <h4>QTY: </h4>
                                         <input className="changeQtyBTN" value="-" type="button" />
-                                        <input className="changeQtyBTN" id="adjustQTY" disabled value={item.quantity}></input>
+                                        <input disabled className="changeQtyBTN" id="adjustQTY" value={item.quantity}></input>
                                         <input className="changeQtyBTN" value="+" type="button" />
                                         </div>
                                     </div>
@@ -107,8 +93,10 @@ export default function Order(props){
                                 </div>
                             </div>
                             )})}
+                            <div id="borderBottom"></div>
                         </div>
                       </div>  
+                      <div id="borderBottom"></div>
                 </div>
 
                 <div id="cartTotal">
@@ -120,7 +108,6 @@ export default function Order(props){
                         <input type="text" 
                             placeholder="PROMO CODE"
                             value={promo} 
-                            disabled = {disabled}
                             onChange={handleChange} />
                         <button 
                             onClick={()=>checkPromo(promo, elgDiscountCode)}>Apply</button>
@@ -136,14 +123,10 @@ export default function Order(props){
                             </div>
                     {getPromo === true &&
                         <><div className="totalDetails"><span><strong>Discount: </strong></span>
-                        <span>-${discount = (subtotal * 0.10).toFixed(2)}</span></div></>}
+                        <span>-${discount}</span></div></>}
 
 
                         <div className="total">
-                            {/* <div className="totalDetails">
-                                <span><strong>Subtotal: </strong></span>
-                                <span>${subtotal}</span>
-                            </div> */}
                             <div className="totalDetails">
                                 <span><strong>Sales Tax </strong>(8.25%):</span>
                                 <span>${salesTax}</span>
@@ -154,13 +137,7 @@ export default function Order(props){
                             </div>
                     </div>
                 <div className="billing">
-                    <button id="placeOrder" 
-                    onClick={()=> {
-                        displayPayment(placeOrder);
-                        setDisabled(disabled => !disabled)
-                    }}>CHECKOUT</button>
-                    {placeOrder === true && <Paypal cart={cart} total={total}/>}
-                    {/* <Paypal cart={cart} total={total}/> */}
+                    <Link to="/payment"> <button id="placeOrder" onClick={() => props.setCartTotal(total)}>CHECKOUT</button></Link>
                 </div>
                 </div>
             </div>
@@ -173,7 +150,7 @@ export default function Order(props){
         animate={{ opacity: 1 }}
         exit={{ opacity: 0}}
         transition={transition}>
-            {totalQty > 0 ? FullCart(cart, promo, discount, setDiscount, getPromo, setGetPromo, total, setTotal, placeOrder, setPlaceOrder, setCart) : EmptyCart()}
+            {props.totalQty > 0 ? FullCart(cart, promo, discount, setDiscount, getPromo, setGetPromo) : <EmptyCart />}
         </motion.div>
 
     )

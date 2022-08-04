@@ -14,6 +14,8 @@ import {Link} from "react-router-dom"
 import { motion } from "framer-motion";
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
+import { useContext } from "react";
+import CartContext from "../components/CartContext";
 // import e from "cors";
 
 const transition = {duration: 0.6, ease: [0.43, 0.13, 0.23, 0.96]};
@@ -21,18 +23,25 @@ const transition = {duration: 0.6, ease: [0.43, 0.13, 0.23, 0.96]};
 
 
 export default function Menu(props){
-    let totalQty = props.totalQty[0];
-    let setTotal = props.totalQty[1];
-    let cart = props.cartTotal[0];
-    let setCart = props.cartTotal[1];
+    let setQtyTotal = props.totalQty[1];
     let itemTotals = props.itemTotals[0];
     let setItemTotals = props.itemTotals[1];
+
+    let {cart} = useContext(CartContext);
+    const {setCart} = useContext(CartContext);
+
+//Module Functionality
     const [show, setShow] = useState(false);
-    const handleClose = () => setShow(false);
+    const handleClose = (cart) => {
+      setShow(false);
+    }
     const handleShow = () => setShow(true);
+
+
 
  
     function Cheesecake(props, setShow){
+
         const [quantity, setQuantity] = useState(0);
     
         function addItem(){
@@ -46,6 +55,7 @@ export default function Menu(props){
         function itemTotal(props){
             setItemTotals(itemTotals = (quantity * props.price))
         }
+        
         function checkForDuplicates(props){
           if(cart.length === 0){
             setCart(
@@ -67,21 +77,13 @@ export default function Menu(props){
               }
           }
           }
-          function totalCartQuantity(props){
-            let totalCart = 0
-            for(let i = 0; i < cart.length; i++) {
-              totalCart += cart[i].quantity
-          }
-          setTotal(totalQty = totalCart)
-        }
 
         const handleCart = (props) => {
             return (
             itemTotal(props),
             checkForDuplicates(props),
             console.log(cart),
-            totalCartQuantity(props),
-            console.log(totalQty),
+            setQtyTotal(totalQty => totalQty + quantity),
             handleShow()
         )}
     return(

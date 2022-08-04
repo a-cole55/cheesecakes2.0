@@ -48,9 +48,9 @@
     border-radius: 2em;
 }
 #updateCartBTN:hover{
-    background-color:#391117;
+    background-color:#4E3E30;
     opacity: 0.75;
-    border-color:#391117;
+    border-color:#4E3E30;
     color:white
 }
 #totalQtyHeader{
@@ -59,7 +59,7 @@
     text-transform: uppercase;
 }
 a{
-    color:#391117
+    color:#4E3E30;
 }
 a:hover{
     text-decoration: underline;
@@ -89,7 +89,7 @@ form{
 }
 label{
     margin-right:10px;
-    color:#391117;
+    color:#4E3E30;
     font:1.5rem 'Rancho', cursive;
 }
 input{
@@ -112,7 +112,7 @@ input{
     margin: 20px 0 0 180px;
     width:5.5em;
     height:1.6em;
-    color:#391117;
+    color:#4E3E30;
     font:1.5rem 'Rancho', cursive;
 
 }
@@ -128,10 +128,6 @@ input{
 .cartItemDetails span:last-child, #remove{
     cursor: pointer;
 }
-/* .cartItemDetails:last-child{
-    width:25%;
-} */
-
 .cartHeader{
     background-color:rgba(224, 159, 146, 0.7);
     height:5em;
@@ -155,7 +151,7 @@ input{
     display: flex;
     flex-direction: row;
     align-items: center;
-    border-bottom:2px dashed rgba(224, 159, 146, 0.3);
+    border-bottom:1px solid rgba(224, 159, 146, 0.1);
     margin-bottom: 5px;
 }
 .viewItems:last-child{
@@ -175,23 +171,30 @@ input{
 .viewItemDetails div{
     width:33%;
 }
+
+
+#borderBottom{
+    height:40px;
+    border-radius: 0 0 5px 5px;
+}
+
 .changeQtyBTN{
     width:1.25em;
     display: inline;
     background-color: transparent;
     border:none;
     font-size: 1rem;
-    color:#391117;
+    color:#4E3E30;
     font-weight: bold;
 }
 .changeQtyBTN input{
-    color:#391117;
+    color:#4E3E30;
 }
 .changeQtyBTN input::placeholder{
-    color:#391117;
+    color:#4E3E30;
 }
 #adjustQTY{
-    color:#391117;
+    color:#4E3E30;
 }
 .changeQtyBTN:first-child, .changeQtyBTN:last-child{
     font-size: 1.25rem;
@@ -205,7 +208,7 @@ input{
     flex-direction: row;
     align-items: flex-end;
     justify-content: center;
-    color:#391117
+    color:#4E3E30
 }
 #itemTotalDiv{
     width:22%;
@@ -265,25 +268,25 @@ input::selection{
   }
   
   :-ms-input-placeholder { /* Internet Explorer 10-11 */
-    color: #391117
+    color: #4E3E30
   }
   
   ::-ms-input-placeholder {
-    color: #391117
+    color: #4E3E30
   }
 .promoCode button{
     height:2.5em;
     font-size:0.9rem;
     background-color: transparent;
     text-decoration: underline;
-    border:#391117 2px solid;
+    border:#4E3E30 2px solid;
     border-left:none;
     opacity: 0.85;
     font:1rem "Source Sans Pro", sans-serif;
     letter-spacing: 0.07em;
     font-weight: bold;
     text-transform: uppercase;
-    color:#391117
+    color:#4E3E30
 }
 h5{
     margin-top:10px;
@@ -324,9 +327,9 @@ h5{
     border-radius: 2em;
 }
 #placeOrder:hover{
-    background-color:#391117;
+    background-color:#4E3E30;
     opacity: 0.75;
-    border-color:#391117;
+    border-color:#4E3E30;
     color:white
 }
 
