@@ -1,12 +1,18 @@
 import React, {useRef, useEffect} from "react";
+import PaymentSuccess from "./PaymentSuccess";
+import { useContext } from "react";
+import CartContext from "../components/CartContext";
 
 
 export default function Paypal(props){
-    console.log(props.cart);
-    let orderArr = props.cart.map((cartItem) => {
+    const {total} = useContext(CartContext);
+    const {cart} = useContext(CartContext);
+    let orderArr = cart.map((cartItem) => {
         return ` ${cartItem.name}: ${cartItem.quantity}`
     });
-    // console.log(orderArr);                                          )
+    console.log(props.total)
+    // console.log(total)
+    // console.log(cart)
     const paypal = useRef();
 
 
@@ -27,7 +33,8 @@ export default function Paypal(props){
 
             onApprove: async (data, actions) => {
                 const order = await actions.order.capture();
-                console.log(order)
+                console.log(order);
+                <PaymentSuccess />
             },
             onError: (err) => {
                 console.log(err)
