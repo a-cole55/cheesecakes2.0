@@ -49,3 +49,9 @@ button:hover{
 .paymentSuccessfulInfo > p{
   font-size: 1.5rem;
 }
+#paymentPage{
+  height:100vh;
+}
+#paymentPage h2{
+  margin: 2% 0;
+}

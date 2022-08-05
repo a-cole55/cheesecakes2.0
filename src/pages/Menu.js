@@ -37,25 +37,27 @@ export default function Menu(props){
     }
     const handleShow = () => setShow(true);
 
-
-
  
     function Cheesecake(props, setShow){
 
         const [quantity, setQuantity] = useState(0);
     
+        //Add Items To Cart (Increase Count)
         function addItem(){
             setQuantity(quantity < 10 ? quantity + 1 : quantity);
         }
     
+        //Remove Items From Cart (Decrease Count)
         function removeItem(){
             setQuantity(quantity > 0 ? quantity - 1 : 0);
         }
 
+        //Calculate Items Subtotal
         function itemTotal(props){
             setItemTotals(itemTotals = (quantity * props.price))
         }
         
+        //Check for Duplicate Items in Array
         function checkForDuplicates(props){
           if(cart.length === 0){
             setCart(

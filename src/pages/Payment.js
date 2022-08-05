@@ -7,7 +7,8 @@ import Paypal from "../components/Paypal";
 export default function PaymentPage(props){
 
     return(
-        <div>
+        <div id="paymentPage">
+            <h2>Submit Payment</h2>
             <Paypal total={props.total} />
         </div>
     )

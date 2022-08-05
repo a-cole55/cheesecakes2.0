@@ -28,7 +28,7 @@ export default function Order(props){
         function handleChange(event){
             setPromo(event.target.value)
         }
-
+        //Validate Promo Code
         const checkPromo = (promo) => {
             if(promo === elgDiscountCode){
                 setGetPromo(true)
@@ -37,6 +37,7 @@ export default function Order(props){
                 setGetPromo(false)
             }
         }
+        //Calculate Discount Amount
         const calcDiscount = (discount,total,subtotal) => {
             setDiscount((subtotal * 0.10).toFixed(2))
         }
