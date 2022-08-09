@@ -43,6 +43,7 @@
   }
   #cartHeading{
     font:1rem "Source Sans Pro", sans-serif;
+    font-weight: bold;
   }
   a{
     text-decoration: none;
