@@ -116,7 +116,32 @@ body{
     #landing p{
         font-size: 1.1rem;
         bottom:20px;
-
+    }
+    .infoSection{
+        height:250px;
+        padding:5%;
+        margin-bottom: 100px;
+    }
+    .infoSection h2{
+        font: 1.5rem 'Rancho', cursive;
+    }
+    .infoItems{
+        width:33%;
+        margin:0 0 0 20px;
+    }
+    .infoItems img{
+        width: 2em;
+        height: 2em;
+    }
+    #first-section{
+        width: 3em;
+        height: 2.4em;
+    }
+    #heartIcon{
+        width:2.5em;
+    }
+    .infoItems h3{
+        font: 1rem 'Rancho', cursive;
     }
 
   }
