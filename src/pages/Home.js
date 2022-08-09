@@ -3,7 +3,7 @@ import "./Home.css";
 import { motion } from "framer-motion";
 import HomeImg from "../assets/bourbonpecan-min.jpg";
 import Home2 from "../assets/strawberrys-min.jpg";
-import Carousel from "../components/Carousel"
+// import Carousel from "../components/Carousel"
 import heart from "../assets/heart.png";
 import box from "../assets/packages-icon-13.png";
 import cheesecakeIcon from "../assets/cheesecake-icon.png"
@@ -44,6 +44,8 @@ export default function Home(){
                 </div>
             </div>
         </div>
+        
+        {/* <iframe width="320" height="440" src="https://www.instagram.com/cheesecakesbychelsea21/embed" frameborder="0"></iframe> */}
         {/* <Carousel /> */}
         </motion.div>
     )
