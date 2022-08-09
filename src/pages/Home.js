@@ -28,7 +28,7 @@ export default function Home(){
         <img id="smallImg" className="hide" src={Home2} alt="cheesecake img"></img>
         <img id="bgImg" className="hide" src={HomeImg} alt="cheesecake img"></img>
         <div className="infoSection">
-            {/* <h2>Why Choose Cheesecakes By Chelsea?</h2> */}
+            <h2>Why Choose Cheesecakes By Chelsea?</h2>
             <div className="iconSection">
                 <div className="infoItems">
                     <img src={cheesecakeIcon} alt="cheesecake icon" id="first-section"></img>
