@@ -16,6 +16,10 @@
     font-size: 1.2rem;
     color:#4E3E30;
     font-family: "Source Sans Pro", sans-serif;
+    font-weight: bold;
+  }
+  .nav-link:hover{
+    font-weight: bold;
   }
 
   .shop{
@@ -42,6 +46,17 @@
   }
   a{
     text-decoration: none;
+  }
+  .action-btn{
+    background-image: linear-gradient(to right,#D8806B, rgba(224, 159, 146, 1));
+    border-radius: 0.3em;
+  }
+  .action-btn a{
+    color:white;
+    font-weight: bold;
+  }
+  .action-btn a:hover{
+    color:white;
   }
 
   @media screen and (max-width:992px){

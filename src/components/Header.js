@@ -22,10 +22,10 @@ export default function Header(props) {
                   <Link to="/menu" className='nav-link' id="menuNav" aria-current="page">Menu</Link>
                 </li>
                 <li className="nav-item">
-                  <Link to="/order" className='nav-link'>Order</Link>
-                </li>
-                <li className="nav-item">
                 <Link to="/specials" className='nav-link'>Specials</Link>
+                </li>
+                <li className="nav-item action-btn">
+                  <Link to="/menu" className='nav-link'>Order Now</Link>
                 </li>
               </ul>
               <div className="actions">
