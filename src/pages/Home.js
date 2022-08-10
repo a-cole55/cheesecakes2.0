@@ -1,12 +1,17 @@
 import HomeLogo from "../assets/default-min.png";
 import "./Home.css";
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import HomeImg from "../assets/bourbonpecan-min.jpg";
 import Home2 from "../assets/strawberrys-min.jpg";
 // import Carousel from "../components/Carousel"
 import heart from "../assets/heart.png";
 import box from "../assets/packages-icon-13.png";
-import cheesecakeIcon from "../assets/cheesecake-icon.png"
+import cheesecakeIcon from "../assets/cheesecake-icon.png";
+import pb from "../assets/pb.png";
+import summer from "../assets/summer.png";
+// import keyLime from "../assets/key-lime2.png";
+
 
 
 const transition = {duration: 0.6, ease: [0.43, 0.13, 0.23, 0.96]};
@@ -44,9 +49,36 @@ export default function Home(){
                 </div>
             </div>
         </div>
-        
-        {/* <iframe width="320" height="440" src="https://www.instagram.com/cheesecakesbychelsea21/embed" frameborder="0"></iframe> */}
-        {/* <Carousel /> */}
+        {/* Order Now Button */}
+        <div className="orderNow">
+            <div className="orderNowBTN">
+            <Link to="/menu"><button className="order-BTN">Order Now</button></Link>
+            </div>
+        </div>
+        <div className="menuPreview">
+            <div className="preview">
+                <img src={pb} alt="reeses cheesecake"></img>
+                <div className="captionText">
+                    {/* <h6>Reese's Delicousness</h6> */}
+                    <p>Combining all the creamy, salty, buttery, fruity, unforgettably tasty flavors...</p>
+                </div>
+            </div>
+            <div className="preview">
+                <img src={summer} alt="strawberry lemonade cheesecake"></img>
+                <div className="captionText">
+                    {/* <h6>Summer Flava!</h6> */}
+                    <p>Summer calls for cheesecake. And lil’ pocket-size cheesecakes too. Savor every slice of summer with...</p>
+                </div>
+            </div>
+            <div className="preview">
+                <img src={pb} alt="key lime pie"></img>
+                <div className="captionText">
+                    {/* <h6>Mini Mini Minis...</h6> */}
+                    <p>Sink your teeth into the mini life.</p>
+                </div>
+            </div>
+        </div>
+    
         </motion.div>
     )
 }

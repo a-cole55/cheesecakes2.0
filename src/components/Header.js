@@ -25,7 +25,7 @@ export default function Header(props) {
                 <Link to="/specials" className='nav-link'>Specials</Link>
                 </li>
                 <li className="nav-item action-btn">
-                  <Link to="/menu" className='nav-link'>Order Now</Link>
+                  <Link to="/menu" className='nav-link'>Order</Link>
                 </li>
               </ul>
               <div className="actions">

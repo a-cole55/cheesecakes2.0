@@ -34,12 +34,12 @@ function App() {
           </Routes>
       </div>
     <footer>
-        <span id="email">email@cheesecakes.com</span>
+        <span id="email">order@cheesecakes.com</span>
         <div id="socials">
           <a href="https://acolee.netlify.app/" target="_blank" rel="noreferrer"><FacebookIcon className="shop" fontSize="large"/></a>
           <a href="https://github.com/a-cole55" target="_blank" rel="noreferrer"><InstagramIcon className="shop" fontSize="large"/></a>
         </div>
-        <span id="phoneNumber">555-555-5555</span>
+        <span id="phoneNumber">817-867-5366</span>
     </footer>
   </div>
   </CartProvider>
