@@ -14,12 +14,17 @@
   }
   .nav-link, #menuNav{
     font-size: 1.2rem;
-    color:#4E3E30;
+    color:#391117;
     font-family: "Source Sans Pro", sans-serif;
     font-weight: bold;
+    text-transform: uppercase;
   }
   .nav-link:hover{
     font-weight: bold;
+    color:#391117
+  }
+  .actions a:hover{
+    color:#391117;
   }
 
   .shop{
@@ -34,8 +39,8 @@
     position:relative;
     text-align: center;
     top:-20px;
-    left:-57px;
-    color:#4E3E30;
+    left:-65px;
+    color:#391117;
     font-size:1rem;
     font-weight:600;
     border-radius: 5em;
@@ -52,12 +57,19 @@
     background-image: linear-gradient(to right,#D8806B, rgba(224, 159, 146, 1));
     border-radius: 0.3em;
   }
+  .action-btn:hover{
+    background-image: linear-gradient(to left,#D8806B, rgba(224, 159, 146, 1));
+  }
   .action-btn a{
-    color:white;
+    color:#391117;
     font-weight: bold;
   }
   .action-btn a:hover{
     color:white;
+    text-decoration: none;
+  }
+  .actions a{
+    text-transform: uppercase;
   }
 
   @media screen and (max-width:992px){

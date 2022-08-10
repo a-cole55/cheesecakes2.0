@@ -48,9 +48,9 @@
     border-radius: 2em;
 }
 #updateCartBTN:hover{
-    background-color:#4E3E30;
+    background-color:#391117;
     opacity: 0.75;
-    border-color:#4E3E30;
+    border-color:#391117;
     color:white
 }
 #totalQtyHeader{
@@ -59,7 +59,7 @@
     text-transform: uppercase;
 }
 a{
-    color:#4E3E30;
+    color:#391117;
 }
 a:hover{
     text-decoration: underline;
@@ -89,7 +89,7 @@ form{
 }
 label{
     margin-right:10px;
-    color:#4E3E30;
+    color:#391117;
     font:1.5rem 'Rancho', cursive;
 }
 input{
@@ -112,7 +112,7 @@ input{
     margin: 20px 0 0 180px;
     width:5.5em;
     height:1.6em;
-    color:#4E3E30;
+    color:#391117;
     font:1.5rem 'Rancho', cursive;
 
 }
@@ -184,17 +184,17 @@ input{
     background-color: transparent;
     border:none;
     font-size: 1rem;
-    color:#4E3E30;
+    color:#391117;
     font-weight: bold;
 }
 .changeQtyBTN input{
-    color:#4E3E30;
+    color:#391117;
 }
 .changeQtyBTN input::placeholder{
-    color:#4E3E30;
+    color:#391117;
 }
 #adjustQTY{
-    color:#4E3E30;
+    color:#391117;
 }
 .changeQtyBTN:first-child, .changeQtyBTN:last-child{
     font-size: 1.25rem;
@@ -208,7 +208,7 @@ input{
     flex-direction: row;
     align-items: flex-end;
     justify-content: center;
-    color:#4E3E30
+    color:#391117
 }
 #itemTotalDiv{
     width:22%;
@@ -268,25 +268,25 @@ input::selection{
   }
   
   :-ms-input-placeholder { /* Internet Explorer 10-11 */
-    color: #4E3E30
+    color: #391117
   }
   
   ::-ms-input-placeholder {
-    color: #4E3E30
+    color: #391117
   }
 .promoCode button{
     height:2.5em;
     font-size:0.9rem;
     background-color: transparent;
     text-decoration: underline;
-    border:#4E3E30 2px solid;
+    border:#391117 2px solid;
     border-left:none;
     opacity: 0.85;
     font:1rem "Source Sans Pro", sans-serif;
     letter-spacing: 0.07em;
     font-weight: bold;
     text-transform: uppercase;
-    color:#4E3E30
+    color:#391117
 }
 h5{
     margin-top:10px;
@@ -327,9 +327,9 @@ h5{
     border-radius: 2em;
 }
 #placeOrder:hover{
-    background-color:#4E3E30;
+    background-color:#391117;
     opacity: 0.75;
-    border-color:#4E3E30;
+    border-color:#391117;
     color:white
 }
 

@@ -1,35 +1,35 @@
 h1{
     text-transform: uppercase;
     font:4rem 'Rancho', cursive;
-    color:#4E3E30;
+    color:#391117;
     /* margin-top: 3%; */
 }
 .modalTitle, .modalFooter{
     border:none;
 }
 .modalTitle{
-    color:#4E3E30;
+    color:#391117;
 }
 .modalBTN, .modalBTNCart{
     height:3em;
 }
 .modalBTN{
-    background-color: #4E3E30;
+    background-color: #391117;
     opacity: 0.9;
 }
 .modalBTN:hover{
-    background-color: #4E3E30;
+    background-color: #391117;
     opacity: 1;
 }
 .modalBTNCart{
     background-color:rgba(224, 159, 146, 0.7);
-    color:#4E3E30;
+    color:#391117;
     font-weight: bold;
-    border: #4E3E30;
+    border: #391117;
 }
 .modalBTNCart:hover{
     background-color:rgba(224, 159, 146, 0.9);
-    color:#4E3E30
+    color:#391117
 }
 .menu{
     display:flex;
@@ -65,13 +65,13 @@ h3{
     letter-spacing: -0.1rem;
     margin-bottom: 0;
     font-size: 1.2rem;
-    color:#4E3E30;
+    color:#391117;
     margin-top:10px;
 }
 #price{
     display: block;
     font-size:1.2rem;
-    color: #4E3E30
+    color: #391117
 }
 #menuBTNS{
     display: flex;
@@ -92,7 +92,7 @@ h3{
     background-color: rgba(187, 76, 80, 0.4);
     height:2.5em;
     margin-left:5px;
-    color:#4E3E30;
+    color:#391117;
     font-weight: bold;
     text-transform: uppercase;
 }
@@ -110,7 +110,7 @@ button{
     width:1.5em;
     height:1.5em;
     font-weight: bold;
-    color:#4E3E30;
+    color:#391117;
     font-size:1.3rem;
     border:none;
     background-color: transparent
@@ -131,7 +131,7 @@ button{
     height:2em;
     font-weight: bold;
     font-size:1rem;
-    color:#4E3E30;
+    color:#391117;
     text-align: center;
     margin:0;
     border-radius:0;
