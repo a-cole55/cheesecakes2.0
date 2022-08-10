@@ -44,8 +44,8 @@ export default function Home(props){
             animate={{ y: "-45%", transition: {delay: 0.4, duration: 1, ease: [0.43, 0.13, 0.23, 0.96]}}}
             exit={{ opacity: 0}}
             transition={transition}>Welcome Cheesecake Lover! I look forward to providing you with the best quality cheesecakes you've ever experienced.</motion.p>
-        <img id="smallImg" className="hide" src={Home2} alt="cheesecake img"></img>
-        <img id="bgImg" className="hide" src={HomeImg} alt="cheesecake img"></img>
+        <img id="smallImg" src={Home2} alt="cheesecake img"></img>
+        <img id="bgImg" src={HomeImg} alt="cheesecake img"></img>
         <div className="infoSection">
             <h2>Why Choose Cheesecakes By Chelsea?</h2>
             <div className="iconSection">

@@ -22,7 +22,7 @@ function App() {
     <Router>
     <CartProvider>
     <div className="App">
-      <Header className="header" totalQty = {[totalQty, setTotal]}/>
+      <Header className="header" totalQty = {[totalQty, setTotal]} fixed="top" />
       <div className="content">
           <Routes>
             <Route path="/" element={<Home/>} />
