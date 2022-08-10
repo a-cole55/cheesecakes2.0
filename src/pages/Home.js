@@ -13,6 +13,7 @@ import MenuPreview from "../components/MenuPreview";
 import pb from "../assets/pb.png";
 import pb2 from "../assets/pb2.png"
 import summer from "../assets/summer.png";
+import summer2 from "../assets/summer2.png";
 // import keyLime from "../assets/key-lime2.png";
 
 
@@ -72,8 +73,16 @@ export default function Home(props){
                 alt="reeses cheesecake" 
                 caption="Combining all the creamy, salty, buttery, fruity, unforgettably tasty flavors..."
                 src2={pb2}/>
-            <MenuPreview src={summer} alt="strawberry lemonade cheesecake" caption="Summer calls for cheesecake. And lil’ pocket-size cheesecakes too. Savor every slice of summer with..."/>
-            <MenuPreview src={pb} alt="reeses cheesecake" caption="Sink your teeth into the mini life."/>
+            <MenuPreview 
+                src={summer} 
+                alt="strawberry lemonade cheesecake" 
+                caption="Summer calls for cheesecake. And lil’ pocket-size cheesecakes too. Savor every slice of summer with..."
+                src2={summer2}/>
+            <MenuPreview 
+                src={pb} 
+                alt="reeses cheesecake" 
+                caption="Sink your teeth into the mini life."
+                src2={pb2}/>
         </div>
     
         </motion.div>
