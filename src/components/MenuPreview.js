@@ -27,7 +27,7 @@ export default function MenuPreview(props){
                     src={props.src2}
                     alt={props.alt2}
                     className={isHovering ? "" : "hide"}/>
-                <div className="orderNowContainer">
+                <div className={isHovering ? "orderNowContainer" : "hide"}>
                     <button className="orderMenuBTN">Order Now</button>
                 </div>
                 <div className="captionText">
