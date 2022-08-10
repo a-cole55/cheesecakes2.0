@@ -74,10 +74,10 @@ export default function Home(props){
                 caption="Combining all the creamy, salty, buttery, fruity, unforgettably tasty flavors..."
                 src2={pb2}/>
             <MenuPreview 
-                src={summer} 
+                src={summer2} 
                 alt="strawberry lemonade cheesecake" 
                 caption="Summer calls for cheesecake. And lil’ pocket-size cheesecakes too. Savor every slice of summer with..."
-                src2={summer2}/>
+                src2={summer}/>
             <MenuPreview 
                 src={pb} 
                 alt="reeses cheesecake" 
