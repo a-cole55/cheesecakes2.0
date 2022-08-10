@@ -19,15 +19,20 @@ export default function MenuPreview(props){
                 className="preview"
                 onMouseOver={handleMouseOver}
                 onMouseOut={handleMouseOut}>
-                <motion.img 
-                    // whileHover={{scale:1.1}}
+                <img 
                     src={props.src}
                     alt={props.alt} 
                     className={isHovering ? "hide" : ""}/>
+                <img 
+                    src={props.src2}
+                    alt={props.alt2}
+                    className={isHovering ? "" : "hide"}/>
+                <div className="orderNowContainer">
+                    <button className="orderMenuBTN">Order Now</button>
+                </div>
                 <div className="captionText">
                     <p>{props.caption}</p>
                 </div>
             </motion.div>
     )
-
 }
