@@ -46,23 +46,7 @@ export default function Home(props){
             transition={transition}>Welcome Cheesecake Lover! I look forward to providing you with the best quality cheesecakes you've ever experienced.</motion.p>
         <img id="smallImg" src={Home2} alt="cheesecake img"></img>
         <img id="bgImg" src={HomeImg} alt="cheesecake img"></img>
-        <div className="infoSection">
-            <h2>Why Choose Cheesecakes By Chelsea?</h2>
-            <div className="iconSection">
-                <div className="infoItems">
-                    <img src={cheesecakeIcon} alt="cheesecake icon" id="first-section" />
-                    <h3>Custom Cheesecakes</h3>
-                </div>
-                <div className="infoItems">
-                    <img src={heart} alt="heart icon" id="heartIcon"></img>
-                    <h3>Made With <br></br>Love</h3>
-                </div>
-                <div className="infoItems">
-                    <img src={box} alt="package icon"></img>
-                    <h3>Thoughtfully Packaged</h3>
-                </div>
-            </div>
-        </div>
+        
         <div className="orderNow">
             <div className="orderNowBTN">
             <Link to="/menu"><button className="order-BTN">Order Now</button></Link>
@@ -83,6 +67,24 @@ export default function Home(props){
                 alt="reeses cheesecake" 
                 caption="Sink your teeth into the mini life."
                 src2={pb2}/>
+        </div>
+
+        <div className="infoSection">
+            <h2>Why Choose Cheesecakes By Chelsea?</h2>
+            <div className="iconSection">
+                <div className="infoItems">
+                    <img src={cheesecakeIcon} alt="cheesecake icon" id="first-section" />
+                    <h3>Custom Cheesecakes</h3>
+                </div>
+                <div className="infoItems">
+                    <img src={heart} alt="heart icon" id="heartIcon"></img>
+                    <h3>Made With <br></br>Love</h3>
+                </div>
+                <div className="infoItems">
+                    <img src={box} alt="package icon"></img>
+                    <h3>Thoughtfully Packaged</h3>
+                </div>
+            </div>
         </div>
     
         </motion.div>
