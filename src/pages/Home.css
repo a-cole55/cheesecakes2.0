@@ -254,7 +254,7 @@ body{
   }
   @media screen and (max-width:500px){
     #homeLogo{
-        max-width:440px;
+        max-width:420px;
     }
     #landing p{
         font-size: 1.1rem;
