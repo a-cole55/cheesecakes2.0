@@ -1,6 +1,13 @@
   nav{
     background-color: #F9EFED;
   }
+  .navbar{
+    position: fixed;
+    top:0;
+    z-index: 1;
+    width:100%;
+    padding:0 25px;
+  }
   nav img{
     width:60px;
     border-radius:10em;
@@ -12,12 +19,19 @@
     -webkit-transform: scale(1.15, 1.15);
     transform: scale(1.15, 1.15);
   }
+  .nav-item{
+    margin:0 20px;
+  }
+  .navbar-nav{
+    margin-left: 50px;
+  }
   .nav-link, #menuNav{
     font-size: 1.2rem;
     color:#391117;
-    font-family: "Source Sans Pro", sans-serif;
-    font-weight: bold;
+    font-family: 'Rancho', cursive;
+    /* font-weight: bold; */
     text-transform: uppercase;
+    letter-spacing: 0.25em;
   }
   .nav-link:hover{
     font-weight: bold;
@@ -25,10 +39,11 @@
   }
   .actions a:hover{
     color:#391117;
+    text-decoration: none;
   }
 
   .shop{
-    color: #BB4C50;
+    color: #391117;
     cursor: pointer;
   }
   .discount{
@@ -39,7 +54,7 @@
     position:relative;
     text-align: center;
     top:-20px;
-    left:-65px;
+    left:-72px;
     color:#391117;
     font-size:1rem;
     font-weight:600;
@@ -47,27 +62,15 @@
     font-family:"Source Sans Pro", sans-serif;
   }
   #cartHeading{
-    font:1rem "Source Sans Pro", sans-serif;
+    font:1rem 'Rancho', cursive;
+    letter-spacing: 0.25em;
+  }
+  #cartHeading:hover{
     font-weight: bold;
   }
   a{
     text-decoration: none;
   }
-  /* .action-btn{
-    background-image: linear-gradient(to right,#D8806B, rgba(224, 159, 146, 1));
-    border-radius: 0.3em;
-  }
-  .action-btn:hover{
-    background-image: linear-gradient(to left,#D8806B, rgba(224, 159, 146, 1));
-  }
-  .action-btn a{
-    color:#391117;
-    font-weight: bold;
-  }
-  .action-btn a:hover{
-    color:white;
-    text-decoration: none;
-  } */
   .actions a{
     text-transform: uppercase;
   }
@@ -75,6 +78,9 @@
   @media screen and (max-width:992px){
     #hideNavLogo{
       display:none;
+    }
+    .navbar-nav{
+      margin-left: 0;
     }
     #cartHeading{
       font-size:1.2rem;
@@ -90,5 +96,6 @@
     nav{
       position: absolute;
     }
+    
   }
   

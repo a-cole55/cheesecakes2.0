@@ -1,5 +1,6 @@
 body{
     overflow-x:hidden;
+    margin-top: 100px;
 }
 #homeLogo{
     max-width:600px;
@@ -257,6 +258,12 @@ body{
         font-size: 1.1rem;
         bottom:20px;
     }
+    #bgImg{
+       display:none;
+      }
+      #smallImg{
+        display:none;
+      }
     .infoSection{
         height:250px;
         padding:5%;
