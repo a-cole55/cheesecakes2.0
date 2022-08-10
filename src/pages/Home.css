@@ -92,6 +92,7 @@ body{
     margin:50px;
     display: flex;
     flex-direction: column;
+    box-shadow: 1px 1px 7px rgba(224, 159, 146, 0.7);
 }
 .preview img{
     height:400px;
@@ -107,7 +108,6 @@ body{
     justify-content: center;
     color:white;
     background-color:#D8806B;
-    box-shadow: 1px 1px 7px rgba(224, 159, 146, 0.7);
 }
 .captionText > p{
     color:white;
@@ -306,7 +306,6 @@ body{
     .captionText{
         height:100px;
         width: 100%;
-
     }
     .orderNow{
         height: 100px;
