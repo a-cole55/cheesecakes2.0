@@ -33,13 +33,26 @@ footer{
   justify-content: space-between;
   align-items: center;
   padding: 0 40px;
+  height:10em;
+  background-color: #F9EFED;
 }
 span{
-  font:1.25rem 'Rancho', cursive;
+  font:1.25rem "Source Sans Pro", sans-serif;
   color:#391117;
 }
 #email{
-  font-size: 1.7rem;
+  font: 1.3rem "Source Sans Pro", sans-serif;
+  display: block;
+}
+#email > a:hover{
+  font-weight: bold;
+  color:#391117
+}
+#copyright{
+  text-transform: uppercase;
+}
+#copyright > span{
+  font: 1rem "Source Sans Pro", sans-serif;
 }
 @media screen and (max-width:1000px){
   .hide{
@@ -58,17 +71,24 @@ span{
   footer{
     font-size:1.25rem;
     padding: 0;
-    justify-content: space-evenly;
   }
-  #email{
+  #email, #phoneNumber{
     font-size: 1.25rem;
   }
-  #phoneNumber{
-    font-size: 1rem;
-}
 }
 @media screen and (max-width:500px){
   .content{
     margin-top:7%;
+  }
+  footer{
+    flex-direction: column-reverse;
+    justify-content: center;
+    height:9em;
+  }
+  #email, #phoneNumber{
+    font-size: 1.15rem;
+  }
+  #copyright > span{
+    font-size: 0.8rem;
   }
 }

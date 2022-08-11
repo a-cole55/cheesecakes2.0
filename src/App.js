@@ -11,6 +11,7 @@ import PaymentPage from "./pages/Payment.js";
 import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import { useState } from "react";
 import { CartProvider } from "./components/CartContext";
+import { motion } from "framer-motion";
 
 
 function App() {
@@ -34,12 +35,21 @@ function App() {
           </Routes>
       </div>
     <footer>
-        <span id="email">order@cheesecakes.com</span>
-        <div id="socials">
-          <a href="https://acolee.netlify.app/" target="_blank" rel="noreferrer"><FacebookIcon className="shop" fontSize="large"/></a>
-          <a href="https://github.com/a-cole55" target="_blank" rel="noreferrer"><InstagramIcon className="shop" fontSize="large"/></a>
-        </div>
-        <span id="phoneNumber">817-867-5366</span>
+      <div id="copyright">
+        <span>AColee Designs Copyright &copy; 2022. All rights reserved.</span>
+      </div>
+      <div id="footer">
+        <motion.div id="socials" whileHover={{scale:1.1}}>
+          <a href="https://acolee.netlify.app/" target="_blank" rel="noreferrer" whileHover={{scale:1.1}}><FacebookIcon className="shop" fontSize="large"/></a>
+          <a href="https://github.com/a-cole55" target="_blank" rel="noreferrer" whileHover={{scale:1.1}}><InstagramIcon className="shop" fontSize="large"/></a>
+        </motion.div>
+        <motion.span 
+          whileHover={{scale:1.1}}
+          id="email"><a href="mailto:order@cheesecakes.com">order@cheesecakes.com</a></motion.span>
+        <motion.span 
+          whileHover={{scale:1.1}}
+          id="phoneNumber">817.867.5366</motion.span>
+      </div>
     </footer>
   </div>
   </CartProvider>

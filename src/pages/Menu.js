@@ -32,7 +32,7 @@ export default function Menu(props){
 
 //Module Functionality
     const [show, setShow] = useState(false);
-    const handleClose = (cart) => {
+    const handleClose = () => {
       setShow(false);
     }
     const handleShow = () => setShow(true);
@@ -61,12 +61,12 @@ export default function Menu(props){
         function checkForDuplicates(props){
           if(cart.length === 0){
             setCart(
-              cart = [...cart, {"quantity": quantity, "key": props.tag, "name":props.title, "price":props.price, "img":props.img, "itemTotal": itemTotals}])
+              cart => [...cart, {"quantity": quantity, "key": props.tag, "name":props.title, "price":props.price, "img":props.img, "itemTotal": itemTotals}])
           }else{
             const duplicate = cart.some(cartItem => cartItem.key === props.tag)
             if(duplicate === false){
               setCart(
-                cart = [...cart, {"quantity": quantity, "key": props.tag, "name":props.title, "price":props.price, "img":props.img, "itemTotal": itemTotals}])
+                cart => [...cart, {"quantity": quantity, "key": props.tag, "name":props.title, "price":props.price, "img":props.img, "itemTotal": itemTotals}])
             } else{
                 for(let i = 0; i < cart.length; i++) {
                   if(cart[i].key === props.tag){
@@ -75,13 +75,13 @@ export default function Menu(props){
                     cart[i].itemTotal += (props.price * quantity);
                   }
                 }
-                cart = [...cart];
+                setCart(cart => [...cart]);
               }
           }
           }
 
         const handleCart = (props) => {
-            return (
+          return (
             itemTotal(props),
             checkForDuplicates(props),
             console.log(cart),
@@ -90,47 +90,46 @@ export default function Menu(props){
         )}
     return(
         <div className="cheesecake">
-                <img src={props.img} alt=""></img>
-                <h3>{props.title}</h3>
-                <span id="price">${props.price}</span>
-                <div id="menuBTNS">
-                  <div id="quantity">
-                          <button id="remove" onClick={removeItem}>-</button>
-                          <input disabled id="qtyCount" value={quantity}></input>
-                          <button id="add" onClick={addItem}>+</button>
-                      </div>
-                    <div id="addToCartBTN">
-                    {quantity > 0 && 
-                  <button id="order" type="button" onClick={() => handleCart(props)}>Add to Cart</button>
-                      }
-                    </div>
-                </div>
+          <img src={props.img} alt=""></img>
+          <h3>{props.title}</h3>
+          <span id="price">${props.price}</span>
+          <div id="menuBTNS">
+            <div id="quantity">
+              <button id="remove" onClick={removeItem}>-</button>
+              <input disabled id="qtyCount" value={quantity}></input>
+              <button id="add" onClick={addItem}>+</button>
+            </div>
+            <div id="addToCartBTN">
+              {quantity > 0 && 
+                <button id="order" type="button" onClick={() => handleCart(props)}>Add to Cart</button>}
+            </div>
+          </div>
         </div>
         )};
 
 
     return(
         <motion.div
-        className="menuBG"
-        initial={{ opacity: 0}}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0}}
-        transition={transition}>
+          className="menuBG"
+          initial={{ opacity: 0}}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0}}
+          transition={transition}>
             <h1>Menu</h1>
             <Modal show={show} onHide={handleClose}>
-            <Modal.Header closeButton className="modalTitle">
-              <Modal.Title className="modalHeading">Item Added To Cart</Modal.Title>
-            </Modal.Header>
-            <Modal.Footer className="modalFooter">
-              <Button variant="secondary" onClick={handleClose} className="modalBTN">
-                Continue Shopping
-              </Button>
-              <Link to="/order">
-                <Button variant="primary" onClick={handleClose} className="modalBTNCart">
-                  View Cart
+              <Modal.Header closeButton className="modalTitle">
+                <Modal.Title className="modalHeading">Item(s) Added To Cart</Modal.Title>
+              </Modal.Header>
+              <Modal.Footer className="modalFooter">
+                <Button variant="secondary" onClick={handleClose} className="modalBTN">
+                  Continue Shopping
                 </Button>
-              </Link>
-            </Modal.Footer>
+                <Link to="/order">
+                  <Button variant="primary" onClick={handleClose} className="modalBTNCart">
+                    View Cart
+                  </Button>
+                </Link>
+              </Modal.Footer>
           </Modal>
             <div className="menu">
                 <Cheesecake tag="01" img={BananaPudding} alt="bourbon banana pudding cheesecake" title="Bourbon Banana Pudding" price={55} />
