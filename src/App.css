@@ -23,10 +23,6 @@
   z-index: 0.5;
 }
 
-.shop{
-  color: #BB4C50;
-  cursor: pointer;
-}
 footer{
   display: flex;
   flex-direction: row;
@@ -40,8 +36,8 @@ span{
   font:1.25rem "Source Sans Pro", sans-serif;
   color:#391117;
 }
-#email{
-  font: 1.3rem "Source Sans Pro", sans-serif;
+#email, #phoneNumber{
+  font: 1.3rem 'Oswald', sans-serif;
   display: block;
 }
 #email > a:hover{
@@ -52,7 +48,7 @@ span{
   text-transform: uppercase;
 }
 #copyright > span{
-  font: 1rem "Source Sans Pro", sans-serif;
+  font: 1rem 'Oswald', sans-serif;
 }
 @media screen and (max-width:1000px){
   .hide{
@@ -73,7 +69,7 @@ span{
     padding: 0;
   }
   #email, #phoneNumber{
-    font-size: 1.25rem;
+    font-size: 1.25rem ;
   }
 }
 @media screen and (max-width:500px){

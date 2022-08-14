@@ -1,4 +1,4 @@
-import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
+import { ShoppingCartOutlined } from "@ant-design/icons";
 import "./Header.css";
 import {Link} from "react-router-dom";
 import NavLogo from "../assets/navLogo.png"
@@ -34,8 +34,8 @@ export default function Header(props) {
                 <div id="cartQtyContainer">
                   <span id="cartQty">{quantity > 9 ? "(9+)" : quantity}</span>
                 </div>}
-                <Link to="/order"><ShoppingCartOutlinedIcon className='shop' id="hideNavLogo" fontSize='large'/>
-                <span id="cartHeading">Cart</span></Link>
+                <Link to="/order"><ShoppingCartOutlined style={{ fontSize: '27px' }} className="hideCartIcon" /></Link>
+                <Link to="/order"><span id="cartHeading" className="hideCartText">View Cart</span></Link>
               </div>
             </div>
           </div>

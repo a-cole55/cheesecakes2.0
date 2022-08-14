@@ -28,7 +28,7 @@
   .nav-link, #menuNav{
     font-size: 1.2rem;
     color:#391117;
-    font-family: 'Rancho', cursive;
+    font-family: 'Oswald', sans-serif;
     /* font-weight: bold; */
     text-transform: uppercase;
     letter-spacing: 0.25em;
@@ -42,10 +42,6 @@
     text-decoration: none;
   }
 
-  .shop{
-    color: #391117;
-    cursor: pointer;
-  }
   .discount{
     display: inline;
   }
@@ -63,15 +59,10 @@
     align-items: center;
   }
   #cartQty{
-    /* position:relative; */
     text-align: center;
-    /* top:-20px;
-    left:-72px; */
     color:#391117;
-    /* background-color:#391117; */
     font-size:1rem;
     font-weight:600;
-    /* border-radius: 5em; */
     font-family:"Source Sans Pro", sans-serif;
   }
   #cartHeading{
@@ -87,14 +78,20 @@
   .actions a{
     text-transform: uppercase;
   }
+  .hideCartText{
+    display:none
+  }
 
   @media screen and (max-width:992px){
-    #hideNavLogo{
-      display:none;
-    }
     .navbar-nav{
       margin-left: 0;
     }
+    .hideCartText{
+      display:block;
+    }
+    .hideCartIcon{
+      display: none;
+  }
     #cartHeading{
       font-size:1.2rem;
     }

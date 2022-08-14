@@ -1,6 +1,6 @@
 import Header from "./components/Header";
-import FacebookIcon from '@mui/icons-material/Facebook';
-import InstagramIcon from '@mui/icons-material/Instagram';
+import { FacebookOutlined } from "@ant-design/icons";
+import { InstagramOutlined } from "@ant-design/icons";
 import './App.css';
 import Home from "./pages/Home.js";
 import Menu from "./pages/Menu.js";
@@ -40,8 +40,8 @@ function App() {
       </div>
       <div id="footer">
         <motion.div id="socials" whileHover={{scale:1.1}}>
-          <a href="https://acolee.netlify.app/" target="_blank" rel="noreferrer" whileHover={{scale:1.1}}><FacebookIcon className="shop" fontSize="large"/></a>
-          <a href="https://github.com/a-cole55" target="_blank" rel="noreferrer" whileHover={{scale:1.1}}><InstagramIcon className="shop" fontSize="large"/></a>
+          <a href="https://acolee.netlify.app/" target="_blank" rel="noreferrer" whileHover={{scale:1.1}}><FacebookOutlined style={{ fontSize: '26px' }} /></a>
+          <a href="https://github.com/a-cole55" target="_blank" rel="noreferrer" whileHover={{scale:1.1}}><InstagramOutlined style={{ fontSize: '27px' }} /></a>
         </motion.div>
         <motion.span 
           whileHover={{scale:1.1}}
