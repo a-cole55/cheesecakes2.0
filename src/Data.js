@@ -1,63 +1,73 @@
+import BananaPudding from "./assets/banana-min.jpg";
+import BourbonPecan from "./assets/pecan (2)-min.jpg";
+import CaramelApple from "./assets/caramelapple-min.jpg";
+import Chocolate from "./assets/choc-min.jpg";
+import Cinnamon from "./assets/cinnamon-min.jpg";
+import Cookies from "./assets/cookies-min.jpg";
+import SweetPotatoe from "./assets/sweetpotatoe (2)-min.jpg";
+import Neo from "./assets/neopolitan-min.jpg";
+import Minis from "./assets/minis-min.jpg";
+
 const DATA = [
     {
-        key: "01",
-        img: "../assets/banana.jpg",
+        tag: "01",
+        img: BananaPudding,
         alt: "bourbon banana pudding cheesecake",
         name: "Bourbon Banana Pudding",
         price: 55
     },
     {
-        key: "02",
-        img: "../assets/pecan (2).jpg",
+        tag: "02",
+        img: BourbonPecan,
         alt: "bourbon pecan pie cheesecake",
         name: "Bourbon Pecan",
         price: 50
     },
     {
-        key: "03",
-        img: "../assets/choc.jpg",
+        tag: "03",
+        img: Chocolate,
         alt: "chocolate cheesecake",
         name: "Chocolate",
         price: 35
     },
     {
-        key: "04",
-        img: "../assets/cinnamon.jpg",
+        tag: "04",
+        img: Cinnamon,
         alt: "cinnamon roll cheesecake",
         name: "Cinnamon Roll",
         price: 50
     },
     {
-        key: "05",
-        img: "../assets/cookies.jpg",
+        tag: "05",
+        img: Cookies,
         alt: "cookies and cream cheesecake",
         name: "Cookies N' Creme",
         price: 45
     },
     {
-        key: "06",
-        img: "../assets/sweetpotatoe (2).jpg",
+        tag: "06",
+        img: SweetPotatoe,
         alt: "sweet potatoe cheesecake",
         name: "Sweet Potatoe",
         price: 30
     },
     {
-        key: "07",
-        img: "../assets/neopolitan.jpg",
+        tag: "07",
+        img: Neo,
         alt: "neapolitan cheesecake",
         name: "Neapolitan",
         price: 55
     },
     {
-        key: "08",
-        img: "../assets/caramelapple.jpg",
+        tag: "08",
+        img: CaramelApple,
         alt: "caramel apple cheesecake",
         name: "Caramel Apple",
         price: 45
     },
     {
-        key: "09",
-        img: "../assets/minis.jpg",
+        tag: "09",
+        img: Minis,
         alt: "3 mini cheesecakes of assorted flavors",
         name: "3x Assorted Minis",
         price: 35

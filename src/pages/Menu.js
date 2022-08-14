@@ -1,14 +1,5 @@
 import "./Menu.css";
-// import DATA from "../Data";
-import BananaPudding from "../assets/banana-min.jpg";
-import BourbonPecan from "../assets/pecan (2)-min.jpg";
-import CaramelApple from "../assets/caramelapple-min.jpg";
-import Chocolate from "../assets/choc-min.jpg";
-import Cinnamon from "../assets/cinnamon-min.jpg";
-import Cookies from "../assets/cookies-min.jpg";
-import SweetPotatoe from "../assets/sweetpotatoe (2)-min.jpg";
-import Neo from "../assets/neopolitan-min.jpg";
-import Minis from "../assets/minis-min.jpg";
+import DATA from "../Data";
 import { useState } from "react";
 import {Link} from "react-router-dom"
 import { motion } from "framer-motion";
@@ -63,13 +54,13 @@ export default function Menu(props){
             setCart(
               cart => [...cart, {"quantity": quantity, "key": props.tag, "name":props.title, "price":props.price, "img":props.img, "itemTotal": itemTotals}])
           }else{
-            const duplicate = cart.some(cartItem => cartItem.key === props.tag)
+            const duplicate = cart.some(cartItem => cartItem.name === props.title)
             if(duplicate === false){
               setCart(
                 cart => [...cart, {"quantity": quantity, "key": props.tag, "name":props.title, "price":props.price, "img":props.img, "itemTotal": itemTotals}])
             } else{
                 for(let i = 0; i < cart.length; i++) {
-                  if(cart[i].key === props.tag){
+                  if(cart[i].name === props.title){
                     cart[i].price += props.price;
                     cart[i].quantity += quantity;
                     cart[i].itemTotal += (props.price * quantity);
@@ -90,7 +81,7 @@ export default function Menu(props){
         )}
     return(
         <div className="cheesecake">
-          <img src={props.img} alt=""></img>
+          <img src={props.img} alt={props.alt}></img>
           <h3>{props.title}</h3>
           <span id="price">${props.price}</span>
           <div id="menuBTNS">
@@ -132,15 +123,10 @@ export default function Menu(props){
               </Modal.Footer>
           </Modal>
             <div className="menu">
-                <Cheesecake tag="01" img={BananaPudding} alt="bourbon banana pudding cheesecake" title="Bourbon Banana Pudding" price={55} />
-                <Cheesecake tag="02" img={BourbonPecan} alt="bourbon pecan pie cheesecake" title="Bourbon Pecan" price={50} />
-                <Cheesecake tag="03" img={Chocolate} alt="chocolate cheesecake" title="Chocolate" price={35} />
-                <Cheesecake tag="04" img={Cinnamon} alt="cinnamon roll cheesecake" title="Cinnamon Roll" price={50} />
-                <Cheesecake tag="05" img={Cookies} alt="cookies and cream cheesecake" title="Cookies N' Creme" price={45} />
-                <Cheesecake tag="06" img={SweetPotatoe} alt="sweet potatoe cheesecake" title="Sweet Potatoe" price={30} />
-                <Cheesecake tag="07" img={Neo} alt="neapolitan cheesecake" title="Neapolitan" price={55} />
-                <Cheesecake tag="08" img={CaramelApple} alt="caramel apple cheesecake" title="Caramel Apple" price={35} />
-                <Cheesecake tag="09" img={Minis} alt="3 mini cheesecakes of assorted flavors" title="3x Assorted Minis" price={35} />
+            {DATA.map((dataItem, index) => {
+              return (
+                <Cheesecake key={index} img={dataItem.img} alt={dataItem.alt} title={dataItem.name} price={dataItem.price}/>
+              )})};
             </div>
         </motion.div>
 

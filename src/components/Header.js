@@ -29,11 +29,13 @@ export default function Header(props) {
                 </li>
               </ul>
               <div className="actions">
-                <Link to="/order"><ShoppingCartOutlinedIcon className='shop' id="hideNavLogo" fontSize='large'/>
-                <span id="cartHeading">Cart</span></Link>
                 {/* conditional statement if over 9 make 9+ & if equal to 0 don't display*/}
                 {quantity > 0 && 
-                <span id="cartQty">{quantity > 9 ? "(9+)" : `(${quantity})`}</span>}
+                <div id="cartQtyContainer">
+                  <span id="cartQty">{quantity > 9 ? "(9+)" : quantity}</span>
+                </div>}
+                <Link to="/order"><ShoppingCartOutlinedIcon className='shop' id="hideNavLogo" fontSize='large'/>
+                <span id="cartHeading">Cart</span></Link>
               </div>
             </div>
           </div>
