@@ -1,6 +1,6 @@
 import "./Menu.css";
 import DATA from "../Data";
-import Cheesecake from "../components/Cheesecake"
+// import Cheesecake from "../components/Cheesecake"
 import { useState } from "react";
 import {Link} from "react-router-dom"
 import { motion } from "framer-motion";
