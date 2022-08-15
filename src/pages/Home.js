@@ -14,6 +14,7 @@ import pb from "../assets/pb.png";
 import pb2 from "../assets/pb2.png"
 import summer from "../assets/summer.png";
 import summer2 from "../assets/summer2.png";
+import special from "../assets/IMG_3073.jpg";
 // import keyLime from "../assets/key-lime2.png";
 
 
@@ -85,6 +86,14 @@ export default function Home(props){
                     <h3>Thoughtfully Packaged</h3>
                 </div>
             </div>
+        </div>
+        <div className="specialsPreviewContainer">
+            <div className="specialsPreview">
+                <h4>Try It All This Summer.</h4>
+                <p>Why stop at one, when you can have ‘em all. From crunch lovers to ooey-gooey connoisseurs, there’s a treat for everyone.</p>
+            </div>
+            <Link to="/specials"><motion.img whileHover={{scale:1.1}} src={special} alt="turtle cheesecake cupcakes" /></Link>
+    
         </div>
     
         </motion.div>

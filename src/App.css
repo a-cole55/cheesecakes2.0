@@ -40,6 +40,9 @@ span{
   font: 1.3rem 'Oswald', sans-serif;
   display: block;
 }
+#phoneNumber:hover{
+  font-weight: bold;
+}
 #email > a:hover{
   font-weight: bold;
   color:#391117
@@ -49,6 +52,9 @@ span{
 }
 #copyright > span{
   font: 1rem 'Oswald', sans-serif;
+}
+a:hover{
+  color:#800080;
 }
 @media screen and (max-width:1000px){
   .hide{

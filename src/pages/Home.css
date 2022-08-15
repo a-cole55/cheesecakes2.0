@@ -230,7 +230,29 @@ body{
     filter: brightness(.7);
     transform: scale(.98);
    }
-
+   .specialsPreviewContainer{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    padding: 0 5% 2% 10%;
+   }
+   .specialsPreviewContainer img{
+    max-width: 600px;
+    height: 450px;
+    border-radius: 3px;
+    box-shadow: 1px 1px 7px rgba(33,33,33,.7);
+   }
+   .specialsPreview{
+    padding: 10%;
+   }
+   .specialsPreview > h4{
+    text-transform: uppercase;
+    font: 3rem 'Oswald', sans-serif;
+   }
+   .specialsPreview > p{
+    font: 1.5rem "Source Sans Pro", sans-serif;
+   }
 
   @media screen and (max-width:700px){
     #homeLogo{
@@ -250,6 +272,14 @@ body{
     #landing p{
         font-size: 1.1rem;
         bottom:40px;
+    }
+    .specialsPreviewContainer{
+        flex-direction: column-reverse;
+        padding: 0 5% 2% 5%;
+    }
+    .specialsPreviewContainer img{
+     width: 350px;
+     height: 350px;
     }
   }
   @media screen and (max-width:500px){

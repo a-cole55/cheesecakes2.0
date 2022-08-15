@@ -1,0 +1,32 @@
+#paymentPage{
+    margin:1% 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+    font-family: 'Oswald', sans-serif;
+}
+#paymentPage > h2{
+    text-transform: uppercase;
+    font-size: 3rem;
+}
+#paymentInfo{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 10%;
+    margin-top: 3%;
+    text-transform: uppercase;
+}
+#checkoutForm{
+    width:50%;
+    margin-right: 100px;
+}
+#paymentOptions{
+    width:50%;
+}
+label{
+    font:1rem 'Oswald', sans-serif;
+}

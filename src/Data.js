@@ -13,7 +13,7 @@ const DATA = [
         tag: "01",
         img: BananaPudding,
         alt: "bourbon banana pudding cheesecake",
-        name: "Bourbon Banana Pudding",
+        name: "Banana Pudding",
         price: 55
     },
     {

@@ -2,7 +2,6 @@ h1{
     text-transform: uppercase;
     font:4rem 'Rancho', cursive;
     color:#391117;
-    /* margin-top: 3%; */
 }
 .modalTitle, .modalFooter{
     border:none;

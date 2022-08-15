@@ -1,5 +1,6 @@
 // import { Checkbox } from "@mui/material";
-import DeleteOutlineOutlinedIcon from '@mui/icons-material/DeleteOutlineOutlined';
+// import DeleteOutlineOutlinedIcon from '@mui/icons-material/DeleteOutlineOutlined';
+import { DeleteOutlined } from "@ant-design/icons";
 import {Link} from "react-router-dom";
 import { useState } from "react";
 import EmptyCart from '../components/EmptyCart';
@@ -20,9 +21,10 @@ export default function Order(props){
     let subtotal = 0;
     
     const {cart} = useContext(CartContext);
+    const {setCart} = useContext(CartContext);
 
 
-    function FullCart(cart, promo, discount, setDiscount, getPromo, setGetPromo, total,setCart){
+    function FullCart(cart, promo, discount, setDiscount, getPromo, setGetPromo, total){
         const elgDiscountCode = "CHEESECAKE2022";
 
         function handleChange(event){
@@ -41,10 +43,13 @@ export default function Order(props){
         const calcDiscount = (discount,total,subtotal) => {
             setDiscount((subtotal * 0.10).toFixed(2))
         }
-
-        function removeItem(cart,itemToRemove){
-            console.log(itemToRemove)
-            setCart(cart.filter((item) => item !== itemToRemove));
+        
+        //Remove Item from Cart
+        function removeItem(cart, item){
+            console.log(item)
+            setCart(cart.filter((cartItem) => cartItem !== item));
+            // cart = [...newCart];
+            console.log(cart)
 
         }
 
@@ -61,7 +66,7 @@ export default function Order(props){
                                 <Link to="/menu"><h4 id="continueShopping">Continue Shopping</h4></Link>
                                 <button id="updateCartBTN">Update Cart</button>
                             </div>
-                            {cart.map((item) => {
+                            {cart.map((item, index) => {
                                 //CALCULATE SUBTOTAL
                             subtotal = subtotal + item.itemTotal
                             //CALCULATE SALESTAX
@@ -71,7 +76,7 @@ export default function Order(props){
                             //CALCULATE TOTAL
                             total = (subtotal + salesTax)
                             return (
-                            <div key={item.key} className="viewItems">
+                            <div key={index} className="viewItems">
                                 <img src={item.img} alt={item.img}></img>
                                 <div className="viewItemDetails">
                                     <div className="cartItemDetails">
@@ -79,17 +84,17 @@ export default function Order(props){
                                     </div>
                                     <div className="cartItemDetails" id="quantityBTNContainer">
                                         <div className="quantityBTN">
-                                        <h4>QTY: </h4>
-                                        <input className="changeQtyBTN" value="-" type="button" />
-                                        <input disabled className="changeQtyBTN" id="adjustQTY" value={item.quantity}></input>
-                                        <input className="changeQtyBTN" value="+" type="button" />
+                                            <h4>QTY: </h4>
+                                            <input className="changeQtyBTN" value="-" type="button" />
+                                            <input disabled className="changeQtyBTN" id="adjustQTY" value={item.quantity}></input>
+                                            <input className="changeQtyBTN" value="+" type="button" />
                                         </div>
                                     </div>
                                     <div className="cartItemDetails" id="itemTotalDiv">
                                     <span>${item.itemTotal}</span>
                                     </div>
                                     <div className="cartItemDetails">
-                                    <DeleteOutlineOutlinedIcon id="remove" /><span onClick={()=>removeItem(cart, item)}>Remove</span>
+                                        <span id="removeCart" onClick={()=>removeItem(cart, item)}><DeleteOutlined id="remove" style={{ fontSize: '22px' }} /></span>
                                     </div>
                                 </div>
                             </div>

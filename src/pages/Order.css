@@ -128,6 +128,10 @@ input{
 .cartItemDetails span:last-child, #remove{
     cursor: pointer;
 }
+#removeCart{
+    font-size: 1rem;
+    margin-top: 10px;
+}
 .cartHeader{
     background-color:rgba(224, 159, 146, 0.7);
     height:5em;
@@ -158,7 +162,7 @@ input{
     border:none;
 }
 .viewItems img{
-    width:140px;
+    width:120px;
     height: 85px;
     border:none;
 }
@@ -171,7 +175,9 @@ input{
 .viewItemDetails div{
     width:33%;
 }
-
+.cartItemDetails > h3{
+    font-size: 1rem;
+}
 
 #borderBottom{
     height:40px;
@@ -201,14 +207,16 @@ input{
 }
 #quantityBTNContainer{
     font-size:1.5rem;
-    width:60%;
+    width:100%;
 }
 .quantityBTN{
     display: flex;
     flex-direction: row;
     align-items: flex-end;
     justify-content: center;
-    color:#391117
+    color:#391117;
+    border: 1.5px solid #391117;
+    width:150px;
 }
 #itemTotalDiv{
     width:22%;
