@@ -48,14 +48,8 @@ export default function Order(props){
         
         //Remove Item from Cart
         function removeItem(cart, item){
-            console.log(item)
             setCart(cart.filter((cartItem) => cartItem !== item));
-            // cart = [...newCart];
-            console.log(cart)
-            // setTotalQty(totalQty => cart.map((cartItem) => {
-            //     totalQty += cartItem.quantity
-            // }))
-
+            setTotalQty(totalQty => totalQty - item.quantity)
         }
 
         return (
