@@ -7,13 +7,16 @@ import Cookies from "./assets/cookies-min.jpg";
 import SweetPotatoe from "./assets/sweetpotatoe (2)-min.jpg";
 import Neo from "./assets/neopolitan-min.jpg";
 import Minis from "./assets/minis-min.jpg";
+import Reeses from "./assets/reeses.jpg";
+import StrawberryLemonade from "./assets/strawberrylemonade.jpg";
+import Turtle from "./assets/turtle.jpg"
 
 const DATA = [
     {
-        tag: "01",
-        img: BananaPudding,
-        alt: "bourbon banana pudding cheesecake",
-        name: "Banana Pudding",
+        tag: "1",
+        img: Reeses,
+        alt: "reeses peanut butter cup cheesecake",
+        name: "Reese's Crunch",
         price: 55
     },
     {
@@ -46,10 +49,10 @@ const DATA = [
     },
     {
         tag: "06",
-        img: SweetPotatoe,
-        alt: "sweet potatoe cheesecake",
-        name: "Sweet Potatoe",
-        price: 30
+        img: CaramelApple,
+        alt: "caramel apple cheesecake",
+        name: "Caramel Apple",
+        price: 45
     },
     {
         tag: "07",
@@ -60,10 +63,10 @@ const DATA = [
     },
     {
         tag: "08",
-        img: CaramelApple,
-        alt: "caramel apple cheesecake",
-        name: "Caramel Apple",
-        price: 45
+        img: Turtle,
+        alt: "caramel and chocolate turtle cheesecake",
+        name: "Turtle Supreme",
+        price: 50
     },
     {
         tag: "09",
@@ -71,6 +74,27 @@ const DATA = [
         alt: "3 mini cheesecakes of assorted flavors",
         name: "3x Assorted Minis",
         price: 35
+    },
+    {
+        tag: "10",
+        img: BananaPudding,
+        alt: "bourbon banana pudding cheesecake",
+        name: "Banana Pudding",
+        price: 55
+    },
+    {
+        tag: "11",
+        img: StrawberryLemonade,
+        alt: "strawberry lemonade cheesecake",
+        name: "Strawberry Lemonade",
+        price: 45
+    },
+    {
+        tag: "06",
+        img: SweetPotatoe,
+        alt: "sweet potatoe cheesecake",
+        name: "Sweet Potatoe",
+        price: 30
     }
 ]
 export default DATA

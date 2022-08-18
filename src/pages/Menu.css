@@ -43,7 +43,7 @@ h1{
 .cheesecake{
     width:280px;
     height:370px;
-    background-color: rgba(224, 159, 146, 0.3);
+    background-color: #F9EFED;
     margin: 15px;
     border-radius: 4px;
     display: flex;
