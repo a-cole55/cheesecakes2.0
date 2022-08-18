@@ -30,6 +30,9 @@
     color:white;
     text-shadow: black 1px 2px;
 }
+.shoppingTag{
+    color:#D8806B;
+}
 
 @media screen and (max-width:690px){
     .coupon{
