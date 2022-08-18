@@ -1,11 +1,12 @@
 import { ShoppingCartOutlined } from "@ant-design/icons";
 import "./Header.css";
 import {Link} from "react-router-dom";
-import NavLogo from "../assets/navLogo.png"
+import NavLogo from "../assets/navLogo.png";
+import { useContext } from "react";
+import CartContext from "../components/CartContext";
 
 export default function Header(props) {
-    let quantity = props.totalQty[0];
-
+    let {totalQty} = useContext(CartContext);
 
     return(
       <header className="App-header">
@@ -30,9 +31,9 @@ export default function Header(props) {
               </ul>
               <div className="actions">
                 {/* conditional statement if over 9 make 9+ & if equal to 0 don't display*/}
-                {quantity > 0 && 
+                {totalQty > 0 && 
                 <div id="cartQtyContainer">
-                  <span id="cartQty">{quantity > 9 ? "(9+)" : quantity}</span>
+                  <span id="cartQty">{totalQty > 9 ? "(9+)" : totalQty}</span>
                 </div>}
                 <Link to="/order"><ShoppingCartOutlined style={{ fontSize: '27px' }} className="hideCartIcon" /></Link>
                 <Link to="/order"><span id="cartHeading" className="hideCartText">View Cart</span></Link>

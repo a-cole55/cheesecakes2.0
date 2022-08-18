@@ -22,6 +22,8 @@ export default function Order(props){
     
     const {cart} = useContext(CartContext);
     const {setCart} = useContext(CartContext);
+    let {totalQty} = useContext(CartContext);
+    const {setTotalQty} = useContext(CartContext);
 
 
     function FullCart(cart, promo, discount, setDiscount, getPromo, setGetPromo, total){
@@ -50,6 +52,9 @@ export default function Order(props){
             setCart(cart.filter((cartItem) => cartItem !== item));
             // cart = [...newCart];
             console.log(cart)
+            // setTotalQty(totalQty => cart.map((cartItem) => {
+            //     totalQty += cartItem.quantity
+            // }))
 
         }
 
@@ -60,7 +65,7 @@ export default function Order(props){
                         <div id="cart">
                             <div className="cartHeader">
                                 <h3 className="shoppingHeader">Shopping Cart</h3>
-                                <span id="totalQtyHeader">({props.totalQty} {props.totalQty > 1 ? "Items" : "Item"})</span>
+                                <span id="totalQtyHeader">({totalQty} {totalQty > 1 ? "Items" : "Item"})</span>
                             </div>
                             <div className="cartActions">
                                 <Link to="/menu"><h4 id="continueShopping">Continue Shopping</h4></Link>
@@ -156,7 +161,7 @@ export default function Order(props){
         animate={{ opacity: 1 }}
         exit={{ opacity: 0}}
         transition={transition}>
-            {props.totalQty > 0 ? FullCart(cart, promo, discount, setDiscount, getPromo, setGetPromo) : <EmptyCart />}
+            {totalQty > 0 ? FullCart(cart, promo, discount, setDiscount, getPromo, setGetPromo) : <EmptyCart />}
         </motion.div>
 
     )

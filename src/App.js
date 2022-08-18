@@ -15,7 +15,6 @@ import { motion } from "framer-motion";
 
 
 function App() {
-  const [totalQty, setTotal] = useState(0);
   const [itemTotals, setItemTotals] = useState(0);
   const [total, setCartTotal] = useState(0)
 
@@ -23,13 +22,13 @@ function App() {
     <Router>
     <CartProvider>
     <div className="App">
-      <Header className="header" totalQty = {[totalQty, setTotal]} fixed="top" />
+      <Header className="header" fixed="top" />
       <div className="content">
           <Routes>
             <Route path="/" element={<Home/>} />
             <Route path="/about" element={<About/>} />
-            <Route path="/menu" element={<Menu totalQty= {[totalQty, setTotal]} itemTotals={[itemTotals, setItemTotals]} />} />
-            <Route path="/order" element={<Order totalQty= {totalQty} setTotal={setTotal} itemTotals={itemTotals} total={total} setCartTotal={setCartTotal}/>} />
+            <Route path="/menu" element={<Menu itemTotals={[itemTotals, setItemTotals]} />} />
+            <Route path="/order" element={<Order itemTotals={itemTotals} total={total} setCartTotal={setCartTotal}/>} />
             <Route path="/specials" element={<Specials/>} />
             <Route path="/payment" element={<PaymentPage total={total}/>} />
           </Routes>

@@ -14,6 +14,7 @@ export default function Paypal(props){
     // console.log(total)
     // console.log(cart)
     const paypal = useRef();
+    const venmo = useRef();
 
 
 
@@ -43,6 +44,12 @@ export default function Paypal(props){
         .render(paypal.current);
     }, [props, orderArr]);
     return (
-        <div ref={paypal}></div>
+        <div>
+            <div ref={paypal}></div>
+            {/* <div id="paypal-button-container">
+                window.paypal.Buttons().render('#paypal-button-container')
+            </div> */}
+        </div>
+
     )
 }

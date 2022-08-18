@@ -15,12 +15,13 @@ const transition = {duration: 0.6, ease: [0.43, 0.13, 0.23, 0.96]};
 
 
 export default function Menu(props){
-    let setQtyTotal = props.totalQty[1];
     let itemTotals = props.itemTotals[0];
     let setItemTotals = props.itemTotals[1];
 
     let {cart} = useContext(CartContext);
     const {setCart} = useContext(CartContext);
+    let {totalQty} = useContext(CartContext);
+    const {setTotalQty} = useContext(CartContext);
 
 //Module Functionality
     const [show, setShow] = useState(false);
@@ -75,7 +76,7 @@ export default function Menu(props){
           itemTotal(props),
           checkForDuplicates(props),
           console.log(cart),
-          setQtyTotal(totalQty => totalQty + quantity),
+          setTotalQty(totalQty => totalQty + quantity),
           handleShow()
       )}
       return(
