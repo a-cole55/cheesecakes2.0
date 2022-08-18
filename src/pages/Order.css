@@ -215,8 +215,6 @@ input{
     align-items: flex-end;
     justify-content: center;
     color:#391117;
-    border: 1.5px solid #391117;
-    width:150px;
 }
 #itemTotalDiv{
     width:22%;
