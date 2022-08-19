@@ -162,21 +162,27 @@ input{
     border:none;
 }
 .viewItems img{
-    width:120px;
-    height: 85px;
+    width:140px;
+    height: 100px;
     border:none;
 }
 .viewItemDetails{
     width:100%;
     display:flex;
     flex-direction: row;
+    font-family: 'Oswald', sans-serif;
 }
 
 .viewItemDetails div{
-    width:33%;
+    width:50%;
 }
 .cartItemDetails > h3{
-    font-size: 1rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.cartItemDetails > span{
+    font:1.25rem 'Oswald', sans-serif;
 }
 
 #borderBottom{
@@ -189,7 +195,7 @@ input{
     display: inline;
     background-color: transparent;
     border:none;
-    font-size: 1rem;
+    font-size: 1.1rem;
     color:#391117;
     font-weight: bold;
 }
@@ -203,7 +209,7 @@ input{
     color:#391117;
 }
 .changeQtyBTN:first-child, .changeQtyBTN:last-child{
-    font-size: 1.25rem;
+    font-size: 1.15rem;
 }
 #quantityBTNContainer{
     font-size:1.5rem;
@@ -216,6 +222,10 @@ input{
     justify-content: center;
     color:#391117;
 }
+.quantityBTN >h4{
+    font-size: 1.03rem;
+    font-weight: bold;
+}
 #itemTotalDiv{
     width:22%;
 }
@@ -226,20 +236,20 @@ input{
     justify-content: center;
     align-items: center;
 }
-.subtotal span{
-    color: #BB4C50;
-    font-weight: bold;
-    font-size: 1.5rem;
-}
+
 .totalDetails{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     padding:10px 35px 5px 35px;
+    
 }
 .totalDetails span, .finalTotal h3, .finalTotal span{
-    font-size: 1.25rem;
-    font-family:"Source Sans Pro", sans-serif;
+    font-size: 1.15rem;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.07rem;
+    font-weight: 100;
 }
 .promoCode{
     display:flex;
@@ -307,13 +317,15 @@ h5{
 }
 .finalTotal h3{
     margin:0;
-    font-weight: 600;
-    text-transform: capitalize;
-    letter-spacing: 0.01em;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    font-size:1.25rem
 }
 .finalTotal span{
     margin-top: 0rem;
     font-weight: 600;
+    font-size:1.25rem
 }
 
 .billing{

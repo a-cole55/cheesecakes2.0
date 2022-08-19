@@ -124,7 +124,7 @@ export default function Order(props){
                                         </div>
                                     </div>
                                     <div className="cartItemDetails" id="itemTotalDiv">
-                                    <span>${item.itemTotal}</span>
+                                        <span>${item.itemTotal}</span>
                                     </div>
                                     <div className="cartItemDetails">
                                         <span id="removeCart" onClick={()=>removeItem(cart, item)}><DeleteOutlined id="remove" style={{ fontSize: '22px' }} /></span>
