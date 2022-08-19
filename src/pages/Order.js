@@ -46,11 +46,37 @@ export default function Order(props){
             setDiscount((subtotal * 0.10).toFixed(2))
         }
         
-        //Remove Item from Cart
+        // //Update Cart Total
+        // function updateCartTotal(cart){
+        //     cart.forEach((item) => {
+        //         //CALCULATE SUBTOTAL
+        //     subtotal = subtotal + item.itemTotal
+        //     //CALCULATE SALESTAX
+        //     salesT = subtotal * .0825
+        //     //CONVERT TO NUMBER
+        //     salesTax = +(salesT.toFixed(2))
+        //     //CALCULATE TOTAL
+        //     total = (subtotal + salesTax)});
+        // }
+
+        //Add Items To Cart (Increase Qty Count)
+          function increaseQty(item){
+            setTotalQty(totalQty => totalQty + 1);
+            item.quantity += 1
+        }
+
+        //Remove Items From Cart (Decrease Qty Count)
+        function reduceQty(item){
+            setTotalQty(totalQty => totalQty - 1);
+            item.quantity -= 1
+        }
+        
+        //Remove Item(s) from Cart
         function removeItem(cart, item){
             setCart(cart.filter((cartItem) => cartItem !== item));
             setTotalQty(totalQty => totalQty - item.quantity)
         }
+
 
         return (
             <div className="cartContent">
@@ -84,9 +110,9 @@ export default function Order(props){
                                     <div className="cartItemDetails" id="quantityBTNContainer">
                                         <div className="quantityBTN">
                                             <h4>QTY: </h4>
-                                            <input className="changeQtyBTN" value="-" type="button" />
+                                            <input className="changeQtyBTN" value="-" type="button" onClick={() => reduceQty(item)}/>
                                             <input disabled className="changeQtyBTN" id="adjustQTY" value={item.quantity}></input>
-                                            <input className="changeQtyBTN" value="+" type="button" />
+                                            <input className="changeQtyBTN" value="+" type="button" onClick={() => increaseQty(item)} />
                                         </div>
                                     </div>
                                     <div className="cartItemDetails" id="itemTotalDiv">
