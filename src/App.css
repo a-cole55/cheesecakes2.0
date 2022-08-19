@@ -6,7 +6,7 @@
 }
 #bgImg{
   width:25%;
-  opacity:0.3;
+  opacity:0.9;
   border-radius: 25em;
   position:fixed;
   bottom:195px;
@@ -15,8 +15,8 @@
 }
 #smallImg{
   width:20%;
-  opacity:0.3;
-  border-radius: 25em;
+  opacity:0.9;
+  border-radius: 30em;
   position:fixed;
   top:300px;
   left:10px;

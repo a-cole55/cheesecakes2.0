@@ -46,29 +46,36 @@ export default function Order(props){
             setDiscount((subtotal * 0.10).toFixed(2))
         }
         
-        // //Update Cart Total
-        // function updateCartTotal(cart){
-        //     cart.forEach((item) => {
-        //         //CALCULATE SUBTOTAL
-        //     subtotal = subtotal + item.itemTotal
-        //     //CALCULATE SALESTAX
-        //     salesT = subtotal * .0825
-        //     //CONVERT TO NUMBER
-        //     salesTax = +(salesT.toFixed(2))
-        //     //CALCULATE TOTAL
-        //     total = (subtotal + salesTax)});
-        // }
+        //Update Cart Total
+        function updateCartTotal(cart){
+            subtotal = 0
+            cart.forEach(item =>  subtotal += item.price);
+                //CALCULATE SUBTOTAL
+            //CALCULATE SALESTAX
+            salesT = subtotal * .0825
+            //CONVERT TO NUMBER
+            salesTax = +(salesT.toFixed(2))
+            //CALCULATE TOTAL
+            total = (subtotal + salesTax)
+            console.log(subtotal);
+            console.log(salesT)
+            console.log(total)
+        }
+            
 
-        //Add Items To Cart (Increase Qty Count)
-          function increaseQty(item){
+
+        //ncreast Item Quantity (Increase Qty Count)
+          function increaseQty(item, cart){
             setTotalQty(totalQty => totalQty + 1);
-            item.quantity += 1
+            item.quantity += 1;
+            updateCartTotal(cart)
         }
 
-        //Remove Items From Cart (Decrease Qty Count)
-        function reduceQty(item){
+        //Reduce Quantity of Item (Decrease Qty Count)
+        function reduceQty(item, cart){
             setTotalQty(totalQty => totalQty - 1);
-            item.quantity -= 1
+            item.quantity -= 1;
+            updateCartTotal(cart)
         }
         
         //Remove Item(s) from Cart
@@ -89,8 +96,9 @@ export default function Order(props){
                             </div>
                             <div className="cartActions">
                                 <Link to="/menu"><h4 id="continueShopping">Continue Shopping</h4></Link>
-                                <button id="updateCartBTN">Update Cart</button>
+                                <button id="updateCartBTN" onClick={()=> updateCartTotal(cart)}>Update Cart</button>
                             </div>
+                            {/* {updateCartTotal(cart)} */}
                             {cart.map((item, index) => {
                                 //CALCULATE SUBTOTAL
                             subtotal = subtotal + item.itemTotal

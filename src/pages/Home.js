@@ -4,7 +4,7 @@ import "./Home.css";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import HomeImg from "../assets/bourbonpecan-min.jpg";
-import Home2 from "../assets/strawberrys-min.jpg";
+import Home2 from "../assets/strawberrys-min(3).jpg";
 // import Carousel from "../components/Carousel"
 import heart from "../assets/heart.png";
 import box from "../assets/packages-icon-13.png";
