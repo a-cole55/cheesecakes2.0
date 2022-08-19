@@ -5,6 +5,7 @@
     align-items: center;
     /* justify-content: center; */
     font-family: 'Oswald', sans-serif;
+    min-height:100vh;
 }
 #paymentPage > h2{
     text-transform: uppercase;
@@ -29,4 +30,34 @@
 }
 label{
     font:1rem 'Oswald', sans-serif;
+}
+@media screen and (max-width:480px){
+    #paymentPage{
+        margin:1% 0 50% 0;
+    }
+    #paymentPage > h2{
+        text-transform: uppercase;
+        font-size: 2rem;
+    }
+    #paymentInfo{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        margin: 3% 0;
+        text-transform: uppercase;
+    }
+    #checkoutForm{
+        width:70%;
+        margin: 0 0 50px 0;
+        position: static;
+    }
+    #paymentOptions{
+        width:70%;
+        position: static;
+        /* margin-bottom: 50px; */
+    }
+
 }

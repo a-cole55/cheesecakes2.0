@@ -36,7 +36,7 @@ export default function Header(props) {
                   <span id="cartQty">{totalQty > 9 ? "(9+)" : totalQty}</span>
                 </div>}
                 <NavLink to="/order"><ShoppingCartOutlined style={{ fontSize: '27px' }} className="hideCartIcon" /></NavLink>
-                <NavLink to="/order"><span id="cartHeading" className="hideCartText">View Cart</span></NavLink>
+                <NavLink to="/order"><span id="cartHeading" className="hideCartText">Cart</span></NavLink>
               </div>
             </div>
           </div>

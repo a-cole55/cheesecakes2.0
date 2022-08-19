@@ -69,6 +69,7 @@ export default function Order(props){
             setTotalQty(totalQty => totalQty + 1);
             item.quantity += 1;
             updateCartTotal(cart)
+
         }
 
         //Reduce Quantity of Item (Decrease Qty Count)
@@ -76,6 +77,7 @@ export default function Order(props){
             setTotalQty(totalQty => totalQty - 1);
             item.quantity -= 1;
             updateCartTotal(cart)
+
         }
         
         //Remove Item(s) from Cart
