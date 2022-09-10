@@ -1,5 +1,4 @@
 import React, {useRef, useEffect, useContext} from "react";
-import PaymentSuccess from "./PaymentSuccess";
 import { useNavigate } from "react-router-dom";
 import CartContext from "../components/CartContext";
 

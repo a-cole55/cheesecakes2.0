@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
 export default function MenuPreview(props){
@@ -28,7 +29,7 @@ export default function MenuPreview(props){
                     alt={props.alt2}
                     className={isHovering ? "" : "hide"}/>
                 <div className={isHovering ? "orderNowContainer" : "hide"}>
-                    <button className="orderMenuBTN">Order Now</button>
+                    <Link to="/menu"><button className="orderMenuBTN">Order Now</button></Link>
                 </div>
                 <div className="captionText">
                     <p>{props.caption}</p>
