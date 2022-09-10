@@ -1,6 +1,6 @@
-import React, {useRef, useEffect} from "react";
+import React, {useRef, useEffect, useContext} from "react";
 import PaymentSuccess from "./PaymentSuccess";
-import { useContext } from "react";
+import { useNavigate } from "react-router-dom";
 import CartContext from "../components/CartContext";
 
 
@@ -15,6 +15,7 @@ export default function Paypal(props){
     // console.log(cart)
     const paypal = useRef();
     const venmo = useRef();
+    let navigate = useNavigate();
 
 
 
@@ -35,10 +36,11 @@ export default function Paypal(props){
             onApprove: async (data, actions) => {
                 const order = await actions.order.capture();
                 console.log(order);
-                <PaymentSuccess />
+                navigate("/success");
             },
             onError: (err) => {
-                console.log(err)
+                console.log(err);
+                navigate("*");
             }
         })
         .render(paypal.current);

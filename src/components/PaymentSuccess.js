@@ -19,5 +19,3 @@ export default function PaymentSuccess(props) {
     </>
   );
 }
-
-// render(<PaymentSuccess />);

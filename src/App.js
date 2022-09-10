@@ -8,6 +8,9 @@ import About from "./pages/About.js";
 import Order from "./pages/Order.js";
 import Specials from "./pages/Specials.js";
 import PaymentPage from "./pages/Payment.js";
+import PaymentSuccess from "./components/PaymentSuccess";
+import ErrorPage from "./components/Error";
+// import CancelledPage from "./components/CancelledPayment";
 import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import { useState } from "react";
 import { CartProvider } from "./components/CartContext";
@@ -31,6 +34,9 @@ function App() {
             <Route path="/order" element={<Order itemTotals={itemTotals} total={total} setCartTotal={setCartTotal}/>} />
             <Route path="/specials" element={<Specials/>} />
             <Route path="/payment" element={<PaymentPage total={total}/>} />
+            <Route path="/success" element={<PaymentSuccess />} />;
+            <Route path="*" element={<ErrorPage />} />
+
           </Routes>
       </div>
     <footer>
