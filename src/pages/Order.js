@@ -2,11 +2,10 @@
 // import DeleteOutlineOutlinedIcon from '@mui/icons-material/DeleteOutlineOutlined';
 import { DeleteOutlined } from "@ant-design/icons";
 import {Link} from "react-router-dom";
-import { useState } from "react";
+import { useState, useContext, useEffect } from "react";
 import EmptyCart from '../components/EmptyCart';
 import "./Order.css";
 import { motion } from "framer-motion";
-import { useContext } from "react";
 import CartContext from "../components/CartContext";
 
 
@@ -25,6 +24,15 @@ export default function Order(props){
     let {totalQty} = useContext(CartContext);
     const {setTotalQty} = useContext(CartContext);
 
+    //Session Storage for Cart and TotalQty
+    useEffect(() => {
+        sessionStorage.setItem('total-cartQty', JSON.stringify(totalQty));
+        console.log(totalQty)
+      }, [totalQty]);
+
+    useEffect(() => {
+      sessionStorage.setItem('user-cart', JSON.stringify(cart));
+    }, [cart]);
 
     function FullCart(cart, promo, discount, setDiscount, getPromo, setGetPromo, total){
         const elgDiscountCode = "CHEESECAKE2022";
@@ -86,6 +94,9 @@ export default function Order(props){
             setTotalQty(totalQty => totalQty - item.quantity)
         }
 
+        // useEffect(() => {
+        //     localStorage.setItem('user-cart', JSON.stringify(cart));
+        //   }, [cart]);
 
         return (
             <div className="cartContent">
@@ -191,7 +202,7 @@ export default function Order(props){
         animate={{ opacity: 1 }}
         exit={{ opacity: 0}}
         transition={transition}>
-            {totalQty > 0 ? FullCart(cart, promo, discount, setDiscount, getPromo, setGetPromo) : <EmptyCart />}
+            {cart.length > 0 ? FullCart(cart, promo, discount, setDiscount, getPromo, setGetPromo) : <EmptyCart />}
         </motion.div>
 
     )

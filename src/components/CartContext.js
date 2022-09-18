@@ -5,8 +5,8 @@ const CartContext = createContext();
 
 export function CartProvider({children}){
     const [total, setCartTotal] = useState(0);
-    const [cart, setCart] = useState([]);
-    const [totalQty, setTotalQty] = useState(0);
+    const [cart, setCart] = useState(JSON.parse(sessionStorage.getItem('user-cart')) || []);
+    const [totalQty, setTotalQty] = useState(JSON.parse(sessionStorage.getItem('total-cartQty')) || 0);
 
 
 
