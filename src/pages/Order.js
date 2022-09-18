@@ -27,7 +27,6 @@ export default function Order(props){
     //Session Storage for Cart and TotalQty
     useEffect(() => {
         sessionStorage.setItem('total-cartQty', JSON.stringify(totalQty));
-        console.log(totalQty)
       }, [totalQty]);
 
     useEffect(() => {

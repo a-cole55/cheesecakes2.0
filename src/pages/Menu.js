@@ -82,7 +82,6 @@ export default function Menu(props){
 
     useEffect(() => {
       sessionStorage.setItem('total-cartQty', JSON.stringify(totalQty));
-      console.log(totalQty)
     }, [totalQty]);
 
     return(
