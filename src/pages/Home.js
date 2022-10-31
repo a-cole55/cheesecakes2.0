@@ -1,11 +1,9 @@
 import HomeLogo from "../assets/default-min.png";
 import "./Home.css";
-// import { useState } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import HomeImg from "../assets/bourbonpecan-min.jpg";
 import Home2 from "../assets/strawberrys-min(3).jpg";
-// import Carousel from "../components/Carousel"
 import heart from "../assets/heart.png";
 import box from "../assets/packages-icon-13.png";
 import cheesecakeIcon from "../assets/cheesecake-icon.png";
