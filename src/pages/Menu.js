@@ -7,7 +7,6 @@ import { motion } from "framer-motion";
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import CartContext from "../components/CartContext";
-// import e from "cors";
 
 const transition = {duration: 0.6, ease: [0.43, 0.13, 0.23, 0.96]};
 
@@ -21,12 +20,14 @@ export default function Menu(props){
   let {totalQty} = useContext(CartContext);
   const {setTotalQty} = useContext(CartContext);
 
-//Module Functionality
+//Modal Functionality
   const [show, setShow] = useState(false);
   const handleClose = () => {
     setShow(false);
   }
   const handleShow = () => setShow(true);
+
+  //Menu Items
   function Cheesecake(props) {
     const [quantity, setQuantity] = useState(0);
 
