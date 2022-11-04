@@ -110,7 +110,6 @@ export default function Order(props){
                                 <Link to="/menu"><h4 id="continueShopping">Continue Shopping</h4></Link>
                                 <button id="updateCartBTN" onClick={()=> updateCartTotal(cart)}>Update Cart</button>
                             </div>
-                            {/* {updateCartTotal(cart)} */}
                             {cart.map((item, index) => {
                                 //CALCULATE SUBTOTAL
                             subtotal = subtotal + item.itemTotal
