@@ -71,7 +71,7 @@ export default function Order(props){
             
 
 
-        //ncreast Item Quantity (Increase Qty Count)
+        //Icreaste Item Quantity (Increase Qty Count)
           function increaseQty(item, cart){
             setTotalQty(totalQty => totalQty + 1);
             item.quantity += 1;
